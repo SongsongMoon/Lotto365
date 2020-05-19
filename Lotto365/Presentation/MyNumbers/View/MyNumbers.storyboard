@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5K-cS-gXP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--내 번호-->
+        <scene sceneID="ske-cZ-wiZ">
+            <objects>
+                <viewController storyboardIdentifier="MyNumbersViewController" id="a5K-cS-gXP" customClass="MyNumbersViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8hI-A4-8aW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiO-x8-IA5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="53"/>
+                                <color key="backgroundColor" name="background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="NjO-y0-68J"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-QK-eqh">
+                                <rect key="frame" x="0.0" y="141" width="414" height="706"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="a5K-cS-gXP" id="2He-d5-qkA"/>
+                                    <outlet property="delegate" destination="a5K-cS-gXP" id="a9D-vZ-wPe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="ZWY-nq-bqp" firstAttribute="bottom" secondItem="vbB-QK-eqh" secondAttribute="bottom" constant="15" id="BQE-Sb-RyA"/>
+                            <constraint firstItem="ZWY-nq-bqp" firstAttribute="trailing" secondItem="hiO-x8-IA5" secondAttribute="trailing" id="RQT-iS-k1Q"/>
+                            <constraint firstItem="vbB-QK-eqh" firstAttribute="leading" secondItem="ZWY-nq-bqp" secondAttribute="leading" id="d3a-kf-JVD"/>
+                            <constraint firstItem="vbB-QK-eqh" firstAttribute="top" secondItem="hiO-x8-IA5" secondAttribute="bottom" id="eTe-Hg-dae"/>
+                            <constraint firstItem="hiO-x8-IA5" firstAttribute="top" secondItem="ZWY-nq-bqp" secondAttribute="top" id="jx1-OS-rUg"/>
+                            <constraint firstItem="ZWY-nq-bqp" firstAttribute="trailing" secondItem="vbB-QK-eqh" secondAttribute="trailing" id="kNe-jw-AQH"/>
+                            <constraint firstItem="hiO-x8-IA5" firstAttribute="leading" secondItem="ZWY-nq-bqp" secondAttribute="leading" id="ty4-2X-Y13"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZWY-nq-bqp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="내 번호" id="daO-4U-fsC"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="vbB-QK-eqh" id="Bs3-ed-akv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bW-JW-Cwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="-182"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="background">
+            <color red="0.090196078431372548" green="0.11372549019607843" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

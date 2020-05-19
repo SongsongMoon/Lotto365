@@ -8,20 +8,75 @@
 
 /* Begin PBXBuildFile section */
 		04605BD5247291C5008727E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605BD4247291C5008727E8 /* AppDelegate.swift */; };
-		04605BD9247291C5008727E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605BD8247291C5008727E8 /* ViewController.swift */; };
-		04605BDC247291C5008727E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDA247291C5008727E8 /* Main.storyboard */; };
 		04605BDE247291C6008727E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDD247291C6008727E8 /* Assets.xcassets */; };
 		04605BE1247291C6008727E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDF247291C6008727E8 /* LaunchScreen.storyboard */; };
+		04605C1924729A6E008727E8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1824729A6E008727E8 /* LaunchViewController.swift */; };
+		04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1A24729C1F008727E8 /* BaseViewController.swift */; };
+		04605C1D24729C4C008727E8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1C24729C4C008727E8 /* BaseViewModel.swift */; };
+		04605C1F24729DC4008727E8 /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1E24729DC4008727E8 /* DataBinding.swift */; };
+		04605C2524737A8D008727E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04605C2424737A8D008727E8 /* GoogleService-Info.plist */; };
+		04605C312473B15F008727E8 /* Dreams.json in Resources */ = {isa = PBXBuildFile; fileRef = 04605C302473B15F008727E8 /* Dreams.json */; };
+		04605C332473C538008727E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605C322473C538008727E8 /* Main.storyboard */; };
+		04605C352473C623008727E8 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C342473C623008727E8 /* RoundableView.swift */; };
+		04605C372473C654008727E8 /* LTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C362473C654008727E8 /* LTView.swift */; };
+		04605C392473C6C0008727E8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C382473C6C0008727E8 /* UIView+Extension.swift */; };
+		04605C3B2473C77F008727E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C3A2473C77F008727E8 /* MainViewController.swift */; };
+		04605C3D2473C964008727E8 /* Analyzes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605C3C2473C964008727E8 /* Analyzes.storyboard */; };
+		04605C3F2473CAB8008727E8 /* AnalyzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C3E2473CAB8008727E8 /* AnalyzesViewController.swift */; };
+		04605C412473CBD9008727E8 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C402473CBD9008727E8 /* BaseNavigationController.swift */; };
+		04605C432473CCD2008727E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C422473CCD2008727E8 /* Utils.swift */; };
+		04605C452473CF93008727E8 /* RecommendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C442473CF93008727E8 /* RecommendedViewController.swift */; };
+		04605C472473D016008727E8 /* RecommendedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04605C462473D016008727E8 /* RecommendedCell.xib */; };
+		04605C492473D2FA008727E8 /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C482473D2FA008727E8 /* RecommendedCell.swift */; };
+		04605C4B2473D318008727E8 /* LTTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C4A2473D318008727E8 /* LTTableCell.swift */; };
+		04605C4D2473D66D008727E8 /* LottoHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04605C4C2473D66D008727E8 /* LottoHistoryCell.xib */; };
+		04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C4E2473D798008727E8 /* LottoHistoryCell.swift */; };
+		04605C512473D9BF008727E8 /* LottoHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605C502473D9BF008727E8 /* LottoHistory.storyboard */; };
+		04605C532473DA61008727E8 /* LottoHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C522473DA61008727E8 /* LottoHistoryViewController.swift */; };
+		04605C552473E6A4008727E8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605C542473E6A4008727E8 /* Settings.storyboard */; };
+		04605C572473E932008727E8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C562473E932008727E8 /* SettingsViewController.swift */; };
+		04605C592473EFD3008727E8 /* MyNumbers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605C582473EFD3008727E8 /* MyNumbers.storyboard */; };
+		04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C5A2473F09F008727E8 /* MyNumbersViewController.swift */; };
+		8363BBC9B2862E3F2FA4612D /* Pods_Lotto365.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04605BD1247291C5008727E8 /* Lotto365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotto365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04605BD4247291C5008727E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04605BD8247291C5008727E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04605BDB247291C5008727E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04605BDD247291C6008727E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04605BE0247291C6008727E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04605BE2247291C6008727E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04605C1824729A6E008727E8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		04605C1A24729C1F008727E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		04605C1C24729C4C008727E8 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		04605C1E24729DC4008727E8 /* DataBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
+		04605C22247372EA008727E8 /* Lotto365.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotto365.entitlements; sourceTree = "<group>"; };
+		04605C2424737A8D008727E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04605C302473B15F008727E8 /* Dreams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dreams.json; sourceTree = "<group>"; };
+		04605C322473C538008727E8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04605C342473C623008727E8 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
+		04605C362473C654008727E8 /* LTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTView.swift; sourceTree = "<group>"; };
+		04605C382473C6C0008727E8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		04605C3A2473C77F008727E8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		04605C3C2473C964008727E8 /* Analyzes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Analyzes.storyboard; sourceTree = "<group>"; };
+		04605C3E2473CAB8008727E8 /* AnalyzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzesViewController.swift; sourceTree = "<group>"; };
+		04605C402473CBD9008727E8 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		04605C422473CCD2008727E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		04605C442473CF93008727E8 /* RecommendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewController.swift; sourceTree = "<group>"; };
+		04605C462473D016008727E8 /* RecommendedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendedCell.xib; sourceTree = "<group>"; };
+		04605C482473D2FA008727E8 /* RecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
+		04605C4A2473D318008727E8 /* LTTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTTableCell.swift; sourceTree = "<group>"; };
+		04605C4C2473D66D008727E8 /* LottoHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LottoHistoryCell.xib; sourceTree = "<group>"; };
+		04605C4E2473D798008727E8 /* LottoHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoHistoryCell.swift; sourceTree = "<group>"; };
+		04605C502473D9BF008727E8 /* LottoHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LottoHistory.storyboard; sourceTree = "<group>"; };
+		04605C522473DA61008727E8 /* LottoHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoHistoryViewController.swift; sourceTree = "<group>"; };
+		04605C542473E6A4008727E8 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		04605C562473E932008727E8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04605C582473EFD3008727E8 /* MyNumbers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyNumbers.storyboard; sourceTree = "<group>"; };
+		04605C5A2473F09F008727E8 /* MyNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersViewController.swift; sourceTree = "<group>"; };
+		15E104ABC2122FCC48507374 /* Pods-Lotto365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365.debug.xcconfig"; path = "Target Support Files/Pods-Lotto365/Pods-Lotto365.debug.xcconfig"; sourceTree = "<group>"; };
+		50822B85C0B19C099B3B71E8 /* Pods-Lotto365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365.release.xcconfig"; path = "Target Support Files/Pods-Lotto365/Pods-Lotto365.release.xcconfig"; sourceTree = "<group>"; };
+		D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotto365.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8363BBC9B2862E3F2FA4612D /* Pods_Lotto365.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +96,8 @@
 			children = (
 				04605BD3247291C5008727E8 /* Lotto365 */,
 				04605BD2247291C5008727E8 /* Products */,
+				767C76443C63A9EDFB163050 /* Pods */,
+				158043A5E71D340455357725 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +112,9 @@
 		04605BD3247291C5008727E8 /* Lotto365 */ = {
 			isa = PBXGroup;
 			children = (
+				04605BE2247291C6008727E8 /* Info.plist */,
+				04605C2424737A8D008727E8 /* GoogleService-Info.plist */,
+				04605C22247372EA008727E8 /* Lotto365.entitlements */,
 				04605BE82472922D008727E8 /* Application */,
 				04605BE924729260008727E8 /* Common */,
 				04605BEE247292AD008727E8 /* Presentation */,
@@ -61,7 +122,6 @@
 				04605BF224729347008727E8 /* Data */,
 				04605BFA2472956C008727E8 /* Infrastructure */,
 				04605BF1247292FA008727E8 /* Resource */,
-				04605BE2247291C6008727E8 /* Info.plist */,
 			);
 			path = Lotto365;
 			sourceTree = "<group>";
@@ -118,25 +178,34 @@
 		04605BEE247292AD008727E8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				04605BEF247292C7008727E8 /* Scene1 */,
+				04605BEF247292C7008727E8 /* Launch */,
+				04605BFC2472984E008727E8 /* Main */,
+				04605BFD24729889008727E8 /* Analyzes */,
+				04605BFE24729898008727E8 /* DreamSelection */,
+				04605BFF247298B0008727E8 /* RecommendedNumber */,
+				04605C0024729909008727E8 /* History */,
+				04605C0124729918008727E8 /* MyNumbers */,
+				04605C0224729927008727E8 /* Settings */,
+				04605C0424729940008727E8 /* ServiceCenter */,
+				04605C032472992C008727E8 /* Usages */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		04605BEF247292C7008727E8 /* Scene1 */ = {
+		04605BEF247292C7008727E8 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
 				04605BF0247292CE008727E8 /* View */,
 				04605BEA24729268008727E8 /* ViewModel */,
 			);
-			path = Scene1;
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		04605BF0247292CE008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04605BDA247291C5008727E8 /* Main.storyboard */,
-				04605BD8247291C5008727E8 /* ViewController.swift */,
+				04605BDF247291C6008727E8 /* LaunchScreen.storyboard */,
+				04605C1824729A6E008727E8 /* LaunchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,8 +213,8 @@
 		04605BF1247292FA008727E8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				04605C302473B15F008727E8 /* Dreams.json */,
 				04605BDD247291C6008727E8 /* Assets.xcassets */,
-				04605BDF247291C6008727E8 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -163,6 +232,7 @@
 		04605BF32472938B008727E8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				04605C382473C6C0008727E8 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -170,6 +240,7 @@
 		04605BF424729391008727E8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				04605C422473CCD2008727E8 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -177,6 +248,13 @@
 		04605BF52472939C008727E8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				04605C1A24729C1F008727E8 /* BaseViewController.swift */,
+				04605C1C24729C4C008727E8 /* BaseViewModel.swift */,
+				04605C1E24729DC4008727E8 /* DataBinding.swift */,
+				04605C342473C623008727E8 /* RoundableView.swift */,
+				04605C362473C654008727E8 /* LTView.swift */,
+				04605C402473CBD9008727E8 /* BaseNavigationController.swift */,
+				04605C4A2473D318008727E8 /* LTTableCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -224,6 +302,245 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		04605BFC2472984E008727E8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				04605C06247299CB008727E8 /* View */,
+				04605C07247299CF008727E8 /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		04605BFD24729889008727E8 /* Analyzes */ = {
+			isa = PBXGroup;
+			children = (
+				04605C09247299DA008727E8 /* View */,
+				04605C08247299D5008727E8 /* ViewModel */,
+			);
+			path = Analyzes;
+			sourceTree = "<group>";
+		};
+		04605BFE24729898008727E8 /* DreamSelection */ = {
+			isa = PBXGroup;
+			children = (
+				04605C0B247299E2008727E8 /* View */,
+				04605C0A247299DE008727E8 /* ViewModel */,
+			);
+			path = DreamSelection;
+			sourceTree = "<group>";
+		};
+		04605BFF247298B0008727E8 /* RecommendedNumber */ = {
+			isa = PBXGroup;
+			children = (
+				04605C0D247299EA008727E8 /* View */,
+				04605C0C247299E6008727E8 /* ViewModel */,
+			);
+			path = RecommendedNumber;
+			sourceTree = "<group>";
+		};
+		04605C0024729909008727E8 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				04605C0F247299F2008727E8 /* View */,
+				04605C0E247299ED008727E8 /* ViewModel */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		04605C0124729918008727E8 /* MyNumbers */ = {
+			isa = PBXGroup;
+			children = (
+				04605C11247299F9008727E8 /* View */,
+				04605C10247299F5008727E8 /* ViewModel */,
+			);
+			path = MyNumbers;
+			sourceTree = "<group>";
+		};
+		04605C0224729927008727E8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				04605C1324729A01008727E8 /* View */,
+				04605C12247299FD008727E8 /* ViewModel */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		04605C032472992C008727E8 /* Usages */ = {
+			isa = PBXGroup;
+			children = (
+				04605C1724729A11008727E8 /* View */,
+				04605C1624729A0C008727E8 /* ViewModel */,
+			);
+			path = Usages;
+			sourceTree = "<group>";
+		};
+		04605C0424729940008727E8 /* ServiceCenter */ = {
+			isa = PBXGroup;
+			children = (
+				04605C1524729A08008727E8 /* View */,
+				04605C1424729A04008727E8 /* ViewModel */,
+			);
+			path = ServiceCenter;
+			sourceTree = "<group>";
+		};
+		04605C06247299CB008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04605C322473C538008727E8 /* Main.storyboard */,
+				04605C3A2473C77F008727E8 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04605C07247299CF008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C08247299D5008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C09247299DA008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04605C3C2473C964008727E8 /* Analyzes.storyboard */,
+				04605C3E2473CAB8008727E8 /* AnalyzesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04605C0A247299DE008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C0B247299E2008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04605C0C247299E6008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C0D247299EA008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04605C442473CF93008727E8 /* RecommendedViewController.swift */,
+				04605C462473D016008727E8 /* RecommendedCell.xib */,
+				04605C482473D2FA008727E8 /* RecommendedCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04605C0E247299ED008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C0F247299F2008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04605C4C2473D66D008727E8 /* LottoHistoryCell.xib */,
+				04605C4E2473D798008727E8 /* LottoHistoryCell.swift */,
+				04605C502473D9BF008727E8 /* LottoHistory.storyboard */,
+				04605C522473DA61008727E8 /* LottoHistoryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04605C10247299F5008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C11247299F9008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04605C582473EFD3008727E8 /* MyNumbers.storyboard */,
+				04605C5A2473F09F008727E8 /* MyNumbersViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04605C12247299FD008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C1324729A01008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04605C542473E6A4008727E8 /* Settings.storyboard */,
+				04605C562473E932008727E8 /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04605C1424729A04008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C1524729A08008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04605C1624729A0C008727E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04605C1724729A11008727E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		158043A5E71D340455357725 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		767C76443C63A9EDFB163050 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15E104ABC2122FCC48507374 /* Pods-Lotto365.debug.xcconfig */,
+				50822B85C0B19C099B3B71E8 /* Pods-Lotto365.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,9 +548,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04605BE5247291C6008727E8 /* Build configuration list for PBXNativeTarget "Lotto365" */;
 			buildPhases = (
+				A209C53B80F97C1D639F7CA4 /* [CP] Check Pods Manifest.lock */,
 				04605BCD247291C5008727E8 /* Sources */,
 				04605BCE247291C5008727E8 /* Frameworks */,
 				04605BCF247291C5008727E8 /* Resources */,
+				BEF76E2DDDA8DD8E8FB9D039 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,34 +602,126 @@
 			buildActionMask = 2147483647;
 			files = (
 				04605BE1247291C6008727E8 /* LaunchScreen.storyboard in Resources */,
+				04605C4D2473D66D008727E8 /* LottoHistoryCell.xib in Resources */,
+				04605C472473D016008727E8 /* RecommendedCell.xib in Resources */,
+				04605C512473D9BF008727E8 /* LottoHistory.storyboard in Resources */,
+				04605C592473EFD3008727E8 /* MyNumbers.storyboard in Resources */,
+				04605C332473C538008727E8 /* Main.storyboard in Resources */,
 				04605BDE247291C6008727E8 /* Assets.xcassets in Resources */,
-				04605BDC247291C5008727E8 /* Main.storyboard in Resources */,
+				04605C2524737A8D008727E8 /* GoogleService-Info.plist in Resources */,
+				04605C312473B15F008727E8 /* Dreams.json in Resources */,
+				04605C3D2473C964008727E8 /* Analyzes.storyboard in Resources */,
+				04605C552473E6A4008727E8 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A209C53B80F97C1D639F7CA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lotto365-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEF76E2DDDA8DD8E8FB9D039 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lotto365/Pods-Lotto365-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lotto365/Pods-Lotto365-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04605BCD247291C5008727E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04605BD9247291C5008727E8 /* ViewController.swift in Sources */,
+				04605C1F24729DC4008727E8 /* DataBinding.swift in Sources */,
+				04605C352473C623008727E8 /* RoundableView.swift in Sources */,
+				04605C392473C6C0008727E8 /* UIView+Extension.swift in Sources */,
+				04605C372473C654008727E8 /* LTView.swift in Sources */,
 				04605BD5247291C5008727E8 /* AppDelegate.swift in Sources */,
+				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,
+				04605C1D24729C4C008727E8 /* BaseViewModel.swift in Sources */,
+				04605C3B2473C77F008727E8 /* MainViewController.swift in Sources */,
+				04605C452473CF93008727E8 /* RecommendedViewController.swift in Sources */,
+				04605C412473CBD9008727E8 /* BaseNavigationController.swift in Sources */,
+				04605C3F2473CAB8008727E8 /* AnalyzesViewController.swift in Sources */,
+				04605C1924729A6E008727E8 /* LaunchViewController.swift in Sources */,
+				04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */,
+				04605C432473CCD2008727E8 /* Utils.swift in Sources */,
+				04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */,
+				04605C532473DA61008727E8 /* LottoHistoryViewController.swift in Sources */,
+				04605C492473D2FA008727E8 /* RecommendedCell.swift in Sources */,
+				04605C4B2473D318008727E8 /* LTTableCell.swift in Sources */,
+				04605C572473E932008727E8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04605BDA247291C5008727E8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04605BDB247291C5008727E8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04605BDF247291C6008727E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -372,7 +783,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -426,7 +837,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,8 +849,10 @@
 		};
 		04605BE6247291C6008727E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E104ABC2122FCC48507374 /* Pods-Lotto365.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lotto365/Lotto365.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FUF4YMXS3K;
 				INFOPLIST_FILE = Lotto365/Info.plist;
@@ -450,14 +863,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		04605BE7247291C6008727E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50822B85C0B19C099B3B71E8 /* Pods-Lotto365.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lotto365/Lotto365.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FUF4YMXS3K;
 				INFOPLIST_FILE = Lotto365/Info.plist;
@@ -468,7 +883,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
