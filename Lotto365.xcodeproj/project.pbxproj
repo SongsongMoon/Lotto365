@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040028052474BF2A009D3A22 /* MainCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040028042474BF2A009D3A22 /* MainCategoryCell.xib */; };
+		040028072474D3CB009D3A22 /* MainCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040028062474D3CB009D3A22 /* MainCategoryCell.swift */; };
+		0400280A2474D8AB009D3A22 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040028092474D8AB009D3A22 /* Segue.swift */; };
+		0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400280B2474E006009D3A22 /* AnalyzesViewModel.swift */; };
+		0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400280D2475004D009D3A22 /* MainViewModel.swift */; };
+		0400281324753150009D3A22 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400281224753150009D3A22 /* QRScannerViewController.swift */; };
 		04605BD5247291C5008727E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605BD4247291C5008727E8 /* AppDelegate.swift */; };
 		04605BDE247291C6008727E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDD247291C6008727E8 /* Assets.xcassets */; };
 		04605BE1247291C6008727E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDF247291C6008727E8 /* LaunchScreen.storyboard */; };
 		04605C1924729A6E008727E8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1824729A6E008727E8 /* LaunchViewController.swift */; };
 		04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1A24729C1F008727E8 /* BaseViewController.swift */; };
-		04605C1D24729C4C008727E8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1C24729C4C008727E8 /* BaseViewModel.swift */; };
 		04605C1F24729DC4008727E8 /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1E24729DC4008727E8 /* DataBinding.swift */; };
 		04605C2524737A8D008727E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04605C2424737A8D008727E8 /* GoogleService-Info.plist */; };
 		04605C312473B15F008727E8 /* Dreams.json in Resources */ = {isa = PBXBuildFile; fileRef = 04605C302473B15F008727E8 /* Dreams.json */; };
@@ -41,6 +46,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040028042474BF2A009D3A22 /* MainCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCategoryCell.xib; sourceTree = "<group>"; };
+		040028062474D3CB009D3A22 /* MainCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryCell.swift; sourceTree = "<group>"; };
+		040028092474D8AB009D3A22 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		0400280B2474E006009D3A22 /* AnalyzesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzesViewModel.swift; sourceTree = "<group>"; };
+		0400280D2475004D009D3A22 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0400281224753150009D3A22 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		04605BD1247291C5008727E8 /* Lotto365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotto365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04605BD4247291C5008727E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04605BDD247291C6008727E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,7 +59,6 @@
 		04605BE2247291C6008727E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04605C1824729A6E008727E8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		04605C1A24729C1F008727E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		04605C1C24729C4C008727E8 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		04605C1E24729DC4008727E8 /* DataBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
 		04605C22247372EA008727E8 /* Lotto365.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotto365.entitlements; sourceTree = "<group>"; };
 		04605C2424737A8D008727E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -91,6 +101,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040028082474D892009D3A22 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				040028092474D8AB009D3A22 /* Segue.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		0400280F24753118009D3A22 /* QRScanner */ = {
+			isa = PBXGroup;
+			children = (
+				040028102475312A009D3A22 /* View */,
+				0400281124753130009D3A22 /* ViewModel */,
+			);
+			path = QRScanner;
+			sourceTree = "<group>";
+		};
+		040028102475312A009D3A22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0400281224753150009D3A22 /* QRScannerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0400281124753130009D3A22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		04605BC8247291C5008727E8 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +179,7 @@
 		04605BE924729260008727E8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				040028082474D892009D3A22 /* Constant */,
 				04605BF52472939C008727E8 /* Base */,
 				04605BF424729391008727E8 /* Utils */,
 				04605BF32472938B008727E8 /* Extension */,
@@ -180,10 +223,11 @@
 			children = (
 				04605BEF247292C7008727E8 /* Launch */,
 				04605BFC2472984E008727E8 /* Main */,
+				0400280F24753118009D3A22 /* QRScanner */,
 				04605BFD24729889008727E8 /* Analyzes */,
 				04605BFE24729898008727E8 /* DreamSelection */,
 				04605BFF247298B0008727E8 /* RecommendedNumber */,
-				04605C0024729909008727E8 /* History */,
+				04605C0024729909008727E8 /* History(Hide) */,
 				04605C0124729918008727E8 /* MyNumbers */,
 				04605C0224729927008727E8 /* Settings */,
 				04605C0424729940008727E8 /* ServiceCenter */,
@@ -249,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				04605C1A24729C1F008727E8 /* BaseViewController.swift */,
-				04605C1C24729C4C008727E8 /* BaseViewModel.swift */,
 				04605C1E24729DC4008727E8 /* DataBinding.swift */,
 				04605C342473C623008727E8 /* RoundableView.swift */,
 				04605C362473C654008727E8 /* LTView.swift */,
@@ -338,13 +381,13 @@
 			path = RecommendedNumber;
 			sourceTree = "<group>";
 		};
-		04605C0024729909008727E8 /* History */ = {
+		04605C0024729909008727E8 /* History(Hide) */ = {
 			isa = PBXGroup;
 			children = (
 				04605C0F247299F2008727E8 /* View */,
 				04605C0E247299ED008727E8 /* ViewModel */,
 			);
-			path = History;
+			path = "History(Hide)";
 			sourceTree = "<group>";
 		};
 		04605C0124729918008727E8 /* MyNumbers */ = {
@@ -388,6 +431,8 @@
 			children = (
 				04605C322473C538008727E8 /* Main.storyboard */,
 				04605C3A2473C77F008727E8 /* MainViewController.swift */,
+				040028042474BF2A009D3A22 /* MainCategoryCell.xib */,
+				040028062474D3CB009D3A22 /* MainCategoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,6 +440,7 @@
 		04605C07247299CF008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0400280D2475004D009D3A22 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -402,6 +448,7 @@
 		04605C08247299D5008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0400280B2474E006009D3A22 /* AnalyzesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -609,6 +656,7 @@
 				04605C332473C538008727E8 /* Main.storyboard in Resources */,
 				04605BDE247291C6008727E8 /* Assets.xcassets in Resources */,
 				04605C2524737A8D008727E8 /* GoogleService-Info.plist in Resources */,
+				040028052474BF2A009D3A22 /* MainCategoryCell.xib in Resources */,
 				04605C312473B15F008727E8 /* Dreams.json in Resources */,
 				04605C3D2473C964008727E8 /* Analyzes.storyboard in Resources */,
 				04605C552473E6A4008727E8 /* Settings.storyboard in Resources */,
@@ -703,7 +751,8 @@
 				04605C372473C654008727E8 /* LTView.swift in Sources */,
 				04605BD5247291C5008727E8 /* AppDelegate.swift in Sources */,
 				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,
-				04605C1D24729C4C008727E8 /* BaseViewModel.swift in Sources */,
+				0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */,
+				0400281324753150009D3A22 /* QRScannerViewController.swift in Sources */,
 				04605C3B2473C77F008727E8 /* MainViewController.swift in Sources */,
 				04605C452473CF93008727E8 /* RecommendedViewController.swift in Sources */,
 				04605C412473CBD9008727E8 /* BaseNavigationController.swift in Sources */,
@@ -713,9 +762,12 @@
 				04605C432473CCD2008727E8 /* Utils.swift in Sources */,
 				04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */,
 				04605C532473DA61008727E8 /* LottoHistoryViewController.swift in Sources */,
+				040028072474D3CB009D3A22 /* MainCategoryCell.swift in Sources */,
 				04605C492473D2FA008727E8 /* RecommendedCell.swift in Sources */,
 				04605C4B2473D318008727E8 /* LTTableCell.swift in Sources */,
+				0400280A2474D8AB009D3A22 /* Segue.swift in Sources */,
 				04605C572473E932008727E8 /* SettingsViewController.swift in Sources */,
+				0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
