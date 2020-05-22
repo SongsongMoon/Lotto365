@@ -9,10 +9,12 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import GoogleMobileAds
 
 class AnalyzesViewController: BaseViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var bannerView: GADBannerView!
     
     private var analyzesViewModel = AnalyzesViewModel()
     private let disposeBag = DisposeBag()
@@ -20,6 +22,8 @@ class AnalyzesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureAdmobBanner()
+        
         tableView.register(MainCategoryCell.self, forCellReuseIdentifier: MainCategoryCell.ID)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
@@ -36,7 +40,14 @@ class AnalyzesViewController: BaseViewController {
                                             }).disposed(by: sSelf.disposeBag)
         }.disposed(by: disposeBag)
     }
+}
 
+extension AnalyzesViewController {
+    private func configureAdmobBanner() {
+        bannerView.rootViewController = self
+        bannerView.adUnitID = Key.AD_BANNER_ID
+        bannerView.load(GADRequest())
+    }
 }
 
 extension AnalyzesViewController: UITableViewDelegate {

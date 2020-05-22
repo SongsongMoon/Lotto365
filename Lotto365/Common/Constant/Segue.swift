@@ -15,5 +15,5 @@ struct Segue {
     static let MAIN_TO_SETTINGS = "mainToSettings"
     
     static let ANALYZES_TO_DREAM_SELECTION = "analyzesToDreamSelection"
-    static let ANALYZES_TO_RECOMMENDED_NUMBER = "analyzesToRecommendedNumber"
+    static let ANALYZES_TO_RANDOM_GENERATOR = "analyzesToRandomGenerator"
 }

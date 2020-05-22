@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class MyNumbersViewController: BaseViewController {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureAdmobBanner()
+        
         tableView.register(RecommendedCell.self, forCellReuseIdentifier: RecommendedCell.ID)
+    }
+}
+
+extension MyNumbersViewController {
+    private func configureAdmobBanner() {
+        bannerView.rootViewController = self
+        bannerView.adUnitID = Key.AD_BANNER_ID
+        bannerView.load(GADRequest())
     }
 }
 

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--랜덤 번호 생성-->
+        <scene sceneID="eG3-6Y-zVQ">
+            <objects>
+                <viewController storyboardIdentifier="RandomGeneratorViewController" id="Rgo-E7-Kam" customClass="RandomGeneratorViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jrj-sS-woq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rl-EZ-4zQ" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="88" width="320" height="53"/>
+                                <color key="backgroundColor" name="background"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="ANb-2Y-4fX"/>
+                                    <constraint firstAttribute="height" constant="53" id="UCS-mf-fq4"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PxM-yq-Hqi">
+                                <rect key="frame" x="0.0" y="165" width="414" height="673"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TA4-yo-zXz">
+                                    <size key="itemSize" width="71" height="64"/>
+                                    <size key="headerReferenceSize" width="0.0" height="60"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EW5-b0-Pnz">
+                                        <rect key="frame" x="0.0" y="60" width="71" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nAG-Mv-q6e">
+                                            <rect key="frame" x="0.0" y="0.0" width="71" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="71" height="64"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="LottoBallHeaderView" id="Zov-Og-6v6" customClass="LottoBallHeaderView" customModule="Lotto365" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rgo-E7-Kam" id="6JE-Xc-Rxz"/>
+                                    <outlet property="delegate" destination="Rgo-E7-Kam" id="vvh-eU-z43"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="7rl-EZ-4zQ" firstAttribute="centerX" secondItem="jrj-sS-woq" secondAttribute="centerX" id="FRg-t2-d0P"/>
+                            <constraint firstItem="uww-v7-ipS" firstAttribute="trailing" secondItem="PxM-yq-Hqi" secondAttribute="trailing" id="IgV-pC-zUo"/>
+                            <constraint firstItem="uww-v7-ipS" firstAttribute="bottom" secondItem="PxM-yq-Hqi" secondAttribute="bottom" constant="24" id="J0H-eK-ZUO"/>
+                            <constraint firstItem="PxM-yq-Hqi" firstAttribute="leading" secondItem="uww-v7-ipS" secondAttribute="leading" id="RBq-Kd-ZGP"/>
+                            <constraint firstItem="7rl-EZ-4zQ" firstAttribute="top" secondItem="uww-v7-ipS" secondAttribute="top" id="Rea-5Z-HKH"/>
+                            <constraint firstItem="PxM-yq-Hqi" firstAttribute="top" secondItem="7rl-EZ-4zQ" secondAttribute="bottom" constant="24" id="uKX-Rn-MKd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uww-v7-ipS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="랜덤 번호 생성" id="XfF-AS-Zw2">
+                        <barButtonItem key="rightBarButtonItem" title="생성하기" id="RgT-XS-hQ9">
+                            <connections>
+                                <action selector="didTouchedCreation:" destination="Rgo-E7-Kam" id="FMu-n4-Yhf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="bannerView" destination="7rl-EZ-4zQ" id="Zpe-n5-S3h"/>
+                        <outlet property="collectionView" destination="PxM-yq-Hqi" id="nzX-AF-NcO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6G-fO-hVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="147.99107142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="background">
+            <color red="0.090196078431372548" green="0.11372549019607843" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

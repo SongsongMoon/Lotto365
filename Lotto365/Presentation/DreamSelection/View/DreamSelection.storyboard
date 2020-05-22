@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--꿈해몽-->
+        <scene sceneID="Npw-gd-bKu">
+            <objects>
+                <viewController storyboardIdentifier="DreamSelectionViewController" id="ziH-JG-ERD" customClass="DreamSelectionViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3PB-6p-wXT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etv-Py-Ft1" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="44" width="320" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Nve-Qf-w68"/>
+                                    <constraint firstAttribute="height" constant="53" id="SHU-KL-OiA"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqL-JE-dIh">
+                                <rect key="frame" x="188.5" y="433" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="Etv-Py-Ft1" firstAttribute="centerX" secondItem="3PB-6p-wXT" secondAttribute="centerX" id="4Vs-N2-li7"/>
+                            <constraint firstItem="vqL-JE-dIh" firstAttribute="centerX" secondItem="3PB-6p-wXT" secondAttribute="centerX" id="6vb-61-eyG"/>
+                            <constraint firstItem="Etv-Py-Ft1" firstAttribute="top" secondItem="8E7-1Z-VHT" secondAttribute="top" id="MG0-n6-zzM"/>
+                            <constraint firstItem="vqL-JE-dIh" firstAttribute="centerY" secondItem="3PB-6p-wXT" secondAttribute="centerY" id="Rzz-u4-K1q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8E7-1Z-VHT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="꿈해몽" id="zmy-2g-AHk"/>
+                    <connections>
+                        <outlet property="bannerView" destination="Etv-Py-Ft1" id="MS8-lq-J65"/>
+                        <outlet property="doneBtn" destination="vqL-JE-dIh" id="nnE-ic-jKu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7C-zB-6ot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-523" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="background">
+            <color red="0.090196078431372548" green="0.11372549019607843" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

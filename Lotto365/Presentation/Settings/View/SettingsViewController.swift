@@ -10,10 +10,23 @@ import UIKit
 
 class SettingsViewController: BaseViewController {
 
+    @IBOutlet var versionLb: UILabel!
+    
+    private var currentVersion: String {
+        guard let dictionary = Bundle.main.infoDictionary,
+            let version = dictionary["CFBundleShortVersionString"] as? String else { return "0" }
+        
+        #if DEBUG
+        return "debug " + version
+        #else
+        return version
+        #endif
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        versionLb.text = currentVersion
     }
     
 

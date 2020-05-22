@@ -197,6 +197,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="xvR-sE-HR0"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="versionLb" destination="Uwg-dR-RZL" id="1qn-2X-sUe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGM-1p-h1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -25,7 +25,7 @@ extension AnalyzesViewModel {
         var segue: String {
             switch self {
             case .dream:    return Segue.ANALYZES_TO_DREAM_SELECTION
-            case .random:   return Segue.ANALYZES_TO_RECOMMENDED_NUMBER
+            case .random:   return Segue.ANALYZES_TO_RANDOM_GENERATOR
             }
         }
     }
