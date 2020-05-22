@@ -7,28 +7,63 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxDataSources
 import GoogleMobileAds
 
 class RandomGeneratorViewController: BaseViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var bannerView: GADBannerView!
+    @IBOutlet var createBtn: UIBarButtonItem!
     
+    private let disposeBag = DisposeBag()
     private let maxCntFixedNumber = 5
     private let maxCntExcludedNumber = 35
     private var fixedNumberList = Set<Int>()
     private var excludedNumberList = Set<Int>()
     
+    private let viewModel = RandomGeneratorViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureAdmobBanner()
-        
-        collectionView.register(LottoBallCell.self,
-                                forCellWithReuseIdentifier: LottoBallCell.ID)
-        collectionView.register(LottoBallHeaderView.self,
-                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                withReuseIdentifier: LottoBallHeaderView.ID)
+
+//        collectionView.register(LottoBallCell.self,
+//                                forCellWithReuseIdentifier: LottoBallCell.ID)
+//        collectionView.register(LottoBallHeaderView.self,
+//                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+//                                withReuseIdentifier: LottoBallHeaderView.ID)
         collectionView.allowsMultipleSelection = true
+        
+        let dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfCustomData>(
+            configureCell: { dataSource, tableView, indexPath, item in
+                let cell = tableView.dequeueReusableCell(withReuseIdentifier: LottoBallCell.ID, for: indexPath) as! LottoBallCell
+                cell.numberLb.text = "\(item)"
+                
+                return cell
+        })
+        
+        let sections = [
+            SectionOfCustomData(header: "고정번호", items: Array(1...45)),
+            SectionOfCustomData(header: "제외번호", items: Array(1...45))
+        ]
+        
+        Observable.just(sections)
+            .bind(to: collectionView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+        collectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        let input = RandomGeneratorViewModel.Input(
+            lottoBallCellTrigger: collectionView.rx.itemSelected.asDriver(),
+            createTrigger: createBtn.rx.tap.asDriver()
+        )
+        
+        let output = viewModel.bind(input: input)
+        
+        
     }
     
     @IBAction func didTouchedCreation(_ sender: UIBarButtonItem) {

@@ -51,6 +51,7 @@
 		04826FD624776E96003AFEA7 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FD524776E96003AFEA7 /* UIColor + Extension.swift */; };
 		04826FD824777544003AFEA7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FD724777544003AFEA7 /* Toast.swift */; };
 		04826FDA247785DF003AFEA7 /* RandomGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FD9247785DF003AFEA7 /* RandomGeneratorViewModel.swift */; };
+		04826FDD2477C970003AFEA7 /* RandomGeneratorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FDC2477C970003AFEA7 /* RandomGeneratorDatasource.swift */; };
 		048AEBF824762A24009130DA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AEBF724762A24009130DA /* Key.swift */; };
 		048AEBFA24762B57009130DA /* DreamSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEBF924762B57009130DA /* DreamSelection.storyboard */; };
 		048AEBFC24762B92009130DA /* DreamSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AEBFB24762B92009130DA /* DreamSelectionViewController.swift */; };
@@ -108,6 +109,7 @@
 		04826FD524776E96003AFEA7 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		04826FD724777544003AFEA7 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		04826FD9247785DF003AFEA7 /* RandomGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorViewModel.swift; sourceTree = "<group>"; };
+		04826FDC2477C970003AFEA7 /* RandomGeneratorDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorDatasource.swift; sourceTree = "<group>"; };
 		048AEBF724762A24009130DA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		048AEBF924762B57009130DA /* DreamSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DreamSelection.storyboard; sourceTree = "<group>"; };
 		048AEBFB24762B92009130DA /* DreamSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSelectionViewController.swift; sourceTree = "<group>"; };
@@ -636,6 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				04826FD9247785DF003AFEA7 /* RandomGeneratorViewModel.swift */,
+				04826FDC2477C970003AFEA7 /* RandomGeneratorDatasource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Lotto365/Pods-Lotto365-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
@@ -781,6 +785,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -792,6 +797,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
@@ -801,6 +807,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -842,6 +849,7 @@
 				04826FD624776E96003AFEA7 /* UIColor + Extension.swift in Sources */,
 				04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */,
 				04605C432473CCD2008727E8 /* Utils.swift in Sources */,
+				04826FDD2477C970003AFEA7 /* RandomGeneratorDatasource.swift in Sources */,
 				04826FCA2477578A003AFEA7 /* RandomGeneratorViewController.swift in Sources */,
 				04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */,
 				04605C532473DA61008727E8 /* LottoHistoryViewController.swift in Sources */,

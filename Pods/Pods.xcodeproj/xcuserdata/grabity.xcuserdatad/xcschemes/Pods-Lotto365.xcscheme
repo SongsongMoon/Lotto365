@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A05EB4BE6471D3DF8AAE8D371C8E0D0F"
+               BlueprintIdentifier = "A8DE974490E79F88CC68A1574E696DD1"
                BuildableName = "Pods_Lotto365.framework"
                BlueprintName = "Pods-Lotto365"
                ReferencedContainer = "container:Pods.xcodeproj">
