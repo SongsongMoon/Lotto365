@@ -30,40 +30,64 @@ class RandomGeneratorViewController: BaseViewController {
         
         configureAdmobBanner()
 
-//        collectionView.register(LottoBallCell.self,
-//                                forCellWithReuseIdentifier: LottoBallCell.ID)
-//        collectionView.register(LottoBallHeaderView.self,
-//                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-//                                withReuseIdentifier: LottoBallHeaderView.ID)
         collectionView.allowsMultipleSelection = true
+        collectionView.rx.setDelegate(self).disposed(by: disposeBag)
         
-        let dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfCustomData>(
-            configureCell: { dataSource, tableView, indexPath, item in
-                let cell = tableView.dequeueReusableCell(withReuseIdentifier: LottoBallCell.ID, for: indexPath) as! LottoBallCell
-                cell.numberLb.text = "\(item)"
+        let dataSource = RxCollectionViewSectionedReloadDataSource<LottoFilteringSectionModel>(
+            configureCell: { (datasource, collectionView, indexPath, item) -> UICollectionViewCell in
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LottoBallCell.ID, for: indexPath) as! LottoBallCell
+                cell.numberLb.text = "\(item.ballNumber)"
+                
+                let fixedNumberColor = UIColor(hex: 0x4A89DC, alpha: 1.0)
+                let excludedNumberColor = UIColor(hex: 0xDA4453, alpha: 1.0)
+
+                if item.section == .fixed && item.isSelected {
+                    cell.backgroundColor = fixedNumberColor
+                }
+                else if item.section == .fixed && item.isSelected == false {
+                    cell.backgroundColor = .clear
+                }
+                
+                if item.section == .excluded && item.isSelected {
+                    cell.backgroundColor = excludedNumberColor
+                }
+                else if item.section == .excluded && item.isSelected {
+                    cell.backgroundColor = .clear
+                }
                 
                 return cell
+        }, configureSupplementaryView: { (datasource, collectionView, type, indexPath) -> UICollectionReusableView in
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
+                                                                         withReuseIdentifier: LottoBallHeaderView.ID,
+                                                                         for: indexPath) as! LottoBallHeaderView
+            guard type == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView() }
+            header.headerLb.text = datasource.sectionModels[indexPath.section].header
+            return header
         })
         
-        let sections = [
-            SectionOfCustomData(header: "고정번호", items: Array(1...45)),
-            SectionOfCustomData(header: "제외번호", items: Array(1...45))
-        ]
-        
-        Observable.just(sections)
-            .bind(to: collectionView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
-        
-        collectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        collectionView.rx.modelSelected(LottoNumber.self).asObservable()
+            .subscribe(onNext: { lottoNumber in
+                print("🔸on selected model : \(lottoNumber.ballNumber)")
+            }).disposed(by: disposeBag)
         
         let input = RandomGeneratorViewModel.Input(
             lottoBallCellTrigger: collectionView.rx.itemSelected.asDriver(),
             createTrigger: createBtn.rx.tap.asDriver()
         )
         
+        
         let output = viewModel.bind(input: input)
         
+        output.sectionModels.asObservable()
+            .bind(to: collectionView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        output.error
+            .drive(onNext: { print("🔸🔴\($0.localizedDescription)") })
+            .disposed(by: disposeBag)
         
+        output.insertSelectionCell
+            .drive(onNext: { print("🔸 selection cell : \($0)")})
+            .disposed(by: disposeBag)
     }
     
     @IBAction func didTouchedCreation(_ sender: UIBarButtonItem) {
@@ -128,47 +152,47 @@ extension RandomGeneratorViewController: UICollectionViewDataSource {
     }
 }
 
-extension RandomGeneratorViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let lottoNumber = indexPath.row + 1
-        if indexPath.section == 0 {
-            if fixedNumberList.contains(lottoNumber) == false {
-                guard fixedNumberList.count < maxCntFixedNumber else {
-                    showToast(message: "고정번호는 최대 5개까지 선택할 수 있습니다.")
-                    return
-                }
-                guard excludedNumberList.contains(lottoNumber) == false else {
-                    showToast(message: "제외번호에서 선택한 숫자는 고정번호를 선택할 수 없습니다.")
-                    return
-                }
-                
-                fixedNumberList.insert(lottoNumber)
-            }
-            else {
-                fixedNumberList.remove(lottoNumber)
-            }
-        }
-        else {
-            if excludedNumberList.contains(lottoNumber) == false {
-                guard excludedNumberList.count < maxCntExcludedNumber else {
-                    showToast(message: "제외번호는 최대 35개까지 선택할 수 있습니다.")
-                    return
-                }
-                guard fixedNumberList.contains(lottoNumber) == false else {
-                    showToast(message: "고정번호에서 선택한 숫자는 제외번호를 선택할 수 없습니다.")
-                    return
-                }
-                
-                excludedNumberList.insert(lottoNumber)
-            }
-            else {
-                excludedNumberList.remove(lottoNumber)
-            }
-        }
-        
-        collectionView.reloadData()
-    }
-}
+//extension RandomGeneratorViewController: UICollectionViewDelegate {
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let lottoNumber = indexPath.row + 1
+//        if indexPath.section == 0 {
+//            if fixedNumberList.contains(lottoNumber) == false {
+//                guard fixedNumberList.count < maxCntFixedNumber else {
+//                    showToast(message: "고정번호는 최대 5개까지 선택할 수 있습니다.")
+//                    return
+//                }
+//                guard excludedNumberList.contains(lottoNumber) == false else {
+//                    showToast(message: "제외번호에서 선택한 숫자는 고정번호를 선택할 수 없습니다.")
+//                    return
+//                }
+//
+//                fixedNumberList.insert(lottoNumber)
+//            }
+//            else {
+//                fixedNumberList.remove(lottoNumber)
+//            }
+//        }
+//        else {
+//            if excludedNumberList.contains(lottoNumber) == false {
+//                guard excludedNumberList.count < maxCntExcludedNumber else {
+//                    showToast(message: "제외번호는 최대 35개까지 선택할 수 있습니다.")
+//                    return
+//                }
+//                guard fixedNumberList.contains(lottoNumber) == false else {
+//                    showToast(message: "고정번호에서 선택한 숫자는 제외번호를 선택할 수 없습니다.")
+//                    return
+//                }
+//
+//                excludedNumberList.insert(lottoNumber)
+//            }
+//            else {
+//                excludedNumberList.remove(lottoNumber)
+//            }
+//        }
+//
+//        collectionView.reloadData()
+//    }
+//}
 
 extension RandomGeneratorViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

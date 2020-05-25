@@ -10,15 +10,26 @@ import Foundation
 import RxDataSources
 
 
-struct SectionOfCustomData {
+struct LottoNumber {
+    enum Section {
+        case fixed
+        case excluded
+    }
+    let ballNumber: Int
+    let section: Section
+    var isSelected = false
+}
+
+
+struct LottoFilteringSectionModel {
   var header: String
   var items: [Item]
 }
 
-extension SectionOfCustomData: SectionModelType {
-  typealias Item = Int
+extension LottoFilteringSectionModel: SectionModelType {
+  typealias Item = LottoNumber
 
-   init(original: SectionOfCustomData, items: [Item]) {
+   init(original: LottoFilteringSectionModel, items: [Item]) {
     self = original
     self.items = items
   }

@@ -41,6 +41,8 @@ class MainViewController: BaseViewController {
                     }).disposed(by: sSelf.disposeBag)
         }.disposed(by: disposeBag)
         
+        
+        
         qrBtn.rx.tap
             .bind(onNext: { [weak self] in
                 self?.moveToQRCaptureController()
