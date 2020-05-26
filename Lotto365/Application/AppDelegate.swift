@@ -13,18 +13,33 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var navigator: BaseNavigatorInterface?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        ApplicationContext.initialize()
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let navigationController = BaseNavigationController(rootViewController: UIViewController())
+        window.rootViewController = navigationController
+        navigator = MainNavigator()
+        navigator?.pushViewController(from: navigationController.topViewController!)
+        
+        self.window = window
+        self.window?.makeKeyAndVisible()
+        
+        //MARK: - configure firebase
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["98dcf8cc42150a49a4328e8870307e3e"]
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        //MARK: - APNs
         Messaging.messaging().delegate = self
         UNUserNotificationCenter.current().delegate = self
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { _, _ in }
         application.registerForRemoteNotifications()
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         
         return true
     }

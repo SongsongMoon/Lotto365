@@ -28,7 +28,7 @@ class AnalyzesViewController: BaseViewController {
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
         let output = analyzesViewModel.bind(input: AnalyzesViewModel.Input())
-        output.categoryList
+        output.categories
             .bind(to: tableView.rx.items(cellIdentifier: MainCategoryCell.ID,
                                          cellType: MainCategoryCell.self)) {
                                             [weak self] (idx, data, cell) in

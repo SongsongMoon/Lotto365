@@ -31,7 +31,7 @@ extension AnalyzesViewModel {
     }
 }
 
-class AnalyzesViewModel {
+class AnalyzesViewModel: BaseViewModel {
 }
 
 extension AnalyzesViewModel: DataBinding {
@@ -44,6 +44,6 @@ extension AnalyzesViewModel: DataBinding {
     }
     
     struct Output {
-        let categoryList = Observable.of([Category.dream, .random])
+        let categories = Observable.of([Category.dream, .random])
     }
 }

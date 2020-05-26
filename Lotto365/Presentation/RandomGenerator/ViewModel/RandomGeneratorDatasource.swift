@@ -9,25 +9,13 @@
 import Foundation
 import RxDataSources
 
-
-struct LottoNumber {
-    enum Section {
-        case fixed
-        case excluded
-    }
-    let ballNumber: Int
-    let section: Section
-    var isSelected = false
-}
-
-
 struct LottoFilteringSectionModel {
   var header: String
   var items: [Item]
 }
 
 extension LottoFilteringSectionModel: SectionModelType {
-  typealias Item = LottoNumber
+  typealias Item = RandomFilter
 
    init(original: LottoFilteringSectionModel, items: [Item]) {
     self = original

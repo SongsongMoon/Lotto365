@@ -64,11 +64,7 @@
                         <viewLayoutGuide key="safeArea" id="uww-v7-ipS"/>
                     </view>
                     <navigationItem key="navigationItem" title="랜덤 번호 생성" id="XfF-AS-Zw2">
-                        <barButtonItem key="rightBarButtonItem" title="생성하기" id="RgT-XS-hQ9">
-                            <connections>
-                                <action selector="didTouchedCreation:" destination="Rgo-E7-Kam" id="FMu-n4-Yhf"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="생성하기" id="RgT-XS-hQ9"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>

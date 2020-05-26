@@ -12,7 +12,7 @@
         <!--Lotto 365-->
         <scene sceneID="Bcq-mb-cew">
             <objects>
-                <viewController id="ff5-62-Fcz" customClass="MainViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="ff5-62-Fcz" customClass="MainViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tDx-8n-e51">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

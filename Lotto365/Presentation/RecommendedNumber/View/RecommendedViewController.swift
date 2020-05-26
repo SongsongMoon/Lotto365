@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import GoogleMobileAds
 
-class RecommendedViewController: UIViewController {
+class RecommendedViewController: BaseViewController {
 
     @IBOutlet var tableview: UITableView!
     @IBOutlet var bannerView: GADBannerView!

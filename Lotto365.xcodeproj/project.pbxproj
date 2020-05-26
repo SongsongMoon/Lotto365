@@ -58,6 +58,19 @@
 		048AEBFE24762BFA009130DA /* Recommended.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEBFD24762BFA009130DA /* Recommended.storyboard */; };
 		048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */; };
 		048AEC0524768F6E009130DA /* Random.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEC0424768F6E009130DA /* Random.storyboard */; };
+		04CB8DA2247CC88A0026C3E3 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA1247CC88A0026C3E3 /* Lotto.swift */; };
+		04CB8DA4247CC8C40026C3E3 /* RandomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA3247CC8C40026C3E3 /* RandomFilter.swift */; };
+		04CB8DA6247CC9E90026C3E3 /* LottoBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */; };
+		04CB8DA8247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA7247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift */; };
+		04CB8DAA247CE8B90026C3E3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA9247CE8B90026C3E3 /* BaseViewModel.swift */; };
+		04CB8DAC247CE8EF0026C3E3 /* BaseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DAB247CE8EF0026C3E3 /* BaseNavigator.swift */; };
+		04CB8DAE247CE91B0026C3E3 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */; };
+		04CB8DB2247D0A1C0026C3E3 /* AbstractAppliccationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DB1247D0A1C0026C3E3 /* AbstractAppliccationContext.swift */; };
+		04CB8DB4247D0AF40026C3E3 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DB3247D0AF40026C3E3 /* Assembler.swift */; };
+		04CB8DB7247D0CA10026C3E3 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DB6247D0CA10026C3E3 /* ApplicationContext.swift */; };
+		04CB8DB9247D0ED00026C3E3 /* AbstractApplicationContext + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DB8247D0ED00026C3E3 /* AbstractApplicationContext + Extension.swift */; };
+		04CB8DBB247D105D0026C3E3 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */; };
+		04CB8DBD247D17F50026C3E3 /* MainApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DBC247D17F50026C3E3 /* MainApplicationContext.swift */; };
 		8363BBC9B2862E3F2FA4612D /* Pods_Lotto365.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +129,19 @@
 		048AEBFD24762BFA009130DA /* Recommended.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recommended.storyboard; sourceTree = "<group>"; };
 		048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSelectionViewModel.swift; sourceTree = "<group>"; };
 		048AEC0424768F6E009130DA /* Random.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Random.storyboard; sourceTree = "<group>"; };
+		04CB8DA1247CC88A0026C3E3 /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
+		04CB8DA3247CC8C40026C3E3 /* RandomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFilter.swift; sourceTree = "<group>"; };
+		04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoBall.swift; sourceTree = "<group>"; };
+		04CB8DA7247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorCoordinator.swift; sourceTree = "<group>"; };
+		04CB8DA9247CE8B90026C3E3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		04CB8DAB247CE8EF0026C3E3 /* BaseNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigator.swift; sourceTree = "<group>"; };
+		04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		04CB8DB1247D0A1C0026C3E3 /* AbstractAppliccationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractAppliccationContext.swift; sourceTree = "<group>"; };
+		04CB8DB3247D0AF40026C3E3 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		04CB8DB6247D0CA10026C3E3 /* ApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
+		04CB8DB8247D0ED00026C3E3 /* AbstractApplicationContext + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbstractApplicationContext + Extension.swift"; sourceTree = "<group>"; };
+		04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		04CB8DBC247D17F50026C3E3 /* MainApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApplicationContext.swift; sourceTree = "<group>"; };
 		15E104ABC2122FCC48507374 /* Pods-Lotto365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365.debug.xcconfig"; path = "Target Support Files/Pods-Lotto365/Pods-Lotto365.debug.xcconfig"; sourceTree = "<group>"; };
 		50822B85C0B19C099B3B71E8 /* Pods-Lotto365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365.release.xcconfig"; path = "Target Support Files/Pods-Lotto365/Pods-Lotto365.release.xcconfig"; sourceTree = "<group>"; };
 		D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotto365.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				04605BD4247291C5008727E8 /* AppDelegate.swift */,
+				04CB8DB6247D0CA10026C3E3 /* ApplicationContext.swift */,
+				04CB8DBC247D17F50026C3E3 /* MainApplicationContext.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -212,6 +240,7 @@
 		04605BE924729260008727E8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				04CB8DB0247D0A0D0026C3E3 /* IoC */,
 				040028082474D892009D3A22 /* Constant */,
 				04605BF52472939C008727E8 /* Base */,
 				04605BF424729391008727E8 /* Utils */,
@@ -254,6 +283,7 @@
 		04605BEE247292AD008727E8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				04605C402473CBD9008727E8 /* BaseNavigationController.swift */,
 				04605BEF247292C7008727E8 /* Launch */,
 				04605BFC2472984E008727E8 /* Main */,
 				0400280F24753118009D3A22 /* QRScanner */,
@@ -320,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				04605C422473CCD2008727E8 /* Utils.swift */,
+				04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -327,14 +358,11 @@
 		04605BF52472939C008727E8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				04CB8DAF247CE95D0026C3E3 /* View */,
+				04CB8DAB247CE8EF0026C3E3 /* BaseNavigator.swift */,
 				04605C1A24729C1F008727E8 /* BaseViewController.swift */,
+				04CB8DA9247CE8B90026C3E3 /* BaseViewModel.swift */,
 				04605C1E24729DC4008727E8 /* DataBinding.swift */,
-				04605C342473C623008727E8 /* RoundableView.swift */,
-				04605C362473C654008727E8 /* LTView.swift */,
-				04605C402473CBD9008727E8 /* BaseNavigationController.swift */,
-				04605C4A2473D318008727E8 /* LTTableCell.swift */,
-				04826FCF24775BAB003AFEA7 /* LTCollectionViewCell.swift */,
-				04826FD724777544003AFEA7 /* Toast.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -342,6 +370,9 @@
 		04605BF6247293DE008727E8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */,
+				04CB8DA1247CC88A0026C3E3 /* Lotto.swift */,
+				04CB8DA3247CC8C40026C3E3 /* RandomFilter.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -387,6 +418,7 @@
 			children = (
 				04605C06247299CB008727E8 /* View */,
 				04605C07247299CF008727E8 /* ViewModel */,
+				04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -617,6 +649,7 @@
 			children = (
 				048AEC0224768F62009130DA /* View */,
 				048AEC0324768F65009130DA /* ViewModel */,
+				04CB8DA7247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift */,
 			);
 			path = RandomGenerator;
 			sourceTree = "<group>";
@@ -641,6 +674,28 @@
 				04826FDC2477C970003AFEA7 /* RandomGeneratorDatasource.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04CB8DAF247CE95D0026C3E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04605C342473C623008727E8 /* RoundableView.swift */,
+				04605C362473C654008727E8 /* LTView.swift */,
+				04605C4A2473D318008727E8 /* LTTableCell.swift */,
+				04826FCF24775BAB003AFEA7 /* LTCollectionViewCell.swift */,
+				04826FD724777544003AFEA7 /* Toast.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04CB8DB0247D0A0D0026C3E3 /* IoC */ = {
+			isa = PBXGroup;
+			children = (
+				04CB8DB1247D0A1C0026C3E3 /* AbstractAppliccationContext.swift */,
+				04CB8DB3247D0AF40026C3E3 /* Assembler.swift */,
+				04CB8DB8247D0ED00026C3E3 /* AbstractApplicationContext + Extension.swift */,
+			);
+			path = IoC;
 			sourceTree = "<group>";
 		};
 		158043A5E71D340455357725 /* Frameworks */ = {
@@ -826,37 +881,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CB8DA2247CC88A0026C3E3 /* Lotto.swift in Sources */,
 				04605C1F24729DC4008727E8 /* DataBinding.swift in Sources */,
+				04CB8DA6247CC9E90026C3E3 /* LottoBall.swift in Sources */,
 				04826FD224776000003AFEA7 /* LottoBallHeaderView.swift in Sources */,
+				04CB8DAC247CE8EF0026C3E3 /* BaseNavigator.swift in Sources */,
 				04605C352473C623008727E8 /* RoundableView.swift in Sources */,
+				04CB8DA4247CC8C40026C3E3 /* RandomFilter.swift in Sources */,
 				04605C392473C6C0008727E8 /* UIView+Extension.swift in Sources */,
 				04826FCE24775B27003AFEA7 /* LottoBallCell.swift in Sources */,
 				04605C372473C654008727E8 /* LTView.swift in Sources */,
 				048AEBFC24762B92009130DA /* DreamSelectionViewController.swift in Sources */,
+				04CB8DB9247D0ED00026C3E3 /* AbstractApplicationContext + Extension.swift in Sources */,
 				04605BD5247291C5008727E8 /* AppDelegate.swift in Sources */,
 				04826FD024775BAB003AFEA7 /* LTCollectionViewCell.swift in Sources */,
 				048AEBF824762A24009130DA /* Key.swift in Sources */,
 				048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */,
 				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,
+				04CB8DB7247D0CA10026C3E3 /* ApplicationContext.swift in Sources */,
+				04CB8DBB247D105D0026C3E3 /* MainNavigator.swift in Sources */,
+				04CB8DB2247D0A1C0026C3E3 /* AbstractAppliccationContext.swift in Sources */,
 				0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */,
+				04CB8DB4247D0AF40026C3E3 /* Assembler.swift in Sources */,
 				0400281324753150009D3A22 /* QRScannerViewController.swift in Sources */,
 				04605C3B2473C77F008727E8 /* MainViewController.swift in Sources */,
 				04605C452473CF93008727E8 /* RecommendedViewController.swift in Sources */,
 				04605C412473CBD9008727E8 /* BaseNavigationController.swift in Sources */,
+				04CB8DAA247CE8B90026C3E3 /* BaseViewModel.swift in Sources */,
 				04826FD824777544003AFEA7 /* Toast.swift in Sources */,
 				04605C3F2473CAB8008727E8 /* AnalyzesViewController.swift in Sources */,
 				04605C1924729A6E008727E8 /* LaunchViewController.swift in Sources */,
 				04826FD624776E96003AFEA7 /* UIColor + Extension.swift in Sources */,
+				04CB8DAE247CE91B0026C3E3 /* DispatchQueue.swift in Sources */,
 				04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */,
 				04605C432473CCD2008727E8 /* Utils.swift in Sources */,
 				04826FDD2477C970003AFEA7 /* RandomGeneratorDatasource.swift in Sources */,
 				04826FCA2477578A003AFEA7 /* RandomGeneratorViewController.swift in Sources */,
 				04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */,
 				04605C532473DA61008727E8 /* LottoHistoryViewController.swift in Sources */,
+				04CB8DBD247D17F50026C3E3 /* MainApplicationContext.swift in Sources */,
 				040028072474D3CB009D3A22 /* MainCategoryCell.swift in Sources */,
 				04605C492473D2FA008727E8 /* RecommendedCell.swift in Sources */,
 				04605C4B2473D318008727E8 /* LTTableCell.swift in Sources */,
 				0400280A2474D8AB009D3A22 /* Segue.swift in Sources */,
+				04CB8DA8247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift in Sources */,
 				04605C572473E932008727E8 /* SettingsViewController.swift in Sources */,
 				04826FDA247785DF003AFEA7 /* RandomGeneratorViewModel.swift in Sources */,
 				0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */,

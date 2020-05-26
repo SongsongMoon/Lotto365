@@ -10,21 +10,32 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class MainViewModel {
-    
+class MainViewModel: BaseViewModel {
+    private var navigator: MainNavigator!
+    override var baseNavigator: BaseNavigatorInterface! {
+        didSet {
+            navigator = self.baseNavigator as? MainNavigator
+        }
+    }
 }
 
 extension MainViewModel: DataBinding {
     struct Input {
-        
+        var analyzesTrigger: Driver<IndexPath>
     }
     
     struct Output {
-        let categoryList = Observable<[Category]>.of([.analyze, .myNumber, .settings])
+        let toAnalyzes: Driver<Void>
+        let categories = Observable<[Category]>.of([.analyze, .myNumber, .settings])
     }
     
     func bind(input: MainViewModel.Input) -> MainViewModel.Output {
-        return Output()
+        let toAnalyzes = input.analyzesTrigger
+            .do(onNext: { _ in
+                self.navigator.toAnalyzes()
+            })
+            .map({ _ in Void() })
+        return Output(toAnalyzes: toAnalyzes)
     }
 }
 

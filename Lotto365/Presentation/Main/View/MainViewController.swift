@@ -18,7 +18,12 @@ class MainViewController: BaseViewController {
     @IBOutlet var bannerView: GADBannerView!
     
     private let disposeBag = DisposeBag()
-    private let viewModel = MainViewModel()
+    private var viewModel: MainViewModel!
+    override var baseViewModel: BaseViewModelInterface! {
+        didSet {
+            self.viewModel = self.baseViewModel as? MainViewModel
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +33,19 @@ class MainViewController: BaseViewController {
         tableView.register(MainCategoryCell.self, forCellReuseIdentifier: MainCategoryCell.ID)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
-        let output = viewModel.bind(input: MainViewModel.Input())
-        output.categoryList
+        let input = MainViewModel.Input(analyzesTrigger: tableView.rx.itemSelected.asDriver())
+        let output = viewModel.bind(input: input)
+        output.toAnalyzes.drive().disposed(by: disposeBag)
+        output.categories
             .bind(to: tableView.rx.items(cellIdentifier: MainCategoryCell.ID, cellType: MainCategoryCell.self)) {
                 [weak self] (idx, data, cell) in
                 guard let sSelf = self else { return }
                 
                 cell.btn.setTitle(data.title, for: .normal)
-                cell.btn.rx.tap
-                    .bind(onNext: {
-                        sSelf.performSegue(withIdentifier: data.segue, sender: nil)
-                    }).disposed(by: sSelf.disposeBag)
+//                cell.btn.rx.tap
+//                    .bind(onNext: {
+//                        sSelf.performSegue(withIdentifier: data.segue, sender: nil)
+//                    }).disposed(by: sSelf.disposeBag)
         }.disposed(by: disposeBag)
         
         
