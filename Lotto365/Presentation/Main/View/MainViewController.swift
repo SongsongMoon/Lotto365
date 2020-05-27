@@ -33,27 +33,21 @@ class MainViewController: BaseViewController {
         tableView.register(MainCategoryCell.self, forCellReuseIdentifier: MainCategoryCell.ID)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
-        let input = MainViewModel.Input(analyzesTrigger: tableView.rx.itemSelected.asDriver())
+        let input = MainViewModel.Input(analyzesTrigger: tableView.rx.itemSelected.asDriver(),
+                                        qrScannerTrigger: qrBtn.rx.tap.asDriver())
         let output = viewModel.bind(input: input)
-        output.toAnalyzes.drive().disposed(by: disposeBag)
+        output.toAnalyzes
+            .drive()
+            .disposed(by: disposeBag)
+        output.toQRScanner
+            .drive()
+            .disposed(by: disposeBag)
         output.categories
             .bind(to: tableView.rx.items(cellIdentifier: MainCategoryCell.ID, cellType: MainCategoryCell.self)) {
-                [weak self] (idx, data, cell) in
-                guard let sSelf = self else { return }
-                
-                cell.btn.setTitle(data.title, for: .normal)
-//                cell.btn.rx.tap
-//                    .bind(onNext: {
-//                        sSelf.performSegue(withIdentifier: data.segue, sender: nil)
-//                    }).disposed(by: sSelf.disposeBag)
-        }.disposed(by: disposeBag)
-        
-        
-        
-        qrBtn.rx.tap
-            .bind(onNext: { [weak self] in
-                self?.moveToQRCaptureController()
-            }).disposed(by: disposeBag)
+                (idx, data, cell) in
+                cell.titleLb.text = data.title
+        }
+        .disposed(by: disposeBag)
     }
 }
 
@@ -63,14 +57,6 @@ extension MainViewController {
         bannerView.delegate = self
         bannerView.adUnitID = Key.AD_BANNER_ID
         bannerView.load(GADRequest())
-    }
-    
-    private func moveToQRCaptureController() {
-        let qrScannerViewController = QRScannerViewController()
-        if #available(iOS 13.0, *) {
-            qrScannerViewController.isModalInPresentation = true
-        }
-        self.present(qrScannerViewController, animated: true, completion: nil)
     }
 }
 

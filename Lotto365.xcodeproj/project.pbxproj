@@ -58,10 +58,15 @@
 		048AEBFE24762BFA009130DA /* Recommended.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEBFD24762BFA009130DA /* Recommended.storyboard */; };
 		048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */; };
 		048AEC0524768F6E009130DA /* Random.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEC0424768F6E009130DA /* Random.storyboard */; };
+		04C15A4B247DF77A00FEE2C9 /* QRScannerNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4A247DF77A00FEE2C9 /* QRScannerNavigator.swift */; };
+		04C15A4D247DF9B600FEE2C9 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4C247DF9B600FEE2C9 /* QRScannerViewModel.swift */; };
+		04C15A4F247E06C800FEE2C9 /* AnalyzesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4E247E06C800FEE2C9 /* AnalyzesNavigator.swift */; };
+		04C15A51247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A50247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift */; };
+		04C4A052247E125100AFC0A2 /* RecommendedNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4A051247E125100AFC0A2 /* RecommendedNavigator.swift */; };
+		04C4A054247E12A000AFC0A2 /* RecommendedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4A053247E12A000AFC0A2 /* RecommendedViewModel.swift */; };
 		04CB8DA2247CC88A0026C3E3 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA1247CC88A0026C3E3 /* Lotto.swift */; };
 		04CB8DA4247CC8C40026C3E3 /* RandomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA3247CC8C40026C3E3 /* RandomFilter.swift */; };
 		04CB8DA6247CC9E90026C3E3 /* LottoBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */; };
-		04CB8DA8247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA7247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift */; };
 		04CB8DAA247CE8B90026C3E3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA9247CE8B90026C3E3 /* BaseViewModel.swift */; };
 		04CB8DAC247CE8EF0026C3E3 /* BaseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DAB247CE8EF0026C3E3 /* BaseNavigator.swift */; };
 		04CB8DAE247CE91B0026C3E3 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */; };
@@ -129,10 +134,15 @@
 		048AEBFD24762BFA009130DA /* Recommended.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recommended.storyboard; sourceTree = "<group>"; };
 		048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSelectionViewModel.swift; sourceTree = "<group>"; };
 		048AEC0424768F6E009130DA /* Random.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Random.storyboard; sourceTree = "<group>"; };
+		04C15A4A247DF77A00FEE2C9 /* QRScannerNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerNavigator.swift; sourceTree = "<group>"; };
+		04C15A4C247DF9B600FEE2C9 /* QRScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewModel.swift; sourceTree = "<group>"; };
+		04C15A4E247E06C800FEE2C9 /* AnalyzesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzesNavigator.swift; sourceTree = "<group>"; };
+		04C15A50247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorNavigator.swift; sourceTree = "<group>"; };
+		04C4A051247E125100AFC0A2 /* RecommendedNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedNavigator.swift; sourceTree = "<group>"; };
+		04C4A053247E12A000AFC0A2 /* RecommendedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewModel.swift; sourceTree = "<group>"; };
 		04CB8DA1247CC88A0026C3E3 /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
 		04CB8DA3247CC8C40026C3E3 /* RandomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFilter.swift; sourceTree = "<group>"; };
 		04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoBall.swift; sourceTree = "<group>"; };
-		04CB8DA7247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorCoordinator.swift; sourceTree = "<group>"; };
 		04CB8DA9247CE8B90026C3E3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		04CB8DAB247CE8EF0026C3E3 /* BaseNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigator.swift; sourceTree = "<group>"; };
 		04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
@@ -171,6 +181,7 @@
 		0400280F24753118009D3A22 /* QRScanner */ = {
 			isa = PBXGroup;
 			children = (
+				04C15A4A247DF77A00FEE2C9 /* QRScannerNavigator.swift */,
 				040028102475312A009D3A22 /* View */,
 				0400281124753130009D3A22 /* ViewModel */,
 			);
@@ -188,6 +199,7 @@
 		0400281124753130009D3A22 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04C15A4C247DF9B600FEE2C9 /* QRScannerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -416,9 +428,9 @@
 		04605BFC2472984E008727E8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */,
 				04605C06247299CB008727E8 /* View */,
 				04605C07247299CF008727E8 /* ViewModel */,
-				04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -428,6 +440,7 @@
 			children = (
 				04605C09247299DA008727E8 /* View */,
 				04605C08247299D5008727E8 /* ViewModel */,
+				04C15A4E247E06C800FEE2C9 /* AnalyzesNavigator.swift */,
 			);
 			path = Analyzes;
 			sourceTree = "<group>";
@@ -444,6 +457,7 @@
 		04605BFF247298B0008727E8 /* RecommendedNumber */ = {
 			isa = PBXGroup;
 			children = (
+				04C4A051247E125100AFC0A2 /* RecommendedNavigator.swift */,
 				04605C0D247299EA008727E8 /* View */,
 				04605C0C247299E6008727E8 /* ViewModel */,
 			);
@@ -498,10 +512,9 @@
 		04605C06247299CB008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C4A056247E13C500AFC0A2 /* Cells */,
 				04605C322473C538008727E8 /* Main.storyboard */,
 				04605C3A2473C77F008727E8 /* MainViewController.swift */,
-				040028042474BF2A009D3A22 /* MainCategoryCell.xib */,
-				040028062474D3CB009D3A22 /* MainCategoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -551,6 +564,7 @@
 		04605C0C247299E6008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04C4A053247E12A000AFC0A2 /* RecommendedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -558,10 +572,9 @@
 		04605C0D247299EA008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C4A055247E13AC00AFC0A2 /* Cells */,
 				048AEBFD24762BFA009130DA /* Recommended.storyboard */,
 				04605C442473CF93008727E8 /* RecommendedViewController.swift */,
-				04605C462473D016008727E8 /* RecommendedCell.xib */,
-				04605C482473D2FA008727E8 /* RecommendedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -647,9 +660,9 @@
 		048AEC0124768F4A009130DA /* RandomGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				04C15A50247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift */,
 				048AEC0224768F62009130DA /* View */,
 				048AEC0324768F65009130DA /* ViewModel */,
-				04CB8DA7247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift */,
 			);
 			path = RandomGenerator;
 			sourceTree = "<group>";
@@ -657,12 +670,9 @@
 		048AEC0224768F62009130DA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C15A52247E0DB400FEE2C9 /* Cells */,
 				048AEC0424768F6E009130DA /* Random.storyboard */,
 				04826FC92477578A003AFEA7 /* RandomGeneratorViewController.swift */,
-				04826FCB24775B14003AFEA7 /* LottoBallCell.xib */,
-				04826FCD24775B27003AFEA7 /* LottoBallCell.swift */,
-				04826FD124776000003AFEA7 /* LottoBallHeaderView.swift */,
-				04826FD32477600A003AFEA7 /* LottoBallHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,6 +684,35 @@
 				04826FDC2477C970003AFEA7 /* RandomGeneratorDatasource.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04C15A52247E0DB400FEE2C9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04826FCB24775B14003AFEA7 /* LottoBallCell.xib */,
+				04826FCD24775B27003AFEA7 /* LottoBallCell.swift */,
+				04826FD124776000003AFEA7 /* LottoBallHeaderView.swift */,
+				04826FD32477600A003AFEA7 /* LottoBallHeaderView.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04C4A055247E13AC00AFC0A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04605C462473D016008727E8 /* RecommendedCell.xib */,
+				04605C482473D2FA008727E8 /* RecommendedCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04C4A056247E13C500AFC0A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				040028042474BF2A009D3A22 /* MainCategoryCell.xib */,
+				040028062474D3CB009D3A22 /* MainCategoryCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		04CB8DAF247CE95D0026C3E3 /* View */ = {
@@ -908,14 +947,19 @@
 				04605C452473CF93008727E8 /* RecommendedViewController.swift in Sources */,
 				04605C412473CBD9008727E8 /* BaseNavigationController.swift in Sources */,
 				04CB8DAA247CE8B90026C3E3 /* BaseViewModel.swift in Sources */,
+				04C15A4B247DF77A00FEE2C9 /* QRScannerNavigator.swift in Sources */,
+				04C15A4F247E06C800FEE2C9 /* AnalyzesNavigator.swift in Sources */,
 				04826FD824777544003AFEA7 /* Toast.swift in Sources */,
 				04605C3F2473CAB8008727E8 /* AnalyzesViewController.swift in Sources */,
 				04605C1924729A6E008727E8 /* LaunchViewController.swift in Sources */,
 				04826FD624776E96003AFEA7 /* UIColor + Extension.swift in Sources */,
 				04CB8DAE247CE91B0026C3E3 /* DispatchQueue.swift in Sources */,
+				04C15A4D247DF9B600FEE2C9 /* QRScannerViewModel.swift in Sources */,
 				04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */,
+				04C4A054247E12A000AFC0A2 /* RecommendedViewModel.swift in Sources */,
 				04605C432473CCD2008727E8 /* Utils.swift in Sources */,
 				04826FDD2477C970003AFEA7 /* RandomGeneratorDatasource.swift in Sources */,
+				04C4A052247E125100AFC0A2 /* RecommendedNavigator.swift in Sources */,
 				04826FCA2477578A003AFEA7 /* RandomGeneratorViewController.swift in Sources */,
 				04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */,
 				04605C532473DA61008727E8 /* LottoHistoryViewController.swift in Sources */,
@@ -924,7 +968,7 @@
 				04605C492473D2FA008727E8 /* RecommendedCell.swift in Sources */,
 				04605C4B2473D318008727E8 /* LTTableCell.swift in Sources */,
 				0400280A2474D8AB009D3A22 /* Segue.swift in Sources */,
-				04CB8DA8247CE5D00026C3E3 /* RandomGeneratorCoordinator.swift in Sources */,
+				04C15A51247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift in Sources */,
 				04605C572473E932008727E8 /* SettingsViewController.swift in Sources */,
 				04826FDA247785DF003AFEA7 /* RandomGeneratorViewModel.swift in Sources */,
 				0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */,

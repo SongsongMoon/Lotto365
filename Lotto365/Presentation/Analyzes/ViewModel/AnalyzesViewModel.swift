@@ -28,22 +28,48 @@ extension AnalyzesViewModel {
             case .random:   return Segue.ANALYZES_TO_RANDOM_GENERATOR
             }
         }
+        
+        var idx: Int {
+            switch self {
+            case .dream:    return 0
+            case .random:   return 1
+            }
+        }
     }
 }
 
 class AnalyzesViewModel: BaseViewModel {
+    var navigator: AnalyzesNavigator!
+    override var baseNavigator: BaseNavigatorInterface! {
+        didSet {
+            self.navigator = baseNavigator as? AnalyzesNavigator
+        }
+    }
 }
 
 extension AnalyzesViewModel: DataBinding {
-    func bind(input: AnalyzesViewModel.Input) -> AnalyzesViewModel.Output {
-        return Output()
-    }
-    
     struct Input {
-        
+        let cellTrigger: Driver<IndexPath>
     }
     
     struct Output {
         let categories = Observable.of([Category.dream, .random])
+        let toDream: Driver<Void>
+        let toRandomGenerator: Driver<Void>
+    }
+    
+    func bind(input: AnalyzesViewModel.Input) -> AnalyzesViewModel.Output {
+        let toDream = input.cellTrigger
+            .filter({ $0.row == Category.dream.idx })
+            .map({ _ in Void() })
+            .do(onNext: { self.navigator.toDreamSelection() })
+            .asDriver()
+        let toRandom = input.cellTrigger
+            .filter({ $0.row == Category.random.idx })
+            .map({ _ in Void() })
+            .do(onNext: { self.navigator.toRandomGenerator() })
+            .asDriver()
+        return Output(toDream: toDream,
+                      toRandomGenerator: toRandom)
     }
 }

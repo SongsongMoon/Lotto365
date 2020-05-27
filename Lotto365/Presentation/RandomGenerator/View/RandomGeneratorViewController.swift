@@ -18,12 +18,13 @@ class RandomGeneratorViewController: BaseViewController {
     @IBOutlet var createBtn: UIBarButtonItem!
     
     private let disposeBag = DisposeBag()
-    private let maxCntFixedNumber = 5
-    private let maxCntExcludedNumber = 35
-    private var fixedNumberList = Set<Int>()
-    private var excludedNumberList = Set<Int>()
     
-    private let viewModel = RandomGeneratorViewModel()
+    private var viewModel: RandomGeneratorViewModel!
+    override var baseViewModel: BaseViewModelInterface! {
+        didSet {
+            self.viewModel = baseViewModel as? RandomGeneratorViewModel
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

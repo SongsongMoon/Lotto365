@@ -23,12 +23,12 @@ class MainNavigator: BaseNavigator<MainViewController> {
 extension MainNavigator: MainNavigatorInterface {
     func toQRScanner() {
         print("🔸present QRScannerViewController from MainViewController")
-        //QRScannerNavigator().presentViewController(from: topViewController)
+        QRScannerNavigator().presentViewController(from: topViewController)
     }
     
     func toAnalyzes() {
         print("🔸push AnalyzesViewController from MainViewController")
-        //AnalyzesNavigator().pushViewController(from: topViewController)
+        AnalyzesNavigator().pushViewController(from: topViewController)
     }
     
     func toMyNumbers() {

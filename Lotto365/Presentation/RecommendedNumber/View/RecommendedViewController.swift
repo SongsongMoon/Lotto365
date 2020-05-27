@@ -15,7 +15,12 @@ class RecommendedViewController: BaseViewController {
 
     @IBOutlet var tableview: UITableView!
     @IBOutlet var bannerView: GADBannerView!
-    
+    private var viewModel: RecommendedViewModel!
+    override var baseViewModel: BaseViewModelInterface! {
+        didSet {
+            self.viewModel = baseViewModel as? RecommendedViewModel
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

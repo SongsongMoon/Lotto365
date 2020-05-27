@@ -7,12 +7,22 @@
 //
 
 import AVFoundation
+import RxSwift
+import RxCocoa
 import UIKit
 
-class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
-
+class QRScannerViewController: BaseViewController {
+    var viewModel: QRScannerViewModel!
+    override var baseViewModel: BaseViewModelInterface! {
+        didSet {
+            self.viewModel = baseViewModel as? QRScannerViewModel
+        }
+    }
+    private let disposeBag = DisposeBag()
+    
+    private var captureSession: AVCaptureSession!
+    private var previewLayer: AVCaptureVideoPreviewLayer!
+    
     private let closeBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
@@ -26,9 +36,71 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         return imgView
     }()
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureCaptureSession()
+        captureSession.startRunning()
         
+        setUI()
+        
+        let input = QRScannerViewModel.Input(closeTrigger: closeBtn.rx.tap.asDriver())
+        let output = viewModel.bind(input: input)
+        output.close
+            .drive()
+            .disposed(by: disposeBag)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if (captureSession?.isRunning == false) {
+            captureSession.startRunning()
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if (captureSession?.isRunning == true) {
+            captureSession.stopRunning()
+        }
+    }
+}
+
+//MARK: - AVCaptureMetadataOutputObjectsDelegate
+extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        captureSession.stopRunning()
+
+        if let metadataObject = metadataObjects.first {
+            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
+            guard let stringValue = readableObject.stringValue else { return }
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            found(code: stringValue)
+            
+            dismiss(animated: true) {
+                guard let url = URL(string: stringValue) else { return }
+                if UIApplication.shared.canOpenURL(url){
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        }
+    }
+
+}
+
+//MARK: - Private
+extension QRScannerViewController {
+    private func configureCaptureSession() {
         captureSession = AVCaptureSession()
 
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
@@ -63,13 +135,9 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
-
-        captureSession.startRunning()
-        
-        setUI()
     }
     
-    func setUI() {
+    private func setUI() {
         view.backgroundColor = UIColor.black
         
         self.view.addSubview(closeBtn)
@@ -89,57 +157,15 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         ])
         
     }
-
-    func failed() {
+    
+    private func failed() {
         let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
         captureSession = nil
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        if (captureSession?.isRunning == false) {
-            captureSession.startRunning()
-        }
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        if (captureSession?.isRunning == true) {
-            captureSession.stopRunning()
-        }
-    }
-
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        captureSession.stopRunning()
-
-        if let metadataObject = metadataObjects.first {
-            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
-            guard let stringValue = readableObject.stringValue else { return }
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(code: stringValue)
-            
-            dismiss(animated: true) {
-                guard let url = URL(string: stringValue) else { return }
-                if UIApplication.shared.canOpenURL(url){
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
-            }
-        }
-    }
-
-    func found(code: String) {
+    private func found(code: String) {
         print(code)
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
     }
 }

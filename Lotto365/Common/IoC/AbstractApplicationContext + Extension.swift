@@ -19,6 +19,19 @@ extension AbstractApplicationContext {
         return ViewInfo(view: vc, viewModel: vm)
     }
     
+    func initializeViewControllerAndViewModel<T1: BaseViewInterface, T2: BaseViewModelInterface>() -> ViewInfo<T1, T2> {
+//        guard var vc = BaseViewController() as? T1 else {
+//            fatalError("initialize failed : \(String(describing: T1.self))")
+//        }
+        
+        var vc: T1 = self.resolve()
+        var vm: T2 = self.resolve()
+        vm.baseViewController = vc
+        vc.baseViewModel = vm
+        
+        return ViewInfo(view: vc, viewModel: vm)
+    }
+    
     func initializeViewController<T>(storyboardName: String, identifier: String) -> T {
         guard let vc = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: identifier) as? T else {
             fatalError("initialize failed : \(storyboardName) \(identifier)")

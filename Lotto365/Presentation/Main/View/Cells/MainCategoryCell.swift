@@ -12,7 +12,7 @@ class MainCategoryCell: LTTableCell {
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var roundContainerView: LTView!
-    @IBOutlet var btn: UIButton!
+    @IBOutlet var titleLb: UILabel!
     
     override func commonInit() {
         super.commonInit()

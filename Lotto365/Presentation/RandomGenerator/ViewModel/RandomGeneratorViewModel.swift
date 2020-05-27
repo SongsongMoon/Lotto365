@@ -10,8 +10,17 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class RandomGeneratorViewModel {
-    let disposeBag = DisposeBag()
+class RandomGeneratorViewModel: BaseViewModel {
+    private let disposeBag = DisposeBag()
+    private let maxCntFixedNumber = 5
+    private let maxCntExcludedNumber = 35
+    
+    private var navigator: RandomGeneratorNavigator!
+    override var baseNavigator: BaseNavigatorInterface! {
+        didSet {
+            self.navigator = baseNavigator as? RandomGeneratorNavigator
+        }
+    }
     
     private func generateRandomBalls(fixedBalls: [LottoBall] = [LottoBall](),
                                     availableNumbers: [Int] = Array(1...45)) -> Lotto {
@@ -56,7 +65,7 @@ extension RandomGeneratorViewModel: DataBinding {
         let sectionModels: Driver<[LottoFilteringSectionModel]>
         let selected: Driver<[LottoFilteringSectionModel]>
         let error: Driver<RandomGeneratorError>
-        let create: Driver<[Lotto]>
+        let create: Driver<Void>
     }
     
     func bind(input: RandomGeneratorViewModel.Input) -> RandomGeneratorViewModel.Output {
@@ -98,12 +107,12 @@ extension RandomGeneratorViewModel: DataBinding {
                 }
                 else {  //insert
                     if selectedNumber.selectedSection == .fixed &&
-                        fixedNumbers.filter({ $0.isSelected && $0.selectedSection == .fixed }).count >= 5 { //cnt of max
+                        fixedNumbers.filter({ $0.isSelected && $0.selectedSection == .fixed }).count >= self.maxCntFixedNumber { //cnt of max
                         errorTraker.onNext(.exceedFixedFiltering)
                         return sections
                     }
                     else if selectedNumber.selectedSection == .excluded &&
-                        excludedNumbers.filter({ $0.isSelected && $0.selectedSection == .excluded }).count >= 35 { //cnt of max
+                        excludedNumbers.filter({ $0.isSelected && $0.selectedSection == .excluded }).count >= self.maxCntExcludedNumber { //cnt of max
                         errorTraker.onNext(.exceedExcludedFiltering)
                         return sections
                     }
@@ -130,7 +139,6 @@ extension RandomGeneratorViewModel: DataBinding {
         .do(onNext: { _sectionModels.accept($0) })
         .asDriver(onErrorJustReturn: sections)
             
-
         let create = input.createTrigger.asObservable()
             .withLatestFrom(_sectionModels.asObservable())
             .map({ [weak self] (sectionModels) -> [Lotto] in
@@ -159,13 +167,11 @@ extension RandomGeneratorViewModel: DataBinding {
                 
                 return Array(randomLottos)
             })
-            .asDriver(onErrorJustReturn: [
-                generateRandomBalls(),
-                generateRandomBalls(),
-                generateRandomBalls(),
-                generateRandomBalls(),
-                generateRandomBalls()
-            ])
+            .do(onNext: { recommendLottoes in
+                self.navigator.toRecommend(recommendLottoes)
+            })
+            .map({ _ in Void()})
+            .asDriver(onErrorJustReturn: ())
             
             
 

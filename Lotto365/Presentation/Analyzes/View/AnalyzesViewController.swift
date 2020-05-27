@@ -16,7 +16,12 @@ class AnalyzesViewController: BaseViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var bannerView: GADBannerView!
     
-    private var analyzesViewModel = AnalyzesViewModel()
+    private var analyzesViewModel: AnalyzesViewModel!
+    override var baseViewModel: BaseViewModelInterface! {
+        didSet {
+            self.analyzesViewModel = baseViewModel as? AnalyzesViewModel
+        }
+    }
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -27,18 +32,20 @@ class AnalyzesViewController: BaseViewController {
         tableView.register(MainCategoryCell.self, forCellReuseIdentifier: MainCategoryCell.ID)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
-        let output = analyzesViewModel.bind(input: AnalyzesViewModel.Input())
+        let input = AnalyzesViewModel.Input(cellTrigger: tableView.rx.itemSelected.asDriver())
+        let output = analyzesViewModel.bind(input: input)
         output.categories
             .bind(to: tableView.rx.items(cellIdentifier: MainCategoryCell.ID,
-                                         cellType: MainCategoryCell.self)) {
-                                            [weak self] (idx, data, cell) in
-                                            guard let sSelf = self else { return }
-                                            
-                                            cell.btn.setTitle(data.title, for: .normal)
-                                            cell.btn.rx.tap.subscribe(onNext: {
-                                                sSelf.performSegue(withIdentifier: data.segue, sender: nil)
-                                            }).disposed(by: sSelf.disposeBag)
-        }.disposed(by: disposeBag)
+                                         cellType: MainCategoryCell.self)) { (idx, data, cell) in
+                                            cell.titleLb.text = data.title
+        }
+        .disposed(by: disposeBag)
+        output.toDream
+            .drive()
+            .disposed(by: disposeBag)
+        output.toRandomGenerator
+            .drive()
+            .disposed(by: disposeBag)
     }
 }
 

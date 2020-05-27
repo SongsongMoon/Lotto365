@@ -22,10 +22,12 @@ class MainViewModel: BaseViewModel {
 extension MainViewModel: DataBinding {
     struct Input {
         var analyzesTrigger: Driver<IndexPath>
+        var qrScannerTrigger: Driver<Void>
     }
     
     struct Output {
         let toAnalyzes: Driver<Void>
+        let toQRScanner: Driver<Void>
         let categories = Observable<[Category]>.of([.analyze, .myNumber, .settings])
     }
     
@@ -35,7 +37,13 @@ extension MainViewModel: DataBinding {
                 self.navigator.toAnalyzes()
             })
             .map({ _ in Void() })
-        return Output(toAnalyzes: toAnalyzes)
+        let toQRScanner = input.qrScannerTrigger
+            .do(onNext: {
+                self.navigator.toQRScanner()
+            })
+            .map({ _ in Void() })
+        return Output(toAnalyzes: toAnalyzes,
+                      toQRScanner: toQRScanner)
     }
 }
 

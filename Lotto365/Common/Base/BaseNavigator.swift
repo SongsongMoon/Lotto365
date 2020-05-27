@@ -11,7 +11,7 @@ import UIKit
 
 protocol BaseNavigatorInterface {
     func pushViewController(from: UIViewController)
-    func presentViewController(from: UIViewController)
+    func presentViewController(from: UIViewController, isModalInPresentation: Bool)
     func popViewController()
     func dismiss()
     func returnToHome()
@@ -29,10 +29,13 @@ class BaseNavigator<T: BaseViewController>: BaseNavigatorInterface {
         }
     }
     
-    func presentViewController(from: UIViewController) {
+    func presentViewController(from: UIViewController, isModalInPresentation: Bool = true) {
         mainThread {
             let vc: T = ApplicationContext.resolve()
             vc.baseViewModel.baseNavigator = self
+            if #available(iOS 13.0, *) {
+                vc.isModalInPresentation = isModalInPresentation
+            }
             from.present(vc, animated: true)
             self.topViewController = vc
         }
