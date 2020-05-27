@@ -12,6 +12,7 @@ class RecommendedCell: LTTableCell {
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var ballList: [UILabel]!
+    @IBOutlet var saveBtn: UIButton!
     
     override func commonInit() {
         super.commonInit()
@@ -21,6 +22,16 @@ class RecommendedCell: LTTableCell {
         containerView.layer.borderWidth = 0
         containerView.layer.borderColor = UIColor.clear.cgColor
         
+        saveBtn.layer.cornerRadius = 10.0
+        saveBtn.layer.masksToBounds = true
+        
         contentView.addSubview(containerView)
+    }
+    
+    func setUI(with viewModel: RecommendedItemViewModel) {
+        for (idx, lb) in ballList.enumerated() {
+            lb.text = "\(viewModel.balls[idx])"
+            lb.textColor = viewModel.ballColors[idx]
+        }
     }
 }

@@ -18,12 +18,7 @@ class MainViewController: BaseViewController {
     @IBOutlet var bannerView: GADBannerView!
     
     private let disposeBag = DisposeBag()
-    private var viewModel: MainViewModel!
-    override var baseViewModel: BaseViewModelInterface! {
-        didSet {
-            self.viewModel = self.baseViewModel as? MainViewModel
-        }
-    }
+    var viewModel: MainViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

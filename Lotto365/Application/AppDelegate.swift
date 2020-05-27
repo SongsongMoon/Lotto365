@@ -13,19 +13,11 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var navigator: BaseNavigatorInterface?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        ApplicationContext.initialize()
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = BaseNavigationController(rootViewController: UIViewController())
-        window.rootViewController = navigationController
-        navigator = MainNavigator()
-        navigator?.pushViewController(from: navigationController.topViewController!)
-        
+        Application.shared.configureMainIterface(in: window)
         self.window = window
-        self.window?.makeKeyAndVisible()
         
         //MARK: - configure firebase
         FirebaseApp.configure()

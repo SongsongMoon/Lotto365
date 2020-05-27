@@ -12,18 +12,25 @@ protocol RandomGeneratorNavigatorInterface {
     func toRecommend(_ lottos: [Lotto])
 }
 
-class RandomGeneratorNavigator: BaseNavigator<RandomGeneratorViewController> {
+class RandomGeneratorNavigator {
+    private let storyBoard: UIStoryboard
+    private let navigationController: UINavigationController
     
+    init(storyBoard: UIStoryboard,
+         navigationController: UINavigationController) {
+        self.storyBoard = storyBoard
+        self.navigationController = navigationController
+    }
 }
 
 extension RandomGeneratorNavigator: RandomGeneratorNavigatorInterface {
     func toRecommend(_ lottos: [Lotto]) {
-        mainThread {
-            let vc: RecommendedViewController = ApplicationContext.resolve()
-            vc.baseViewModel = viewModel
-            vc.baseViewModel.baseNavigator = self
-            self.topViewController.navigationController?.pushViewController(vc, animated: true)
-            self.topViewController = vc
+        let storyboard = UIStoryboard(name: "Recommended", bundle: nil)
+        let navigator = RecommendedNavigator(storyBoard: storyboard, navigationController: navigationController)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "RecommendedViewController") as? RecommendedViewController else {
+            fatalError("It doesn't exist RecommendedViewController with Identifier.")
         }
+        vc.viewModel = RecommendedViewModel(recommended: lottos, navigator: navigator)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

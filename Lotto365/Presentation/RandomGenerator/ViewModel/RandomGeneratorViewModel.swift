@@ -10,16 +10,15 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class RandomGeneratorViewModel: BaseViewModel {
+class RandomGeneratorViewModel {
     private let disposeBag = DisposeBag()
     private let maxCntFixedNumber = 5
     private let maxCntExcludedNumber = 35
     
-    private var navigator: RandomGeneratorNavigator!
-    override var baseNavigator: BaseNavigatorInterface! {
-        didSet {
-            self.navigator = baseNavigator as? RandomGeneratorNavigator
-        }
+    private var navigator: RandomGeneratorNavigatorInterface!
+    
+    init(navigator: RandomGeneratorNavigatorInterface) {
+        self.navigator = navigator
     }
     
     private func generateRandomBalls(fixedBalls: [LottoBall] = [LottoBall](),
@@ -31,27 +30,9 @@ class RandomGeneratorViewModel: BaseViewModel {
             }
         }
         
-        return Lotto(balls: Array(randomBalls), created: "\(Date().millisecondsSince1970)")
-    }
-}
-
-extension RandomGeneratorViewModel {
-    enum RandomGeneratorError: Error {
-        case exceedFixedFiltering
-        case exceedExcludedFiltering
-        case existFixedFilterNumber
-        case existExcludedFilterNumber
-        case unknown
-        
-        var localizedDescription: String {
-            switch self {
-            case .exceedExcludedFiltering:      return "제외번호는 최대 35개까지 선택가능합니다."
-            case .exceedFixedFiltering:         return "고정번호는 최대 5개까지 선택가능합니다."
-            case .existExcludedFilterNumber:    return "제외번호로 선택되어 있는 번호는 중복으로 선택이 불가능합니다."
-            case .existFixedFilterNumber:       return "고정번호로 선택되어 있는 번호는 중복으로 선택이 불가능합니다."
-            case .unknown:                      return "알 수 없는 에러."
-            }
-        }
+        let sortedBalls = randomBalls.sorted(by: { $0.number < $1.number })
+        return Lotto(balls: Array(sortedBalls),
+                     created: "\(Date().millisecondsSince1970)")
     }
 }
 
@@ -186,7 +167,25 @@ extension RandomGeneratorViewModel: DataBinding {
     }
 }
 
-
+extension RandomGeneratorViewModel {
+    enum RandomGeneratorError: Error {
+        case exceedFixedFiltering
+        case exceedExcludedFiltering
+        case existFixedFilterNumber
+        case existExcludedFilterNumber
+        case unknown
+        
+        var localizedDescription: String {
+            switch self {
+            case .exceedExcludedFiltering:      return "제외번호는 최대 35개까지 선택가능합니다."
+            case .exceedFixedFiltering:         return "고정번호는 최대 5개까지 선택가능합니다."
+            case .existExcludedFilterNumber:    return "제외번호로 선택되어 있는 번호는 중복으로 선택이 불가능합니다."
+            case .existFixedFilterNumber:       return "고정번호로 선택되어 있는 번호는 중복으로 선택이 불가능합니다."
+            case .unknown:                      return "알 수 없는 에러."
+            }
+        }
+    }
+}
 
 
 

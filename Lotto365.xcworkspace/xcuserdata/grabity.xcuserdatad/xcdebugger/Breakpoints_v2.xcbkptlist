@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "toAnalyzes()"
+            landmarkName = "toQRScanner()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

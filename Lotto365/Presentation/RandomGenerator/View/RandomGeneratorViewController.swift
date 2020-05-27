@@ -13,18 +13,13 @@ import RxDataSources
 import GoogleMobileAds
 
 class RandomGeneratorViewController: BaseViewController {
+    public var viewModel: RandomGeneratorViewModel!
+    
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var bannerView: GADBannerView!
     @IBOutlet var createBtn: UIBarButtonItem!
     
     private let disposeBag = DisposeBag()
-    
-    private var viewModel: RandomGeneratorViewModel!
-    override var baseViewModel: BaseViewModelInterface! {
-        didSet {
-            self.viewModel = baseViewModel as? RandomGeneratorViewModel
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

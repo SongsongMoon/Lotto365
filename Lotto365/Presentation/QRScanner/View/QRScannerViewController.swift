@@ -12,12 +12,8 @@ import RxCocoa
 import UIKit
 
 class QRScannerViewController: BaseViewController {
-    var viewModel: QRScannerViewModel!
-    override var baseViewModel: BaseViewModelInterface! {
-        didSet {
-            self.viewModel = baseViewModel as? QRScannerViewModel
-        }
-    }
+    public var viewModel: QRScannerViewModel!
+    
     private let disposeBag = DisposeBag()
     
     private var captureSession: AVCaptureSession!

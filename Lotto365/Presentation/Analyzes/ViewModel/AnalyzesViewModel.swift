@@ -10,40 +10,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-extension AnalyzesViewModel {
-    enum Category {
-        case dream
-        case random
-        
-        var title: String {
-            switch self {
-            case .dream:    return "꿈해몽 번호분석"
-            case .random:   return "무작위 번호분석"
-            }
-        }
-        
-        var segue: String {
-            switch self {
-            case .dream:    return Segue.ANALYZES_TO_DREAM_SELECTION
-            case .random:   return Segue.ANALYZES_TO_RANDOM_GENERATOR
-            }
-        }
-        
-        var idx: Int {
-            switch self {
-            case .dream:    return 0
-            case .random:   return 1
-            }
-        }
-    }
-}
-
-class AnalyzesViewModel: BaseViewModel {
-    var navigator: AnalyzesNavigator!
-    override var baseNavigator: BaseNavigatorInterface! {
-        didSet {
-            self.navigator = baseNavigator as? AnalyzesNavigator
-        }
+class AnalyzesViewModel {
+    var navigator: AnalyzesNavigatorInterface!
+    init(navigator: AnalyzesNavigatorInterface) {
+        self.navigator = navigator
     }
 }
 
@@ -71,5 +41,33 @@ extension AnalyzesViewModel: DataBinding {
             .asDriver()
         return Output(toDream: toDream,
                       toRandomGenerator: toRandom)
+    }
+}
+
+extension AnalyzesViewModel {
+    enum Category {
+        case dream
+        case random
+        
+        var title: String {
+            switch self {
+            case .dream:    return "꿈해몽 번호분석"
+            case .random:   return "무작위 번호분석"
+            }
+        }
+        
+        var segue: String {
+            switch self {
+            case .dream:    return Segue.ANALYZES_TO_DREAM_SELECTION
+            case .random:   return Segue.ANALYZES_TO_RANDOM_GENERATOR
+            }
+        }
+        
+        var idx: Int {
+            switch self {
+            case .dream:    return 0
+            case .random:   return 1
+            }
+        }
     }
 }

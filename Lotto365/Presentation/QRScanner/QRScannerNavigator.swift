@@ -12,13 +12,15 @@ protocol QRScannerNavigatorInterface {
     func toMain()
 }
 
-class QRScannerNavigator: BaseNavigator<QRScannerViewController> {
+class QRScannerNavigator: QRScannerNavigatorInterface {
+    private let navigationController: UINavigationController
     
-}
-
-extension QRScannerNavigator: QRScannerNavigatorInterface {
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
     func toMain() {
         print("🔸dismiss QRScannerViewController")
-        topViewController.dismiss(animated: true, completion: nil)
+        navigationController.topViewController?.dismiss(animated: true, completion: nil)
     }
 }

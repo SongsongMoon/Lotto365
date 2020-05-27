@@ -25,13 +25,9 @@
                                     <constraint firstAttribute="height" constant="53" id="NfU-cv-6ce"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="krP-8v-4F8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="krP-8v-4F8">
                                 <rect key="frame" x="0.0" y="156" width="414" height="691"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="XAQ-bl-FQM" id="icG-6D-9et"/>
-                                    <outlet property="delegate" destination="XAQ-bl-FQM" id="tDN-YG-Ehu"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="background"/>

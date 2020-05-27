@@ -9,26 +9,42 @@
 import Foundation
 import UIKit
 
-protocol MainNavigatorInterface: BaseNavigatorInterface {
+protocol MainNavigatorInterface {
     func toQRScanner()
     func toAnalyzes()
     func toMyNumbers()
     func toSettings()
 }
 
-class MainNavigator: BaseNavigator<MainViewController> {
+class MainNavigator: MainNavigatorInterface {
+    private let storyBoard: UIStoryboard
+    private let navigationController: UINavigationController
     
-}
-
-extension MainNavigator: MainNavigatorInterface {
+    init(storyBoard: UIStoryboard,
+         navigationController: UINavigationController) {
+        self.storyBoard = storyBoard
+        self.navigationController = navigationController
+    }
+    
     func toQRScanner() {
         print("🔸present QRScannerViewController from MainViewController")
-        QRScannerNavigator().presentViewController(from: topViewController)
+        let navigator = QRScannerNavigator(navigationController: navigationController)
+        let viewModel = QRScannerViewModel(navigator: navigator)
+        let qrScannerViewController = QRScannerViewController()
+        qrScannerViewController.viewModel = viewModel
+        navigationController.present(qrScannerViewController, animated: true, completion: nil)
     }
     
     func toAnalyzes() {
         print("🔸push AnalyzesViewController from MainViewController")
-        AnalyzesNavigator().pushViewController(from: topViewController)
+        let storyboard = UIStoryboard(name: "Analyzes", bundle: nil)
+        let navigator = AnalyzesNavigator(storyBoard: storyboard, navigationController: navigationController)
+        let viewModel = AnalyzesViewModel(navigator: navigator)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AnalyzesViewController") as? AnalyzesViewController else {
+            fatalError("It doesn't exist AnalyzesViewController with Identifier.")
+        }
+        viewController.viewModel = viewModel
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func toMyNumbers() {

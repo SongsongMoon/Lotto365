@@ -10,12 +10,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class QRScannerViewModel: BaseViewModel {
-    private var navigator: QRScannerNavigator!
-    override var baseNavigator: BaseNavigatorInterface! {
-        didSet {
-            self.navigator = baseNavigator as? QRScannerNavigator
-        }
+class QRScannerViewModel {
+    private var navigator: QRScannerNavigatorInterface!
+    
+    init(navigator: QRScannerNavigatorInterface) {
+        self.navigator = navigator
     }
 }
 

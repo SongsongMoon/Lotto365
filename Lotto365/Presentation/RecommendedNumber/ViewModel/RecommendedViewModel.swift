@@ -10,18 +10,15 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class RecommendedViewModel: BaseViewModel {
+class RecommendedViewModel {
     private let recommendedLottos: [Lotto]
     
-    var navigator: RecommendedNavigator!
-    override var baseNavigator: BaseNavigatorInterface! {
-        didSet {
-            self.navigator = baseNavigator as? RecommendedNavigator
-        }
-    }
+    private var navigator: RecommendedNavigatorInterface!
     
-    init(recommended: [Lotto]) {
+    init(recommended: [Lotto], navigator: RecommendedNavigatorInterface) {
         self.recommendedLottos = recommended
+        self.navigator = navigator
+        recommendedLottos.forEach({ print("🔸recommended : \($0.balls)") })
     }
 }
 
@@ -31,10 +28,11 @@ extension RecommendedViewModel: DataBinding {
     }
     
     struct Output {
-        
+        let lottos: Driver<[Lotto]>
     }
     
     func bind(input: RecommendedViewModel.Input) -> RecommendedViewModel.Output {
-        return Output()
+        let lottos = Driver.of(recommendedLottos)
+        return Output(lottos: lottos)
     }
 }

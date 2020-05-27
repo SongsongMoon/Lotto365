@@ -13,15 +13,11 @@ import GoogleMobileAds
 
 class AnalyzesViewController: BaseViewController {
 
+    public var viewModel: AnalyzesViewModel!
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var bannerView: GADBannerView!
     
-    private var analyzesViewModel: AnalyzesViewModel!
-    override var baseViewModel: BaseViewModelInterface! {
-        didSet {
-            self.analyzesViewModel = baseViewModel as? AnalyzesViewModel
-        }
-    }
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -33,7 +29,7 @@ class AnalyzesViewController: BaseViewController {
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
         let input = AnalyzesViewModel.Input(cellTrigger: tableView.rx.itemSelected.asDriver())
-        let output = analyzesViewModel.bind(input: input)
+        let output = viewModel.bind(input: input)
         output.categories
             .bind(to: tableView.rx.items(cellIdentifier: MainCategoryCell.ID,
                                          cellType: MainCategoryCell.self)) { (idx, data, cell) in

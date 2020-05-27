@@ -12,8 +12,15 @@ protocol RecommendedNavigatorInterface {
     
 }
 
-class RecommendedNavigator: BaseNavigator<RecommendedViewController> {
+class RecommendedNavigator {
+    private let storyBoard: UIStoryboard
+    private let navigationController: UINavigationController
     
+    init(storyBoard: UIStoryboard,
+         navigationController: UINavigationController) {
+        self.storyBoard = storyBoard
+        self.navigationController = navigationController
+    }
 }
 
 extension RecommendedNavigator: RecommendedNavigatorInterface {

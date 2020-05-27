@@ -10,12 +10,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class MainViewModel: BaseViewModel {
-    private var navigator: MainNavigator!
-    override var baseNavigator: BaseNavigatorInterface! {
-        didSet {
-            navigator = self.baseNavigator as? MainNavigator
-        }
+class MainViewModel {
+    private var navigator: MainNavigatorInterface!
+    
+    init(navigator: MainNavigatorInterface) {
+        self.navigator = navigator
     }
 }
 
