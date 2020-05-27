@@ -9,6 +9,7 @@
 import Foundation
 
 struct Lotto {
+    let id: String
     let balls: [LottoBall]
     let created: String
 }

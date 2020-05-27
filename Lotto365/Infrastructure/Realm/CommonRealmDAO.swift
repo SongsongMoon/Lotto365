@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 import RxSwift
-import RxCocoa
+import RxRealm
 
 protocol RealmEntitiy {
     associatedtype ENTITY
@@ -25,7 +25,8 @@ protocol RealmEntityMapper {
 
 class commonRealmDAO<VALUE: RealmEntityMapper>: DAO where VALUE.REALM_ENTITY: Object, VALUE.REALM_ENTITY: RealmEntitiy {
     typealias KEY = String
-    var realm: Realm!
+    private var realm: Realm!
+    private let scheduler: RunLoopThreadScheduler
     
     init() {
         guard let m = try? Realm(configuration: getRealmConfig()) else {
@@ -33,9 +34,11 @@ class commonRealmDAO<VALUE: RealmEntityMapper>: DAO where VALUE.REALM_ENTITY: Ob
         }
         
         realm = m
+        let name = "co.kr.lotto365.Realm.Repository"
+        self.scheduler = RunLoopThreadScheduler(threadName: name)
     }
     
-    func getRealmConfig() -> Realm.Configuration {
+    private func getRealmConfig() -> Realm.Configuration {
         return Realm.Configuration()
     }
     
@@ -48,6 +51,12 @@ class commonRealmDAO<VALUE: RealmEntityMapper>: DAO where VALUE.REALM_ENTITY: Ob
         catch let error as NSError {
             throw DAOError.createFail(error.description)
         }
+    }
+    
+    func readAll() -> [VALUE] {
+        let values = realm.objects(VALUE.REALM_ENTITY.self)
+        let results = values.compactMap({ $0.getEntity() as? VALUE })
+        return Array(results)
     }
     
     func read(key: KEY) throws -> VALUE {

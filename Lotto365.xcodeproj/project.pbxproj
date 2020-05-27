@@ -64,6 +64,8 @@
 		04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */; };
 		04ADD538247E638900B9CC25 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD537247E638900B9CC25 /* DAO.swift */; };
 		04ADD53B247E658F00B9CC25 /* CommonRealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */; };
+		04ADD53D247E6B5300B9CC25 /* RealmLottoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53C247E6B5300B9CC25 /* RealmLottoDAO.swift */; };
+		04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */; };
 		04C15A4B247DF77A00FEE2C9 /* QRScannerNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4A247DF77A00FEE2C9 /* QRScannerNavigator.swift */; };
 		04C15A4D247DF9B600FEE2C9 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4C247DF9B600FEE2C9 /* QRScannerViewModel.swift */; };
 		04C15A4F247E06C800FEE2C9 /* AnalyzesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4E247E06C800FEE2C9 /* AnalyzesNavigator.swift */; };
@@ -139,6 +141,8 @@
 		04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoRepositoryInterface.swift; sourceTree = "<group>"; };
 		04ADD537247E638900B9CC25 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRealmDAO.swift; sourceTree = "<group>"; };
+		04ADD53C247E6B5300B9CC25 /* RealmLottoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLottoDAO.swift; sourceTree = "<group>"; };
+		04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		04C15A4A247DF77A00FEE2C9 /* QRScannerNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerNavigator.swift; sourceTree = "<group>"; };
 		04C15A4C247DF9B600FEE2C9 /* QRScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewModel.swift; sourceTree = "<group>"; };
 		04C15A4E247E06C800FEE2C9 /* AnalyzesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzesNavigator.swift; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 		04605BED24729289008727E8 /* PersistentStorage */ = {
 			isa = PBXGroup;
 			children = (
+				04ADD53C247E6B5300B9CC25 /* RealmLottoDAO.swift */,
 			);
 			path = PersistentStorage;
 			sourceTree = "<group>";
@@ -689,6 +694,7 @@
 			isa = PBXGroup;
 			children = (
 				04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */,
+				04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -926,6 +932,7 @@
 				04605C392473C6C0008727E8 /* UIView+Extension.swift in Sources */,
 				04826FCE24775B27003AFEA7 /* LottoBallCell.swift in Sources */,
 				04ADD534247E61FE00B9CC25 /* LottoUseCase.swift in Sources */,
+				04ADD53D247E6B5300B9CC25 /* RealmLottoDAO.swift in Sources */,
 				04605C372473C654008727E8 /* LTView.swift in Sources */,
 				04ADD530247E35A700B9CC25 /* Application.swift in Sources */,
 				048AEBFC24762B92009130DA /* DreamSelectionViewController.swift in Sources */,
@@ -936,6 +943,7 @@
 				048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */,
 				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,
 				04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */,
+				04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */,
 				04ADD532247E501B00B9CC25 /* RecommendedItemViewModel.swift in Sources */,
 				04CB8DBB247D105D0026C3E3 /* MainNavigator.swift in Sources */,
 				0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */,
