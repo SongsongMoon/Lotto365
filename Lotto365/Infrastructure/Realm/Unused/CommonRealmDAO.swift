@@ -6,6 +6,7 @@
 //  Copyright © 2020 FACTORY X. All rights reserved.
 //
 
+/*
 import Foundation
 import RealmSwift
 import RxSwift
@@ -97,3 +98,4 @@ class commonRealmDAO<VALUE: RealmEntityMapper>: DAO where VALUE.REALM_ENTITY: Ob
         }
     }
 }
+*/

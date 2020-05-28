@@ -13,6 +13,16 @@
 		0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400280B2474E006009D3A22 /* AnalyzesViewModel.swift */; };
 		0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400280D2475004D009D3A22 /* MainViewModel.swift */; };
 		0400281324753150009D3A22 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400281224753150009D3A22 /* QRScannerViewController.swift */; };
+		044B0DBD247F4EAC0087E2E6 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DBC247F4EAC0087E2E6 /* DomainConvertibleType.swift */; };
+		044B0DBF247F4EBC0087E2E6 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DBE247F4EBC0087E2E6 /* RealmRepresentable.swift */; };
+		044B0DC1247F4F190087E2E6 /* RMLotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC0247F4F190087E2E6 /* RMLotto.swift */; };
+		044B0DC3247F503D0087E2E6 /* Realm + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC2247F503D0087E2E6 /* Realm + Extensions.swift */; };
+		044B0DC5247F56CF0087E2E6 /* RMLottoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC4247F56CF0087E2E6 /* RMLottoUseCase.swift */; };
+		044B0DC7247F57270087E2E6 /* RMUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC6247F57270087E2E6 /* RMUseCaseProvider.swift */; };
+		044B0DC9247F57400087E2E6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC8247F57400087E2E6 /* Repository.swift */; };
+		044B0DCB247F58740087E2E6 /* Observable + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DCA247F58740087E2E6 /* Observable + Extensions.swift */; };
+		044B0DCD247F5AFF0087E2E6 /* DomainUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DCC247F5AFF0087E2E6 /* DomainUseCaseProvider.swift */; };
+		044B0DD0247FA00C0087E2E6 /* LTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DCF247FA00C0087E2E6 /* LTButton.swift */; };
 		04605BD5247291C5008727E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605BD4247291C5008727E8 /* AppDelegate.swift */; };
 		04605BDE247291C6008727E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDD247291C6008727E8 /* Assets.xcassets */; };
 		04605BE1247291C6008727E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDF247291C6008727E8 /* LaunchScreen.storyboard */; };
@@ -60,7 +70,7 @@
 		048AEC0524768F6E009130DA /* Random.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEC0424768F6E009130DA /* Random.storyboard */; };
 		04ADD530247E35A700B9CC25 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD52F247E35A700B9CC25 /* Application.swift */; };
 		04ADD532247E501B00B9CC25 /* RecommendedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD531247E501B00B9CC25 /* RecommendedItemViewModel.swift */; };
-		04ADD534247E61FE00B9CC25 /* LottoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD533247E61FE00B9CC25 /* LottoUseCase.swift */; };
+		04ADD534247E61FE00B9CC25 /* LottoDomainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */; };
 		04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */; };
 		04ADD538247E638900B9CC25 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD537247E638900B9CC25 /* DAO.swift */; };
 		04ADD53B247E658F00B9CC25 /* CommonRealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */; };
@@ -87,6 +97,16 @@
 		0400280B2474E006009D3A22 /* AnalyzesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzesViewModel.swift; sourceTree = "<group>"; };
 		0400280D2475004D009D3A22 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		0400281224753150009D3A22 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		044B0DBC247F4EAC0087E2E6 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		044B0DBE247F4EBC0087E2E6 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		044B0DC0247F4F190087E2E6 /* RMLotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLotto.swift; sourceTree = "<group>"; };
+		044B0DC2247F503D0087E2E6 /* Realm + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm + Extensions.swift"; sourceTree = "<group>"; };
+		044B0DC4247F56CF0087E2E6 /* RMLottoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLottoUseCase.swift; sourceTree = "<group>"; };
+		044B0DC6247F57270087E2E6 /* RMUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMUseCaseProvider.swift; sourceTree = "<group>"; };
+		044B0DC8247F57400087E2E6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		044B0DCA247F58740087E2E6 /* Observable + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable + Extensions.swift"; sourceTree = "<group>"; };
+		044B0DCC247F5AFF0087E2E6 /* DomainUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainUseCaseProvider.swift; sourceTree = "<group>"; };
+		044B0DCF247FA00C0087E2E6 /* LTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTButton.swift; sourceTree = "<group>"; };
 		04605BD1247291C5008727E8 /* Lotto365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotto365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04605BD4247291C5008727E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04605BDD247291C6008727E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,7 +157,7 @@
 		048AEC0424768F6E009130DA /* Random.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Random.storyboard; sourceTree = "<group>"; };
 		04ADD52F247E35A700B9CC25 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		04ADD531247E501B00B9CC25 /* RecommendedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedItemViewModel.swift; sourceTree = "<group>"; };
-		04ADD533247E61FE00B9CC25 /* LottoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoUseCase.swift; sourceTree = "<group>"; };
+		04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDomainUseCase.swift; sourceTree = "<group>"; };
 		04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoRepositoryInterface.swift; sourceTree = "<group>"; };
 		04ADD537247E638900B9CC25 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRealmDAO.swift; sourceTree = "<group>"; };
@@ -206,6 +226,67 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		044B0DB6247F4E340087E2E6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				044B0DBB247F4E970087E2E6 /* Convertion */,
+				044B0DC0247F4F190087E2E6 /* RMLotto.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		044B0DB7247F4E3E0087E2E6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				044B0DC8247F57400087E2E6 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		044B0DB8247F4E490087E2E6 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				044B0DC4247F56CF0087E2E6 /* RMLottoUseCase.swift */,
+				044B0DC6247F57270087E2E6 /* RMUseCaseProvider.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		044B0DB9247F4E500087E2E6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */,
+				044B0DC2247F503D0087E2E6 /* Realm + Extensions.swift */,
+				044B0DCA247F58740087E2E6 /* Observable + Extensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		044B0DBA247F4E7D0087E2E6 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				04ADD53C247E6B5300B9CC25 /* RealmLottoDAO.swift */,
+				04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */,
+			);
+			path = Unused;
+			sourceTree = "<group>";
+		};
+		044B0DBB247F4E970087E2E6 /* Convertion */ = {
+			isa = PBXGroup;
+			children = (
+				044B0DBC247F4EAC0087E2E6 /* DomainConvertibleType.swift */,
+				044B0DBE247F4EBC0087E2E6 /* RealmRepresentable.swift */,
+			);
+			path = Convertion;
+			sourceTree = "<group>";
+		};
+		044B0DCE247F8CDF0087E2E6 /* RealmTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RealmTest;
+			sourceTree = "<group>";
+		};
 		04605BC8247291C5008727E8 = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +313,7 @@
 				04605C22247372EA008727E8 /* Lotto365.entitlements */,
 				04605BE82472922D008727E8 /* Application */,
 				04605BE924729260008727E8 /* Common */,
-				04605BEE247292AD008727E8 /* Presentation */,
+				04605BEE247292AD008727E8 /* Scenes */,
 				04605BEB24729276008727E8 /* Domain */,
 				04605BF224729347008727E8 /* Data */,
 				04605BFA2472956C008727E8 /* Infrastructure */,
@@ -285,15 +366,18 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		04605BED24729289008727E8 /* PersistentStorage */ = {
+		04605BED24729289008727E8 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				04ADD53C247E6B5300B9CC25 /* RealmLottoDAO.swift */,
+				044B0DB6247F4E340087E2E6 /* Entities */,
+				044B0DB7247F4E3E0087E2E6 /* Repository */,
+				044B0DB8247F4E490087E2E6 /* UseCases */,
+				044B0DB9247F4E500087E2E6 /* Utility */,
 			);
-			path = PersistentStorage;
+			path = Realm;
 			sourceTree = "<group>";
 		};
-		04605BEE247292AD008727E8 /* Presentation */ = {
+		04605BEE247292AD008727E8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				04605C402473CBD9008727E8 /* BaseNavigationController.swift */,
@@ -310,7 +394,7 @@
 				04605C0424729940008727E8 /* ServiceCenter */,
 				04605C032472992C008727E8 /* Usages */,
 			);
-			path = Presentation;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		04605BEF247292C7008727E8 /* Launch */ = {
@@ -344,7 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				04605BF92472954D008727E8 /* Repositories */,
-				04605BED24729289008727E8 /* PersistentStorage */,
+				04605BED24729289008727E8 /* Realm */,
+				044B0DCE247F8CDF0087E2E6 /* RealmTest */,
 				04605BEC2472927D008727E8 /* Network */,
 			);
 			path = Data;
@@ -391,7 +476,8 @@
 		04605BF7247293E4008727E8 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				04ADD533247E61FE00B9CC25 /* LottoUseCase.swift */,
+				04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */,
+				044B0DCC247F5AFF0087E2E6 /* DomainUseCaseProvider.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -693,8 +779,7 @@
 		04ADD539247E658400B9CC25 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */,
-				04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */,
+				044B0DBA247F4E7D0087E2E6 /* Unused */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -733,6 +818,7 @@
 			children = (
 				04605C342473C623008727E8 /* RoundableView.swift */,
 				04605C362473C654008727E8 /* LTView.swift */,
+				044B0DCF247FA00C0087E2E6 /* LTButton.swift */,
 				04605C4A2473D318008727E8 /* LTTableCell.swift */,
 				04826FCF24775BAB003AFEA7 /* LTCollectionViewCell.swift */,
 				04826FD724777544003AFEA7 /* Toast.swift */,
@@ -923,15 +1009,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044B0DC5247F56CF0087E2E6 /* RMLottoUseCase.swift in Sources */,
 				04CB8DA2247CC88A0026C3E3 /* Lotto.swift in Sources */,
 				04605C1F24729DC4008727E8 /* DataBinding.swift in Sources */,
 				04CB8DA6247CC9E90026C3E3 /* LottoBall.swift in Sources */,
 				04826FD224776000003AFEA7 /* LottoBallHeaderView.swift in Sources */,
 				04605C352473C623008727E8 /* RoundableView.swift in Sources */,
 				04CB8DA4247CC8C40026C3E3 /* RandomFilter.swift in Sources */,
+				044B0DCD247F5AFF0087E2E6 /* DomainUseCaseProvider.swift in Sources */,
+				044B0DD0247FA00C0087E2E6 /* LTButton.swift in Sources */,
 				04605C392473C6C0008727E8 /* UIView+Extension.swift in Sources */,
 				04826FCE24775B27003AFEA7 /* LottoBallCell.swift in Sources */,
-				04ADD534247E61FE00B9CC25 /* LottoUseCase.swift in Sources */,
+				04ADD534247E61FE00B9CC25 /* LottoDomainUseCase.swift in Sources */,
 				04ADD53D247E6B5300B9CC25 /* RealmLottoDAO.swift in Sources */,
 				04605C372473C654008727E8 /* LTView.swift in Sources */,
 				04ADD530247E35A700B9CC25 /* Application.swift in Sources */,
@@ -940,20 +1029,25 @@
 				04826FD024775BAB003AFEA7 /* LTCollectionViewCell.swift in Sources */,
 				048AEBF824762A24009130DA /* Key.swift in Sources */,
 				04ADD53B247E658F00B9CC25 /* CommonRealmDAO.swift in Sources */,
+				044B0DCB247F58740087E2E6 /* Observable + Extensions.swift in Sources */,
 				048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */,
 				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,
 				04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */,
+				044B0DC3247F503D0087E2E6 /* Realm + Extensions.swift in Sources */,
 				04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */,
 				04ADD532247E501B00B9CC25 /* RecommendedItemViewModel.swift in Sources */,
 				04CB8DBB247D105D0026C3E3 /* MainNavigator.swift in Sources */,
+				044B0DBD247F4EAC0087E2E6 /* DomainConvertibleType.swift in Sources */,
 				0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */,
 				0400281324753150009D3A22 /* QRScannerViewController.swift in Sources */,
 				04605C3B2473C77F008727E8 /* MainViewController.swift in Sources */,
+				044B0DC7247F57270087E2E6 /* RMUseCaseProvider.swift in Sources */,
 				04605C452473CF93008727E8 /* RecommendedViewController.swift in Sources */,
 				04ADD538247E638900B9CC25 /* DAO.swift in Sources */,
 				04605C412473CBD9008727E8 /* BaseNavigationController.swift in Sources */,
 				04C15A4B247DF77A00FEE2C9 /* QRScannerNavigator.swift in Sources */,
 				04C15A4F247E06C800FEE2C9 /* AnalyzesNavigator.swift in Sources */,
+				044B0DC1247F4F190087E2E6 /* RMLotto.swift in Sources */,
 				04826FD824777544003AFEA7 /* Toast.swift in Sources */,
 				04605C3F2473CAB8008727E8 /* AnalyzesViewController.swift in Sources */,
 				04605C1924729A6E008727E8 /* LaunchViewController.swift in Sources */,
@@ -962,8 +1056,10 @@
 				04C15A4D247DF9B600FEE2C9 /* QRScannerViewModel.swift in Sources */,
 				04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */,
 				04C4A054247E12A000AFC0A2 /* RecommendedViewModel.swift in Sources */,
+				044B0DBF247F4EBC0087E2E6 /* RealmRepresentable.swift in Sources */,
 				04605C432473CCD2008727E8 /* Utils.swift in Sources */,
 				04826FDD2477C970003AFEA7 /* RandomGeneratorDatasource.swift in Sources */,
+				044B0DC9247F57400087E2E6 /* Repository.swift in Sources */,
 				04C4A052247E125100AFC0A2 /* RecommendedNavigator.swift in Sources */,
 				04826FCA2477578A003AFEA7 /* RandomGeneratorViewController.swift in Sources */,
 				04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */,
@@ -1122,7 +1218,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1142,7 +1238,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

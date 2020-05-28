@@ -6,6 +6,7 @@
 //  Copyright © 2020 FACTORY X. All rights reserved.
 //
 
+/*
 import Foundation
 import RxSwift
 import RealmSwift
@@ -65,3 +66,4 @@ extension Lotto: RealmEntityMapper {
         return mapper
     }
 }
+*/

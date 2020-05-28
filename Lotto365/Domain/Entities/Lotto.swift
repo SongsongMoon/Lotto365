@@ -9,15 +9,14 @@
 import Foundation
 
 struct Lotto {
-    let id: String
+    let uid: String
     let balls: [LottoBall]
     let created: String
 }
 
 extension Lotto: Equatable {
     public static func ==(lhs: Lotto, rhs: Lotto) -> Bool {
-        return lhs.balls == rhs.balls &&
-            lhs.created == rhs.created
+        return lhs.uid == rhs.uid
     }
 }
 

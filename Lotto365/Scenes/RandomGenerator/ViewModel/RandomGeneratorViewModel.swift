@@ -20,20 +20,6 @@ class RandomGeneratorViewModel {
     init(navigator: RandomGeneratorNavigatorInterface) {
         self.navigator = navigator
     }
-    
-    private func generateRandomBalls(fixedBalls: [LottoBall] = [LottoBall](),
-                                    availableNumbers: [Int] = Array(1...45)) -> Lotto {
-        var randomBalls = Set(fixedBalls)
-        while randomBalls.count != 6 {
-            if let randomNumber = availableNumbers.randomElement() {
-                randomBalls.insert(LottoBall(number: randomNumber))
-            }
-        }
-        
-        let sortedBalls = randomBalls.sorted(by: { $0.number < $1.number })
-        return Lotto(balls: Array(sortedBalls),
-                     created: "\(Date().millisecondsSince1970)")
-    }
 }
 
 extension RandomGeneratorViewModel: DataBinding {
@@ -122,34 +108,18 @@ extension RandomGeneratorViewModel: DataBinding {
             
         let create = input.createTrigger.asObservable()
             .withLatestFrom(_sectionModels.asObservable())
-            .map({ [weak self] (sectionModels) -> [Lotto] in
-                guard let sSelf = self else { return [Lotto]() }
-                
+            .map({ [weak self] (sectionModels) -> ([Int], [Int]) in
                 let fixedNumbers = sectionModels[0].items
                     .filter({ $0.isSelected && $0.selectedSection == .fixed })
                     .map({ $0.ballNumber })
                 let excludedNumbers = sectionModels[1].items
                     .filter({ $0.isSelected && $0.selectedSection == .excluded })
                     .map({ $0.ballNumber })
-                let availableRandomNumbers = Array(1...45)
-                    .filter({ !excludedNumbers.contains($0) })
-                    .filter({ !fixedNumbers.contains($0) })
                 
-                let fixedBalls = sectionModels[0].items
-                    .filter({ $0.isSelected && $0.selectedSection == .fixed })
-                    .map({ LottoBall(number: $0.ballNumber) })
-                
-                var randomLottos = Set([Lotto]())
-                while randomLottos.count != 5 {
-                    let lotto = sSelf.generateRandomBalls(fixedBalls: fixedBalls,
-                                                          availableNumbers: availableRandomNumbers)
-                    randomLottos.insert(lotto)
-                }
-                
-                return Array(randomLottos)
+                return (fixedNumbers, excludedNumbers)
             })
-            .do(onNext: { recommendLottoes in
-                self.navigator.toRecommend(recommendLottoes)
+            .do(onNext: { (fixedNumbers, excludedNumbers) in
+                self.navigator.toRecommend(fixed: fixedNumbers, excluded: excludedNumbers)
             })
             .map({ _ in Void()})
             .asDriver(onErrorJustReturn: ())

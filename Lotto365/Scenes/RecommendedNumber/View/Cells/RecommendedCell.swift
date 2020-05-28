@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class RecommendedCell: LTTableCell {
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var ballList: [UILabel]!
     @IBOutlet var saveBtn: UIButton!
+    
+    private let disposeBag = DisposeBag()
     
     override func commonInit() {
         super.commonInit()
@@ -28,10 +32,15 @@ class RecommendedCell: LTTableCell {
         contentView.addSubview(containerView)
     }
     
-    func setUI(with viewModel: RecommendedItemViewModel) {
+    func bind(with viewModel: RecommendedItemViewModel) {
         for (idx, lb) in ballList.enumerated() {
             lb.text = "\(viewModel.balls[idx])"
             lb.textColor = viewModel.ballColors[idx]
         }
+        
+        let output = viewModel.bind(input: RecommendedItemViewModel.Input(saveTrigger: saveBtn.rx.tap.asDriver()))
+        output.save
+            .drive(onNext: { print("🔸success to save data") })
+            .disposed(by: disposeBag)
     }
 }

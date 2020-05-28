@@ -11,9 +11,10 @@ import UIKit
 
 class Application {
     static let shared = Application()
+    private let realmUseCaseProvider: DomainUseCaseProvider
     
     private init() {
-        
+        self.realmUseCaseProvider = RMUseCaseProvider()
     }
     
     public func configureMainIterface(in window: UIWindow) {
@@ -23,7 +24,9 @@ class Application {
             fatalError("it doesn't exist MainViewController with identifier")
         }
         let naviCon = BaseNavigationController(rootViewController: mainViewController)
-        let mainNavigator = MainNavigator(storyBoard: storyboard, navigationController: naviCon)
+        let mainNavigator = MainNavigator(service: realmUseCaseProvider,
+                                          storyBoard: storyboard,
+                                          navigationController: naviCon)
         
         let viewModel = MainViewModel(navigator: mainNavigator)
         mainViewController.viewModel = viewModel

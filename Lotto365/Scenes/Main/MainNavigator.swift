@@ -19,11 +19,14 @@ protocol MainNavigatorInterface {
 class MainNavigator: MainNavigatorInterface {
     private let storyBoard: UIStoryboard
     private let navigationController: UINavigationController
+    private let service: DomainUseCaseProvider
     
-    init(storyBoard: UIStoryboard,
+    init(service: DomainUseCaseProvider,
+         storyBoard: UIStoryboard,
          navigationController: UINavigationController) {
         self.storyBoard = storyBoard
         self.navigationController = navigationController
+        self.service = service
     }
     
     func toQRScanner() {
@@ -38,7 +41,9 @@ class MainNavigator: MainNavigatorInterface {
     func toAnalyzes() {
         print("🔸push AnalyzesViewController from MainViewController")
         let storyboard = UIStoryboard(name: "Analyzes", bundle: nil)
-        let navigator = AnalyzesNavigator(storyBoard: storyboard, navigationController: navigationController)
+        let navigator = AnalyzesNavigator(service: service,
+                                          storyBoard: storyboard,
+                                          navigationController: navigationController)
         let viewModel = AnalyzesViewModel(navigator: navigator)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "AnalyzesViewController") as? AnalyzesViewController else {
             fatalError("It doesn't exist AnalyzesViewController with Identifier.")

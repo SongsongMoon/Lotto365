@@ -16,10 +16,13 @@ protocol AnalyzesNavigatorInterface {
 class AnalyzesNavigator {
     private let storyBoard: UIStoryboard
     private let navigationController: UINavigationController
+    private let service: DomainUseCaseProvider
     
-    init(storyBoard: UIStoryboard,
+    init(service: DomainUseCaseProvider,
+         storyBoard: UIStoryboard,
          navigationController: UINavigationController) {
         self.storyBoard = storyBoard
+        self.service = service
         self.navigationController = navigationController
     }
 }
@@ -32,7 +35,8 @@ extension AnalyzesNavigator: AnalyzesNavigatorInterface {
     func toRandomGenerator() {
         print("🔸push RandomGeneratorViewController from AnalyzesViewController")
         let storyBoard = UIStoryboard(name: "Random", bundle: nil)
-        let navigator = RandomGeneratorNavigator(storyBoard: storyBoard,
+        let navigator = RandomGeneratorNavigator(service: service,
+                                                 storyBoard: storyBoard,
                                                  navigationController: navigationController)
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "RandomGeneratorViewController") as? RandomGeneratorViewController else {
             fatalError("It doesn't exist RandomGeneratorViewController with Identifier.")

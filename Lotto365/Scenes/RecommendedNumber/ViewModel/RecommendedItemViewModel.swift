@@ -13,16 +13,21 @@ import RxCocoa
 class RecommendedItemViewModel {
     let balls: [Int]
     let ballColors: [UIColor]
+    let lotto: Lotto
+    private let useCase: LottoDomainUseCase
     
-    init(lotto: Lotto) {
+    init(useCase: LottoDomainUseCase,
+         lotto: Lotto) {
         self.balls = lotto.balls.map({ $0.number })
         self.ballColors = lotto.balls.compactMap({ UIColor(named: $0.colorName) })
+        self.useCase = useCase
+        self.lotto = lotto
     }
 }
 
 extension RecommendedItemViewModel: DataBinding {
     struct Input {
-        var saveTrigger: Driver<Lotto>
+        var saveTrigger: Driver<Void>
     }
     
     struct Output {
@@ -31,8 +36,13 @@ extension RecommendedItemViewModel: DataBinding {
     
     func bind(input: RecommendedItemViewModel.Input) -> RecommendedItemViewModel.Output {
         let save = input.saveTrigger
-            .do(onNext: { print("save item : \($0.balls)") })
-            .map({ _ in Void() })
+            .map { self.lotto }
+            .flatMapLatest { (lotto) -> Driver<Void> in
+                    return self.useCase
+                        .saveMyLotto(lotto)
+                        .asDriver(onErrorJustReturn: ())
+            }
+                    
         return Output(save: save)
     }
 }

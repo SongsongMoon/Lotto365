@@ -17,6 +17,8 @@ class RecommendedViewController: BaseViewController {
     
     @IBOutlet var tableview: UITableView!
     @IBOutlet var bannerView: GADBannerView!
+    @IBOutlet var saveAllBtn: UIButton!
+    @IBOutlet var reCreateBtn: UIButton!
     
     private let disposeBag = DisposeBag()
     
@@ -28,15 +30,18 @@ class RecommendedViewController: BaseViewController {
         tableview.rx.setDelegate(self).disposed(by: disposeBag)
         tableview.register(RecommendedCell.self, forCellReuseIdentifier: RecommendedCell.ID)
         
-        let input = RecommendedViewModel.Input()
+        let input = RecommendedViewModel.Input(saveAllTrigger: saveAllBtn.rx.tap.asDriver(),
+                                               reCreateTrigger: reCreateBtn.rx.tap.asDriver())
         let output = viewModel.bind(input: input)
         output.lottos.asObservable()
             .bind(to: tableview.rx.items(cellIdentifier: RecommendedCell.ID, cellType: RecommendedCell.self)) {
                 (idx, data, cell) in
-                
-                cell.setUI(with: RecommendedItemViewModel(lotto: data))
+                cell.bind(with: data)
         }
         .disposed(by: disposeBag)
+        output.saveAll
+            .drive()
+            .disposed(by: disposeBag)
     }
 }
 
