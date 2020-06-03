@@ -15,9 +15,9 @@ protocol RandomGeneratorNavigatorInterface {
 class RandomGeneratorNavigator {
     private let storyBoard: UIStoryboard
     private let navigationController: UINavigationController
-    private let service: DomainUseCaseProvider
+    private let service: DomainLottoUseCaseProvider
     
-    init(service: DomainUseCaseProvider,
+    init(service: DomainLottoUseCaseProvider,
          storyBoard: UIStoryboard,
          navigationController: UINavigationController) {
         self.storyBoard = storyBoard

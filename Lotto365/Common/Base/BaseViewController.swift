@@ -10,8 +10,6 @@ import UIKit
 
 protocol BaseViewInterface {
     func showToast(message: String)
-    func showPopup(title: String?, message: String?, buttonText: String?, buttonAction: (() -> Void)?)
-    func hidePopup()
 }
 
 class BaseViewController: UIViewController {
@@ -21,13 +19,5 @@ class BaseViewController: UIViewController {
 extension BaseViewController: BaseViewInterface {
     func showToast(message: String) {
         Toast(text: message).show()
-    }
-
-    func showPopup(title: String?, message: String?, buttonText: String?, buttonAction: (() -> Void)?) {
-        
-    }
-    
-    func hidePopup() {
-        
     }
 }

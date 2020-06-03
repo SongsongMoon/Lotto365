@@ -25,19 +25,44 @@
                                     <constraint firstAttribute="height" constant="53" id="NjO-y0-68J"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-QK-eqh">
-                                <rect key="frame" x="0.0" y="141" width="414" height="706"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-QK-eqh">
+                                <rect key="frame" x="0.0" y="141" width="414" height="633"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="a5K-cS-gXP" id="2He-d5-qkA"/>
-                                    <outlet property="delegate" destination="a5K-cS-gXP" id="a9D-vZ-wPe"/>
-                                </connections>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vZm-w9-eaq">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vZm-w9-eaq" id="5rq-s9-SDJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvn-RO-uxy" customClass="LTButton" customModule="Lotto365" customModuleProvider="target">
+                                <rect key="frame" x="123" y="798" width="168" height="48"/>
+                                <color key="backgroundColor" name="Button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="LtM-Yg-e5F"/>
+                                    <constraint firstAttribute="width" constant="168" id="eNR-Dm-SnX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <state key="normal" title="전체 삭제">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
+                            <constraint firstItem="Dvn-RO-uxy" firstAttribute="centerX" secondItem="8hI-A4-8aW" secondAttribute="centerX" id="8f9-z6-KqC"/>
                             <constraint firstItem="hiO-x8-IA5" firstAttribute="centerX" secondItem="8hI-A4-8aW" secondAttribute="centerX" id="ASc-Bf-CDM"/>
-                            <constraint firstItem="ZWY-nq-bqp" firstAttribute="bottom" secondItem="vbB-QK-eqh" secondAttribute="bottom" constant="15" id="BQE-Sb-RyA"/>
+                            <constraint firstItem="ZWY-nq-bqp" firstAttribute="bottom" secondItem="Dvn-RO-uxy" secondAttribute="bottom" constant="16" id="B0s-PY-fbB"/>
+                            <constraint firstItem="Dvn-RO-uxy" firstAttribute="top" secondItem="vbB-QK-eqh" secondAttribute="bottom" constant="24" id="Vzo-Ny-wlh"/>
                             <constraint firstItem="vbB-QK-eqh" firstAttribute="leading" secondItem="ZWY-nq-bqp" secondAttribute="leading" id="d3a-kf-JVD"/>
                             <constraint firstItem="vbB-QK-eqh" firstAttribute="top" secondItem="hiO-x8-IA5" secondAttribute="bottom" id="eTe-Hg-dae"/>
                             <constraint firstItem="hiO-x8-IA5" firstAttribute="top" secondItem="ZWY-nq-bqp" secondAttribute="top" id="jx1-OS-rUg"/>
@@ -48,16 +73,20 @@
                     <navigationItem key="navigationItem" title="내 번호" id="daO-4U-fsC"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="allDeleteBtn" destination="Dvn-RO-uxy" id="qnb-2j-DdM"/>
                         <outlet property="bannerView" destination="hiO-x8-IA5" id="3hr-JI-taC"/>
                         <outlet property="tableView" destination="vbB-QK-eqh" id="Bs3-ed-akv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bW-JW-Cwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="-182"/>
+            <point key="canvasLocation" x="79.710144927536234" y="-182.14285714285714"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Button">
+            <color red="0.29411764705882354" green="0.27450980392156865" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="background">
             <color red="0.090196078431372548" green="0.11372549019607843" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -87,5 +87,21 @@ extension Reactive where Base == Realm {
             return Disposables.create()
         }
     }
+    
+    func deleteAll<R: RealmRepresentable>(type: R.Type) -> Observable<Void> where R.RealmType: Object {
+        return Observable.create { observer in
+            do {
+                try self.base.write {
+                    self.base.delete(self.base.objects(type.RealmType.self))
+                }
+
+                observer.onNext(())
+                observer.onCompleted()
+            } catch {
+                observer.onError(error)
+            }
+            return Disposables.create()
+        }
+    }
 }
 

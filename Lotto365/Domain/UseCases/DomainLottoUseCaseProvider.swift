@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol DomainUseCaseProvider {
+protocol DomainLottoUseCaseProvider {
     
     func makeLottoUseCase() -> LottoDomainUseCase
 }
+
+

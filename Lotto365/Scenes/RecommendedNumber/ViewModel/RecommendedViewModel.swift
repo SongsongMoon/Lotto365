@@ -91,8 +91,6 @@ extension RecommendedViewModel {
         }
         
         let sortedBalls = randomBalls.sorted(by: { $0.number < $1.number })
-        return Lotto(uid: UUID().uuidString,
-                     balls: Array(sortedBalls),
-                     created: "\(Date().millisecondsSince1970)")
+        return Lotto(balls: Array(sortedBalls))
     }
 }

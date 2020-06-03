@@ -40,7 +40,7 @@ class RecommendedViewController: BaseViewController {
         }
         .disposed(by: disposeBag)
         output.saveAll
-            .drive()
+            .drive(onNext: { Toast(text: "저장되었습니다.").show() })
             .disposed(by: disposeBag)
     }
 }

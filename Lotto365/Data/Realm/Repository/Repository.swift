@@ -19,9 +19,11 @@ protocol AbstractRepository {
     func save(entity: T) -> Observable<Void>
     func save(entities: [T]) -> Observable<Void>
     func delete(entity: T) -> Observable<Void>
+    func deleteAll(type: T.Type) -> Observable<Void>
 }
 
 class Repository<T:RealmRepresentable>: AbstractRepository where T == T.RealmType.DomainType, T.RealmType: Object {
+    
     private let configuration: Realm.Configuration
     private let scheduler: RunLoopThreadScheduler
     
@@ -33,6 +35,9 @@ class Repository<T:RealmRepresentable>: AbstractRepository where T == T.RealmTyp
         self.configuration = configuration
         let name = "co.kr.Lotto365.Realm.Repository"
         self.scheduler = RunLoopThreadScheduler(threadName: name)
+        if let fileURL = configuration.fileURL {
+            print("🔸Realm file path : \(fileURL)")
+        }
     }
     
     func queryAll() -> Observable<[T]> {
@@ -78,4 +83,12 @@ class Repository<T:RealmRepresentable>: AbstractRepository where T == T.RealmTyp
         }
         .subscribeOn(scheduler)
     }
+    
+    func deleteAll(type: T.Type) -> Observable<Void> {
+        return Observable.deferred {
+            return self.realm.rx.deleteAll(type: type)
+        }
+        .subscribeOn(scheduler)
+    }
+    
 }

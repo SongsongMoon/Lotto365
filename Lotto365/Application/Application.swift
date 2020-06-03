@@ -11,7 +11,7 @@ import UIKit
 
 class Application {
     static let shared = Application()
-    private let realmUseCaseProvider: DomainUseCaseProvider
+    private let realmUseCaseProvider: DomainLottoUseCaseProvider
     
     private init() {
         self.realmUseCaseProvider = RMUseCaseProvider()

@@ -16,9 +16,9 @@ protocol AnalyzesNavigatorInterface {
 class AnalyzesNavigator {
     private let storyBoard: UIStoryboard
     private let navigationController: UINavigationController
-    private let service: DomainUseCaseProvider
+    private let service: DomainLottoUseCaseProvider
     
-    init(service: DomainUseCaseProvider,
+    init(service: DomainLottoUseCaseProvider,
          storyBoard: UIStoryboard,
          navigationController: UINavigationController) {
         self.storyBoard = storyBoard
@@ -30,6 +30,16 @@ class AnalyzesNavigator {
 extension AnalyzesNavigator: AnalyzesNavigatorInterface {
     func toDreamSelection() {
         print("🔸push DreamSelectionViewController from AnalyzesViewController")
+        let storyBoard = UIStoryboard(name: "DreamSelection", bundle: nil)
+        let dreamService = FUseCaseProvider()
+        let navigator = DreamSelectionNavigator(storyBoard: storyBoard,
+                                                navigationController: navigationController)
+        guard let vc = storyBoard.instantiateViewController(withIdentifier: "DreamSelectionViewController") as? DreamSelectionViewController else {
+            fatalError("It doesn't exist DreamSelectionViewController with Identifier.")
+        }
+        vc.viewModel = DreamSelectionViewModel(useCase: dreamService.makeDreamUseCase(),
+                                               navigator: navigator)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func toRandomGenerator() {

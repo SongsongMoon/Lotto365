@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class RMUseCaseProvider: DomainUseCaseProvider {
+class RMUseCaseProvider: DomainLottoUseCaseProvider {
     private let configuration: Realm.Configuration
     
     public init(configuration: Realm.Configuration = Realm.Configuration()) {

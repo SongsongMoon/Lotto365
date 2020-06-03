@@ -12,6 +12,8 @@ import RxSwift
 protocol LottoDomainUseCase {
     func getMyLottos() -> Observable<[Lotto]>
     func saveMyLotto(_ lotto: Lotto) -> Observable<Void>
-    func saveMyLottos(_ lottos: [Lotto]) -> Observable<Void> 
+    func saveMyLottos(_ lottos: [Lotto]) -> Observable<Void>
+    func delete(_ lotto: Lotto) -> Observable<Void>
+    func deleteAll() -> Observable<Void>
 }
 

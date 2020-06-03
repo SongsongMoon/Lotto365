@@ -9,7 +9,7 @@
 import UIKit
 
 class LTButton: UIButton, RoundableView {
-
+    
     @IBInspectable var cornerRadius: CGFloat = 10 {
         didSet {
             self.setRound(cornerRadius)
@@ -33,5 +33,9 @@ class LTButton: UIButton, RoundableView {
         self.layer.masksToBounds = true
     }
 
+    override var isEnabled: Bool {
+        didSet {
+            self.alpha = isEnabled ? 1.0 : 0.5
+        }
+    }
 }
-

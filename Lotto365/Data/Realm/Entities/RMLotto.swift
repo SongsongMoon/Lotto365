@@ -21,9 +21,11 @@ class RMLotto: Object {
 extension RMLotto: DomainConvertibleType {
     func asDomain() -> Lotto {
         
-        return Lotto(uid: uid,
-                     balls: Array(balls.map({ LottoBall(number: $0) })),
-                     created: createdAt)
+        return Lotto(
+            uid: self.uid,
+            balls: Array(balls.map({ LottoBall(number: $0) })),
+            created: self.createdAt
+        )
     }
 }
 

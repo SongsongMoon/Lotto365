@@ -32,8 +32,16 @@ extension MainViewModel: DataBinding {
     
     func bind(input: MainViewModel.Input) -> MainViewModel.Output {
         let toAnalyzes = input.analyzesTrigger
-            .do(onNext: { _ in
-                self.navigator.toAnalyzes()
+            .do(onNext: { idx in
+                if idx.row == 0 {
+                    self.navigator.toAnalyzes()
+                }
+                else if idx.row == 1 {
+                    self.navigator.toMyNumbers()
+                }
+                else if idx.row == 2 {
+                    self.navigator.toSettings()
+                }
             })
             .map({ _ in Void() })
         let toQRScanner = input.qrScannerTrigger
@@ -41,6 +49,7 @@ extension MainViewModel: DataBinding {
                 self.navigator.toQRScanner()
             })
             .map({ _ in Void() })
+        
         return Output(toAnalyzes: toAnalyzes,
                       toQRScanner: toQRScanner)
     }

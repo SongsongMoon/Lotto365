@@ -19,9 +19,9 @@ protocol MainNavigatorInterface {
 class MainNavigator: MainNavigatorInterface {
     private let storyBoard: UIStoryboard
     private let navigationController: UINavigationController
-    private let service: DomainUseCaseProvider
+    private let service: DomainLottoUseCaseProvider
     
-    init(service: DomainUseCaseProvider,
+    init(service: DomainLottoUseCaseProvider,
          storyBoard: UIStoryboard,
          navigationController: UINavigationController) {
         self.storyBoard = storyBoard
@@ -54,7 +54,17 @@ class MainNavigator: MainNavigatorInterface {
     
     func toMyNumbers() {
         print("🔸push MyNumbersViewController from MainViewController")
-        //MyNumbersNavigator().pushViewController(from: topViewController)
+        let storyboard = UIStoryboard(name: "MyNumbers", bundle: nil)
+        let navigator = MyNumbersNavigator(service: service,
+                                          storyBoard: storyboard,
+                                          navigationController: navigationController)
+        let viewModel = MyNumbersViewModel(navigator: navigator,
+                                           useCase: service.makeLottoUseCase())
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "MyNumbersViewController") as? MyNumbersViewController else {
+            fatalError("It doesn't exist AnalyzesViewController with Identifier.")
+        }
+        viewController.viewModel = viewModel
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func toSettings() {

@@ -40,7 +40,7 @@ class RecommendedCell: LTTableCell {
         
         let output = viewModel.bind(input: RecommendedItemViewModel.Input(saveTrigger: saveBtn.rx.tap.asDriver()))
         output.save
-            .drive(onNext: { print("🔸success to save data") })
+            .drive(onNext: { Toast(text: "저장되었습니다.").show() })
             .disposed(by: disposeBag)
     }
 }
