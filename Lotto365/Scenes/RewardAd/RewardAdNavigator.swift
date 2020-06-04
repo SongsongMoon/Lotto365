@@ -10,7 +10,7 @@ import UIKit
 
 protocol RewardAdNavigatorInterface {
     func toDreamSelection()
-    func toRecommended()
+    func toLottoDream()
 }
 
 class RewardAdNavigator: RewardAdNavigatorInterface {
@@ -26,16 +26,25 @@ class RewardAdNavigator: RewardAdNavigatorInterface {
         self.storyBoard = storyBoard
         self.navigationController = navigationController
         self.selectedDreams = selectedDreams
-        
-        print("🔸init RewardAdNavigator with dreams : ")
-        selectedDreams.forEach({ print("🔸\($0.name)")})
     }
     
     func toDreamSelection() {
-        navigationController.popViewController(animated: false)
+        print("🔸pop RewardAdViewController")
+        self.navigationController.popViewController(animated: false)
     }
     
-    func toRecommended() {
+    func toLottoDream() {
+        print("🔸push RecommendedViewController from RewardAdViewController")
+        let service = RMUseCaseProvider()
+        let storyboard = UIStoryboard(name: "LottoDream", bundle: nil)
+        let navigator = LottoDreamNavigator(storyBoard: storyboard, navigationController: navigationController)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "LottoDreamViewController") as? LottoDreamViewController else {
+            fatalError("It doesn't exist LottoDreamViewController with Identifier.")
+        }
         
+        vc.viewModel = LottoDreamViewModel(useCase: service.makeLottoUseCase(),
+                                           navigator: navigator,
+                                           selectedDreams: selectedDreams)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--꿈 번호-->
+        <scene sceneID="y1v-MA-DW2">
+            <objects>
+                <viewController storyboardIdentifier="LottoDreamViewController" id="GSq-8z-QFl" customClass="LottoDreamViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2no-vp-flZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSJ-2E-Kh2" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="88" width="320" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="FuG-7b-xxc"/>
+                                    <constraint firstAttribute="width" constant="320" id="dz1-O9-lQP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkK-UF-vpu" userLabel="Recommended" customClass="LTView" customModule="Lotto365" customModuleProvider="target">
+                                <rect key="frame" x="16" y="153" width="382" height="68"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5yc-Sd-u4K">
+                                        <rect key="frame" x="5" y="14" width="298" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyp-be-oqa">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="44"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                <color key="textColor" name="One"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9f-Xn-agI">
+                                                <rect key="frame" x="50.5" y="0.0" width="45.5" height="44"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                <color key="textColor" name="One"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3J-Ng-ngA">
+                                                <rect key="frame" x="101" y="0.0" width="45.5" height="44"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                <color key="textColor" name="Eleven"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zZ-cL-Vrk">
+                                                <rect key="frame" x="151.5" y="0.0" width="45.5" height="44"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                <color key="textColor" name="Eleven"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-b0-v1C">
+                                                <rect key="frame" x="202" y="0.0" width="45.5" height="44"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                <color key="textColor" name="TwentyOne"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMU-dg-RU2">
+                                                <rect key="frame" x="252.5" y="0.0" width="45.5" height="44"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                <color key="textColor" name="TwentyOne"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0h-mQ-Z7h" customClass="LTButton" customModule="Lotto365" customModuleProvider="target">
+                                        <rect key="frame" x="313" y="16.5" width="64" height="35"/>
+                                        <color key="backgroundColor" name="Button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="OZ6-Pa-EOc"/>
+                                            <constraint firstAttribute="width" constant="64" id="wVm-Do-DqY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                        <state key="normal" title="저장">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Box"/>
+                                <constraints>
+                                    <constraint firstItem="5yc-Sd-u4K" firstAttribute="leading" secondItem="nkK-UF-vpu" secondAttribute="leading" constant="5" id="2M7-yr-zuf"/>
+                                    <constraint firstItem="5yc-Sd-u4K" firstAttribute="top" secondItem="nkK-UF-vpu" secondAttribute="top" constant="14" id="GN5-tq-DjL"/>
+                                    <constraint firstItem="W0h-mQ-Z7h" firstAttribute="leading" secondItem="5yc-Sd-u4K" secondAttribute="trailing" constant="10" id="ZzV-Ts-sSs"/>
+                                    <constraint firstAttribute="trailing" secondItem="W0h-mQ-Z7h" secondAttribute="trailing" constant="5" id="hVq-bq-Tsg"/>
+                                    <constraint firstAttribute="height" constant="68" id="kM0-LQ-vYe"/>
+                                    <constraint firstItem="W0h-mQ-Z7h" firstAttribute="centerY" secondItem="nkK-UF-vpu" secondAttribute="centerY" id="xja-by-tEZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="5yc-Sd-u4K" secondAttribute="bottom" constant="10" id="z75-KB-fvu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꿈 키워드 분석번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iu-Jb-EMG">
+                                <rect key="frame" x="16" y="257" width="149" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" name="text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fcV-FK-5Lo">
+                                <rect key="frame" x="0.0" y="285" width="414" height="553"/>
+                                <color key="backgroundColor" name="background"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="OSJ-2E-Kh2" firstAttribute="top" secondItem="T56-34-5lD" secondAttribute="top" id="5UN-yx-wvB"/>
+                            <constraint firstItem="nkK-UF-vpu" firstAttribute="leading" secondItem="T56-34-5lD" secondAttribute="leading" constant="16" id="6cd-RI-Azr"/>
+                            <constraint firstItem="T56-34-5lD" firstAttribute="bottom" secondItem="fcV-FK-5Lo" secondAttribute="bottom" constant="24" id="9yx-G2-owY"/>
+                            <constraint firstItem="T56-34-5lD" firstAttribute="trailing" secondItem="fcV-FK-5Lo" secondAttribute="trailing" id="MYT-sG-3n8"/>
+                            <constraint firstItem="fcV-FK-5Lo" firstAttribute="leading" secondItem="T56-34-5lD" secondAttribute="leading" id="PZu-Ga-pAF"/>
+                            <constraint firstItem="OSJ-2E-Kh2" firstAttribute="centerX" secondItem="2no-vp-flZ" secondAttribute="centerX" id="VHk-7h-jeb"/>
+                            <constraint firstItem="2iu-Jb-EMG" firstAttribute="top" secondItem="nkK-UF-vpu" secondAttribute="bottom" constant="36" id="XGj-5b-2K8"/>
+                            <constraint firstItem="fcV-FK-5Lo" firstAttribute="top" secondItem="2iu-Jb-EMG" secondAttribute="bottom" constant="4" id="cUe-5j-1NQ"/>
+                            <constraint firstItem="T56-34-5lD" firstAttribute="trailing" secondItem="nkK-UF-vpu" secondAttribute="trailing" constant="16" id="fA6-tW-Ked"/>
+                            <constraint firstItem="2iu-Jb-EMG" firstAttribute="leading" secondItem="T56-34-5lD" secondAttribute="leading" constant="16" id="imv-2L-kgf"/>
+                            <constraint firstItem="nkK-UF-vpu" firstAttribute="top" secondItem="OSJ-2E-Kh2" secondAttribute="bottom" constant="12" id="wSb-B8-93i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T56-34-5lD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="꿈 번호" id="7gz-0M-xDd"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="bannerView" destination="OSJ-2E-Kh2" id="X3I-A9-ORv"/>
+                        <outlet property="saveBtn" destination="W0h-mQ-Z7h" id="0IR-Yb-Zrn"/>
+                        <outlet property="tableView" destination="fcV-FK-5Lo" id="DSv-w2-fmJ"/>
+                        <outletCollection property="lottoNumbers" destination="Pyp-be-oqa" collectionClass="NSMutableArray" id="iHk-Bh-uAc"/>
+                        <outletCollection property="lottoNumbers" destination="P9f-Xn-agI" collectionClass="NSMutableArray" id="2o8-lv-vt9"/>
+                        <outletCollection property="lottoNumbers" destination="A3J-Ng-ngA" collectionClass="NSMutableArray" id="wVU-mr-0If"/>
+                        <outletCollection property="lottoNumbers" destination="3zZ-cL-Vrk" collectionClass="NSMutableArray" id="2RO-z7-8wW"/>
+                        <outletCollection property="lottoNumbers" destination="fTc-b0-v1C" collectionClass="NSMutableArray" id="JMx-w2-tpc"/>
+                        <outletCollection property="lottoNumbers" destination="gMU-dg-RU2" collectionClass="NSMutableArray" id="XHf-1T-7Od"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j54-va-8fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.73913043478262" y="-161.38392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Box">
+            <color red="0.16862745098039217" green="0.20392156862745098" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Button">
+            <color red="0.29411764705882354" green="0.27450980392156865" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Eleven">
+            <color red="0.16862745098039217" green="0.34901960784313724" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="One">
+            <color red="0.94901960784313721" green="0.52156862745098043" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TwentyOne">
+            <color red="0.88627450980392153" green="0.058823529411764705" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background">
+            <color red="0.090196078431372548" green="0.11372549019607843" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text">
+            <color red="0.60392156862745094" green="0.63529411764705879" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

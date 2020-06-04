@@ -77,6 +77,7 @@ class NaviBarConfiguration {
         UINavigationBar.appearance().isTranslucent = isTranslucent
     }
     
+    
     static func setBarButtonTitleTextColor(_ textColor: UIColor) {
         let BarButtonItemAppearance = UIBarButtonItem.appearance()
         BarButtonItemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: textColor], for: .normal)
@@ -99,6 +100,7 @@ class NaviBarConfiguration {
     
     static func disappearBackButtonTitle() {
         //set back button title
+        
         UIBarButtonItem.appearance()
             .setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0),
                                                   for:UIBarMetrics.default)

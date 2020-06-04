@@ -34,7 +34,7 @@ extension DreamSelectionNavigator: DreamSelectionNavigatorInterface {
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "RewardAdViewController") as? RewardAdViewController else {
             fatalError("It doesn't exist RewardAdViewController with Identifier.")
         }
-        vc.viewModel = RewardAdViewModel(navigator: rewardAdNavigator)
+        vc.navigator = rewardAdNavigator
         navigationController.pushViewController(vc, animated: false)
     }
     
