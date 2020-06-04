@@ -46,6 +46,7 @@ extension DreamSelectionViewModel: DataBinding {
         let categoryTrigger: Driver<Int>
         let dreamTrigger: Driver<Int>
         let addTrigger: Driver<Void>
+        let deleteTrigger: Driver<IndexPath>
         let createTrigger: Driver<Void>
     }
     
@@ -55,9 +56,10 @@ extension DreamSelectionViewModel: DataBinding {
         let selectedCategory: Observable<String>
         let selectedDream: Observable<Dream>
         let addDream: Observable<Void>
-        let addedDreams: Driver<[Dream]>
+        let deleteDream: Driver<Void>
+        let sectionedDream: Driver<[DreamSectionModel]>
         let createBtnEnable: Driver<Bool>
-        let createLotto: Driver<[Dream]>
+        let createLotto: Driver<Void>
         let error: Driver<DreamSelectionError>
     }
     
@@ -67,6 +69,14 @@ extension DreamSelectionViewModel: DataBinding {
         let dreamCategories = useCase.getDreams()
         let selectingCategory = BehaviorSubject<Int>(value: defaultIdx)
         let selectingDream = BehaviorSubject<Int>(value: defaultIdx)
+        let sectionListSubject = BehaviorSubject<[DreamSectionModel]>(value: [])
+        
+        let categories = dreamCategories.map({ $0.map({ $0.title }) })
+        
+        let dreams = Observable.combineLatest(dreamCategories, selectingCategory.asObservable()) { list, selectedIdx in
+            list[selectedIdx].items.map({ $0.name })
+        }
+        .asDriver(onErrorJustReturn: [])
         
         input.categoryTrigger.asObservable()
             .do(onNext: {
@@ -92,54 +102,65 @@ extension DreamSelectionViewModel: DataBinding {
         let selectedCategory = selectingCategory.flatMapLatest({ idx in
             return dreamCategories.map({ $0[idx].title })
         })
-        
-        
-        let categories = dreamCategories.map({ $0.map({ $0.title }) })
-        
-        let dreams = Observable.combineLatest(dreamCategories, selectingCategory.asObservable()) { list, selectedIdx in
-            list[selectedIdx].items.map({ $0.name })
-        }
-        .asDriver(onErrorJustReturn: [])
-        
-        let addingDreams = BehaviorSubject<[Dream]>(value: [])
-        let addedDreams = addingDreams.scan([], accumulator: { (seed, newItems) -> [Dream] in
-            
-            if seed.count >= 6 {
-                errorTracker.onNext(.exceedMaximum)
-                return seed
-            }
-            
-            for item in newItems {
-                if seed.contains(item) {
-                    return seed
-                }
-            }
-            
-            return seed + newItems
-        })
-    
+
         let addDream = input.addTrigger.asObservable()
             .withLatestFrom(selectItem)
-            .do(onNext: { addingDreams.onNext([$0]) })
+            .do(onNext: { (selectedDream) in
+                guard var sections = try? sectionListSubject.value() else { return }
+                if sections.isEmpty {
+                    let newSection = DreamSectionModel(header: "", items: [selectedDream])
+                    sectionListSubject.onNext([newSection])
+                }
+                else {
+                    let addedItems = sections[0].items
+                    
+                    if addedItems.count >= 6 {
+                        errorTracker.onNext(.exceedMaximum)
+                        return
+                    }
+                    
+                    if addedItems.contains(selectedDream) {
+                        return
+                    }
+                    
+                    sections[0].items.append(selectedDream)
+                    sectionListSubject.onNext(sections)
+                }
+            })
+            
         
-        let canCreateBtn = addedDreams
-            .map({ !$0.isEmpty })
-            .asDriver(onErrorJustReturn: false)
+        let deleteDream = input.deleteTrigger
+            .do(onNext: { idx in
+                guard var sections = try? sectionListSubject.value() else { return }
+                sections[0].items.remove(at: idx.row)
+                sectionListSubject.onNext(sections)
+            })
+            .map({ _ in Void() })
+            .asDriver()
+        
+        let canCreateBtn = sectionListSubject.map { (sections) -> Bool in
+            let isSectionsEmpty = sections.map({ $0.items.isEmpty })
+            return !isSectionsEmpty.contains(true)
+        }
         
         let createRecommendedLotto = input.createTrigger.asObservable()
-            .withLatestFrom(addedDreams)
+            .withLatestFrom(sectionListSubject.asObservable())
             .do(onNext: {
-                self.navigator.toRewardAd(selectedDreams: $0)
+                guard let dreams = $0.first?.items else { return }
+                self.navigator.toRewardAd(selectedDreams: dreams)
             })
+            .map({ _ in Void() })
+            .asDriver(onErrorJustReturn: ())
         
         return Output(dreams: dreams,
                       categories: categories.asDriver(onErrorJustReturn: []),
                       selectedCategory: selectedCategory,
                       selectedDream: selectItem,
                       addDream: addDream.map({ _ in Void() }),
-                      addedDreams: addedDreams.asDriver(onErrorJustReturn: []),
-                      createBtnEnable: canCreateBtn,
-                      createLotto: createRecommendedLotto.asDriver(onErrorJustReturn: []),
+                      deleteDream: deleteDream,
+                      sectionedDream: sectionListSubject.asDriver(onErrorJustReturn: []),
+                      createBtnEnable: canCreateBtn.asDriver(onErrorJustReturn: false),
+                      createLotto: createRecommendedLotto,
                       error: errorTracker.asDriver(onErrorJustReturn: DreamSelectionError.unknown))
     }
 }

@@ -23,3 +23,23 @@ extension MyNumbersSectionModel: SectionModelType {
   }
 }
 
+extension MyNumbersSectionModel: Equatable, Comparable {
+    static func == (lhs: MyNumbersSectionModel, rhs: MyNumbersSectionModel) -> Bool {
+        return lhs.header == rhs.header
+    }
+    
+    static func < (lhs: MyNumbersSectionModel, rhs: MyNumbersSectionModel) -> Bool {
+        guard let lDate = Utils.GetDateFromString(lhs.header, format: .yyyyMMdd),
+            let rDate = Utils.GetDateFromString(rhs.header, format: .yyyyMMdd)
+            else {
+                return false
+        }
+        
+        print("🔸lDate : \(lDate), rDate : \(rDate)")
+        print("🔸lDate < rDate : \(lDate < rDate)")
+        
+        return lDate < rDate
+    }
+    
+    
+}

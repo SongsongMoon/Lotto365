@@ -63,9 +63,11 @@ extension MyNumbersViewModel: DataBinding {
                 dict.map { (key, value) -> MyNumbersSectionModel in
                     let formatted = Utils.ChangeDateFormat(date: key, afterFormat: .yyyyMMdd)
                     let itemViewModels = value.map({ lotto in MyNumbersItemViewModel(useCase: self.useCase, lotto: lotto) })
+                    
                     return MyNumbersSectionModel(header: formatted ?? "-",
                                                  items: itemViewModels)
                 }
+                .sorted()
         }.asDriver(onErrorJustReturn: [MyNumbersSectionModel]())
         
         let enableAllDeleteBtn = lottos.map({ !$0.isEmpty })

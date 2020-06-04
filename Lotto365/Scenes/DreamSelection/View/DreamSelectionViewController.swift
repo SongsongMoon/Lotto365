@@ -13,6 +13,21 @@ import RxCocoa
 import RxDataSources
 import RxViewController
 
+struct DreamSectionModel {
+    var header: String
+    var items: [Item]
+}
+
+extension DreamSectionModel: SectionModelType {
+    typealias Item = Dream
+
+    init(original: DreamSectionModel, items: [Item]) {
+        self = original
+        self.items = items
+    }
+}
+
+
 class DreamSelectionViewController: BaseViewController {
 
     public var viewModel: DreamSelectionViewModel!
@@ -44,15 +59,25 @@ class DreamSelectionViewController: BaseViewController {
             return items[row]
     }
     
+    private var dreamTableDataSource = RxTableViewSectionedReloadDataSource<DreamSectionModel>(configureCell: { (datasource, tableView, indexPath, item) -> UITableViewCell in
+        let cell = tableView.dequeueReusableCell(withIdentifier: SelectedDreamCell.ID, for: indexPath) as! SelectedDreamCell
+        cell.categoryLb.text = item.category
+        cell.dreamLb.text = item.name
+        return cell
+    }, canEditRowAtIndexPath: {_,_ in
+        return true
+    })
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureAdmobBanner()
         tableView.register(SelectedDreamCell.self, forCellReuseIdentifier: SelectedDreamCell.ID)
         
         let categorySelect = categoryPickerView.rx
             .itemSelected
             .map { $0.0 }
+        
         let dreamSelect = dreamPickerView.rx
             .itemSelected
             .map{ $0.0 }
@@ -60,44 +85,55 @@ class DreamSelectionViewController: BaseViewController {
         let input = DreamSelectionViewModel.Input(categoryTrigger: categorySelect.asDriver(onErrorJustReturn: 0),
                                                   dreamTrigger: dreamSelect.asDriver(onErrorJustReturn: 0),
                                                   addTrigger: addBtn.rx.tap.asDriver(),
+                                                  deleteTrigger: tableView.rx.itemDeleted.asDriver(),
                                                   createTrigger: doneBtn.rx.tap.asDriver())
         let output = viewModel.bind(input: input)
+        
         output.categories
             .drive(categoryPickerView.rx.items(adapter: categoryPickerViewDataSource))
             .disposed(by: disposeBag)
+        
         output.dreams
             .drive(dreamPickerView.rx.items(adapter: dreamPickerViewDataSource))
             .disposed(by: disposeBag)
+        
         output.selectedDream
             .subscribe(onNext: { [weak self] dream in
                 self?.categoryLb.text = dream.category
                 self?.dreamLb.text = dream.name
             })
             .disposed(by: disposeBag)
+        
         output.selectedCategory
             .subscribe(onNext: { [weak self] categoryName in
                 self?.categoryLb.text = categoryName
                 self?.dreamPickerView.selectRow(2, inComponent: 0, animated: true)
             })
             .disposed(by: disposeBag)
+        
         output.addDream
             .subscribe()
             .disposed(by: disposeBag)
-        output.addedDreams
-            .drive(tableView.rx.items(cellIdentifier: SelectedDreamCell.ID, cellType: SelectedDreamCell.self)) { row, element, cell in
-                cell.categoryLb.text = element.category
-                cell.dreamLb.text = element.name
-        }
-        .disposed(by: disposeBag)
+        
+        output.sectionedDream
+            .drive(tableView.rx.items(dataSource: dreamTableDataSource))
+            .disposed(by: disposeBag)
+        
         output.createBtnEnable
             .drive(doneBtn.rx.isEnabled)
             .disposed(by: disposeBag)
+        
         output.error
             .drive(onNext: {
                 Toast(text: $0.localizedDescription).show()
             })
             .disposed(by: disposeBag)
+        
         output.createLotto
+            .drive()
+            .disposed(by: disposeBag)
+        
+        output.deleteDream
             .drive()
             .disposed(by: disposeBag)
     }

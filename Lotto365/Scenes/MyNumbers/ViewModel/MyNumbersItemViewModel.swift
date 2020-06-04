@@ -26,30 +26,3 @@ class MyNumbersItemViewModel {
         self.lotto = lotto
     }
 }
-
-//extension MyNumbersItemViewModel: DataBinding {
-//    func bind(input: MyNumbersItemViewModel.Input) -> MyNumbersItemViewModel.Output {
-//        let delete = input.deleteTrigger.asObservable()
-//            .take(1)
-//            .map { self.lotto }
-//            .flatMapLatest { (lotto) -> Driver<Void> in
-//                print("🔸 delete lotto : \(lotto.uid)")
-//                
-//                return self.useCase
-//                    .delete(lotto)
-//                    .asDriver(onErrorJustReturn: ())
-//        }
-//        .asDriver(onErrorJustReturn: ())
-//        
-//        return Output(delete: delete)
-//    }
-//    
-//    struct Input {
-//        var deleteTrigger: Driver<Void>
-//    }
-//    
-//    struct Output {
-//        let delete: Driver<Void>
-//    }
-//}
-//
