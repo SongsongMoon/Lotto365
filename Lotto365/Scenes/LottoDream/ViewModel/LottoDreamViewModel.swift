@@ -39,19 +39,19 @@ extension LottoDreamViewModel: DataBinding {
     
     func bind(input: LottoDreamViewModel.Input) -> LottoDreamViewModel.Output {
         
-        let lotto = Driver.just(convertToLotto(with: selectedDreams))
+        let lotto = convertToLotto(with: selectedDreams)
         let dreamsAndLottoBalls = Driver.of(selectedDreams).map { (dreams) -> [(Dream, LottoBall)] in
             let balls = dreams.map({ LottoBall(number: Int($0.lottoNumber) ?? 1 ) })
             return Array(zip(dreams, balls))
         }
         
-        let save = input.saveTrigger
-            .withLatestFrom(lotto).asObservable()
-            .flatMapLatest { [weak self] (lotto) -> Observable<Void> in
+        let save = input.saveTrigger.asObservable()
+            .withLatestFrom(lotto)
+            .flatMapLatest { [weak self] (_lotto) -> Observable<Void> in
                 guard let sSelf = self else { return Observable.empty() }
                 
                 return sSelf.useCase
-                    .saveMyLotto(lotto)
+                    .saveMyLotto(_lotto)
         }
         
         let back = input.backTrigger
@@ -60,7 +60,7 @@ extension LottoDreamViewModel: DataBinding {
             })
         
         return Output(
-            lotto: lotto,
+            lotto: lotto.asDriver(onErrorJustReturn: Lotto(balls: [])),
             dreamsAndLottoBalls: dreamsAndLottoBalls,
             save: save.asDriver(onErrorJustReturn: ()),
             back: back
@@ -69,10 +69,9 @@ extension LottoDreamViewModel: DataBinding {
 }
 
 extension LottoDreamViewModel {
-    private func convertToLotto(with dreams: [Dream]) -> Lotto {
-        let balls = dreams.map({ LottoBall(number: Int($0.lottoNumber) ?? 1 ) })
-        
-        return generateLotto(fixedBalls: balls)
+    private func convertToLotto(with dreams: [Dream]) -> Observable<Lotto> {
+        let balls = dreams.compactMap({ Int($0.lottoNumber) })
+        return Observable.just(Lotto(fixed: balls, excluded: []))
     }
     
     private func generateLotto(fixedBalls: [LottoBall] = [LottoBall](),

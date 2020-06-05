@@ -45,6 +45,7 @@ class LottoDreamViewController: BaseViewController {
         let input = LottoDreamViewModel.Input(saveTrigger: saveBtn.rx.tap.asDriver(),
                                               backTrigger: backBtn.rx.tap.asDriver())
         let output = viewModel.bind(input: input)
+        
         output.lotto.drive(onNext: { [weak self] in
             guard let sSelf = self else { return }
             

@@ -16,4 +16,3 @@ protocol LottoDomainUseCase {
     func delete(_ lotto: Lotto) -> Observable<Void>
     func deleteAll() -> Observable<Void>
 }
-

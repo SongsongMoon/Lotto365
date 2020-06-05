@@ -39,17 +39,12 @@ extension RecommendedViewModel: DataBinding {
     }
     
     func bind(input: RecommendedViewModel.Input) -> RecommendedViewModel.Output {
-        let fixedBalls = fixed.map({ LottoBall(number: $0) })
-        let availableRandomNumbers = Array(1...45)
-            .filter({ !excluded.contains($0) })
-            .filter({ !fixed.contains($0) })
-        let lottos = generateLottos(fixedBalls: fixedBalls,
-                               availableNumbers: availableRandomNumbers,
-                               cntLottos: 5)
-
+        let lottos = self.createLottos(cnt: 5)
+        
         let reCreate = input.reCreateTrigger.asObservable()
-            .flatMapLatest { (_) -> Observable<[Lotto]> in
-                self.generateLottos(fixedBalls: fixedBalls, availableNumbers: availableRandomNumbers, cntLottos: 5)
+            .flatMapLatest { [weak self] (_) -> Observable<[Lotto]> in
+                guard let sSelf = self else { return Observable.empty() }
+                return sSelf.createLottos(cnt: 5)
         }
         
         let reload = Observable.merge(lottos, reCreate)
@@ -71,26 +66,13 @@ extension RecommendedViewModel: DataBinding {
 }
 
 extension RecommendedViewModel {
-    private func generateLottos(fixedBalls: [LottoBall] = [LottoBall](),
-                                availableNumbers: [Int] = Array(1...45),
-                                cntLottos: Int = 5) -> Observable<[Lotto]> {
-        var results = Set<Lotto>()
-        while results.count != cntLottos {
-            results.insert(generateLotto(fixedBalls: fixedBalls, availableNumbers: availableNumbers))
-        }
-        return Observable.of(Array(results))
-    }
-    
-    private func generateLotto(fixedBalls: [LottoBall] = [LottoBall](),
-                               availableNumbers: [Int] = Array(1...45)) -> Lotto {
-        var randomBalls = Set(fixedBalls)
-        while randomBalls.count != 6 {
-            if let randomNumber = availableNumbers.randomElement() {
-                randomBalls.insert(LottoBall(number: randomNumber))
-            }
+    private func createLottos(cnt: Int) -> Observable<[Lotto]> {
+        var lottos = Set<Lotto>()
+        
+        while lottos.count != cnt {
+            lottos.insert(Lotto(fixed: fixed, excluded: excluded))
         }
         
-        let sortedBalls = randomBalls.sorted(by: { $0.number < $1.number })
-        return Lotto(balls: Array(sortedBalls))
+        return Observable.just(Array(lottos))
     }
 }

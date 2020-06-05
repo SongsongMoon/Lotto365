@@ -67,7 +67,7 @@ extension MyNumbersViewModel: DataBinding {
                     return MyNumbersSectionModel(header: formatted ?? "-",
                                                  items: itemViewModels)
                 }
-                .sorted()
+                .sorted(by: { $0 > $1 })
         }.asDriver(onErrorJustReturn: [MyNumbersSectionModel]())
         
         let enableAllDeleteBtn = lottos.map({ !$0.isEmpty })

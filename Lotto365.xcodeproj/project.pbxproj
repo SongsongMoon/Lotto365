@@ -97,8 +97,6 @@
 		04ADD534247E61FE00B9CC25 /* LottoDomainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */; };
 		04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */; };
 		04ADD538247E638900B9CC25 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD537247E638900B9CC25 /* DAO.swift */; };
-		04ADD53B247E658F00B9CC25 /* CommonRealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */; };
-		04ADD53D247E6B5300B9CC25 /* RealmLottoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53C247E6B5300B9CC25 /* RealmLottoDAO.swift */; };
 		04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */; };
 		04AEF8312484EC5800945FD7 /* MyNumbersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AEF8302484EC5800945FD7 /* MyNumbersCell.xib */; };
 		04AEF8332484EC6C00945FD7 /* MyNumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8322484EC6C00945FD7 /* MyNumbersCell.swift */; };
@@ -211,8 +209,6 @@
 		04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDomainUseCase.swift; sourceTree = "<group>"; };
 		04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoRepositoryInterface.swift; sourceTree = "<group>"; };
 		04ADD537247E638900B9CC25 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
-		04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRealmDAO.swift; sourceTree = "<group>"; };
-		04ADD53C247E6B5300B9CC25 /* RealmLottoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLottoDAO.swift; sourceTree = "<group>"; };
 		04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		04AEF8302484EC5800945FD7 /* MyNumbersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNumbersCell.xib; sourceTree = "<group>"; };
 		04AEF8322484EC6C00945FD7 /* MyNumbersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersCell.swift; sourceTree = "<group>"; };
@@ -331,15 +327,6 @@
 				044B0DCA247F58740087E2E6 /* Observable + Extensions.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		044B0DBA247F4E7D0087E2E6 /* Unused */ = {
-			isa = PBXGroup;
-			children = (
-				04ADD53C247E6B5300B9CC25 /* RealmLottoDAO.swift */,
-				04ADD53A247E658F00B9CC25 /* CommonRealmDAO.swift */,
-			);
-			path = Unused;
 			sourceTree = "<group>";
 		};
 		044B0DBB247F4E970087E2E6 /* Convertion */ = {
@@ -590,10 +577,10 @@
 		04605BF7247293E4008727E8 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */,
-				0418F518248629C70077E643 /* DreamDomainUseCase.swift */,
 				044B0DCC247F5AFF0087E2E6 /* DomainLottoUseCaseProvider.swift */,
+				04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */,
 				0418F52024862F070077E643 /* DomainDreamUseCaseProvider.swift */,
+				0418F518248629C70077E643 /* DreamDomainUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -940,7 +927,6 @@
 		04ADD539247E658400B9CC25 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				044B0DBA247F4E7D0087E2E6 /* Unused */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -1191,7 +1177,6 @@
 				04605C392473C6C0008727E8 /* UIView+Extension.swift in Sources */,
 				04826FCE24775B27003AFEA7 /* LottoBallCell.swift in Sources */,
 				04ADD534247E61FE00B9CC25 /* LottoDomainUseCase.swift in Sources */,
-				04ADD53D247E6B5300B9CC25 /* RealmLottoDAO.swift in Sources */,
 				0418F5152485F9970077E643 /* DreamSelectionNavigator.swift in Sources */,
 				04605C372473C654008727E8 /* LTView.swift in Sources */,
 				04ADD530247E35A700B9CC25 /* Application.swift in Sources */,
@@ -1201,7 +1186,6 @@
 				0477FFB72487992500ADB45C /* RewardAdViewController.swift in Sources */,
 				04826FD024775BAB003AFEA7 /* LTCollectionViewCell.swift in Sources */,
 				048AEBF824762A24009130DA /* Key.swift in Sources */,
-				04ADD53B247E658F00B9CC25 /* CommonRealmDAO.swift in Sources */,
 				044B0DCB247F58740087E2E6 /* Observable + Extensions.swift in Sources */,
 				048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */,
 				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,

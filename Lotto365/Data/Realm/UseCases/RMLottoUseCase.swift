@@ -11,6 +11,7 @@ import RxSwift
 import RealmSwift
 
 class RMLottoUseCase<Repository>: LottoDomainUseCase where Repository: AbstractRepository, Repository.T == Lotto {
+    
     private let repository: Repository
     private let disposBag = DisposeBag()
     
@@ -48,3 +49,4 @@ class RMLottoUseCase<Repository>: LottoDomainUseCase where Repository: AbstractR
         return self.repository.deleteAll(type: Lotto.self)
     }
 }
+

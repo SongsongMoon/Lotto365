@@ -20,6 +20,30 @@ struct Lotto {
         self.created = created
         self.uid = uid
     }
+    
+    init(
+        uid: String = UUID().uuidString,
+        fixed: [Int],
+        excluded: [Int],
+        created: String = "\(Date().millisecondsSince1970)"
+    ) {
+        self.uid = uid
+        self.created = created
+        
+        let fixedBalls = fixed.map({ LottoBall(number: $0) })
+        let availableRandomNumbers = Array(1...45)
+            .filter({ !excluded.contains($0) })
+            .filter({ !fixed.contains($0) })
+        var lottoBalls = Set(fixedBalls)
+        
+        while lottoBalls.count != 6 {
+            if let randomNum = availableRandomNumbers.randomElement() {
+                lottoBalls.insert(LottoBall(number: randomNum))
+            }
+        }
+        
+        self.balls = Array(lottoBalls.sorted(by: { $0.number < $1.number }))
+    }
 }
 
 extension Lotto: Equatable {
