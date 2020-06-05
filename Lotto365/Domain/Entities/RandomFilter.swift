@@ -16,7 +16,7 @@ struct RandomFilter {
     let ballNumber: Int
     var isSelected = false
     var section: Section
-    var selectedSection: Section
+    var selectedSection: Section?
 }
 
 extension RandomFilter: Equatable {

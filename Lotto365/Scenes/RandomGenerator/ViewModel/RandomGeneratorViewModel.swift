@@ -41,8 +41,8 @@ extension RandomGeneratorViewModel: DataBinding {
         var fixedNumberItemList = [RandomFilter]()
         var excludedNumberItemList = [RandomFilter]()
         for idx in 1...45 {
-            fixedNumberItemList.append(RandomFilter(ballNumber: idx, section: .fixed, selectedSection: .fixed))
-            excludedNumberItemList.append(RandomFilter(ballNumber: idx, section: .excluded ,selectedSection: .excluded))
+            fixedNumberItemList.append(RandomFilter(ballNumber: idx, section: .fixed))
+            excludedNumberItemList.append(RandomFilter(ballNumber: idx, section: .excluded))
         }
         
         let sections = [
@@ -69,17 +69,21 @@ extension RandomGeneratorViewModel: DataBinding {
                     }
                     else {
                         fixedNumbers[selectedIdx].isSelected = false
+                        fixedNumbers[selectedIdx].selectedSection = nil
                         excludedNumbers[selectedIdx].isSelected = false
+                        excludedNumbers[selectedIdx].selectedSection = nil
                     }
                 }
                 else {  //insert
-                    if selectedNumber.selectedSection == .fixed &&
-                        fixedNumbers.filter({ $0.isSelected && $0.selectedSection == .fixed }).count >= self.maxCntFixedNumber { //cnt of max
+                    let cntSelectedFixed = fixedNumbers.filter({ $0.isSelected && $0.selectedSection == .fixed }).count
+                    let cntSelectedExcluded = excludedNumbers.filter({ $0.isSelected && $0.selectedSection == .excluded }).count
+                    if selectedNumber.section == .fixed &&
+                        cntSelectedFixed >= self.maxCntFixedNumber {
                         errorTraker.onNext(.exceedFixedFiltering)
                         return sections
                     }
-                    else if selectedNumber.selectedSection == .excluded &&
-                        excludedNumbers.filter({ $0.isSelected && $0.selectedSection == .excluded }).count >= self.maxCntExcludedNumber { //cnt of max
+                    else if selectedNumber.section == .excluded &&
+                        cntSelectedExcluded >= self.maxCntExcludedNumber {
                         errorTraker.onNext(.exceedExcludedFiltering)
                         return sections
                     }
@@ -108,7 +112,7 @@ extension RandomGeneratorViewModel: DataBinding {
             
         let create = input.createTrigger.asObservable()
             .withLatestFrom(_sectionModels.asObservable())
-            .map({ [weak self] (sectionModels) -> ([Int], [Int]) in
+            .map({ (sectionModels) -> ([Int], [Int]) in
                 let fixedNumbers = sectionModels[0].items
                     .filter({ $0.isSelected && $0.selectedSection == .fixed })
                     .map({ $0.ballNumber })
