@@ -69,7 +69,16 @@ class MainNavigator: MainNavigatorInterface {
     
     func toSettings() {
         print("🔸push SettingsViewController from MainViewController")
-        //SettingsNavigator().pushViewController(from: topViewController)
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let navigator = SettingsNavigator(storyBoard: storyboard,
+                                          navigationController: navigationController)
+        let viewModel = SettingsViewModel(navigator: navigator)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController else {
+            fatalError("It doesn't exist SettingsViewController with Identifier.")
+        }
+        viewController.viewModel = viewModel
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     

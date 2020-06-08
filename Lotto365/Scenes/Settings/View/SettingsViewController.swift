@@ -7,37 +7,31 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class SettingsViewController: BaseViewController {
 
-    @IBOutlet var versionLb: UILabel!
+    public var viewModel: SettingsViewModel!
     
-    private var currentVersion: String {
-        guard let dictionary = Bundle.main.infoDictionary,
-            let version = dictionary["CFBundleShortVersionString"] as? String else { return "0" }
-        
-        #if DEBUG
-        return "debug " + version
-        #else
-        return version
-        #endif
-    }
+    @IBOutlet var versionLb: UILabel!
+    @IBOutlet var serviceCenterBtn: UIButton!
+    @IBOutlet var usagesBtn: UIButton!
+    
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        versionLb.text = currentVersion
+        let input = SettingsViewModel.Input(serviceCenterTrigger: serviceCenterBtn.rx.tap.asDriver(),
+                                            usagesTriggeer: usagesBtn.rx.tap.asDriver())
+        let output = viewModel.bind(input: input)
+        
+        output.toServiceCenter.drive().disposed(by: disposeBag)
+        output.toUsages.drive().disposed(by: disposeBag)
+        output.version.drive(versionLb.rx.text)
+        .disposed(by: disposeBag)
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

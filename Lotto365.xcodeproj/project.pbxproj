@@ -87,6 +87,16 @@
 		048AEBFE24762BFA009130DA /* Recommended.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEBFD24762BFA009130DA /* Recommended.storyboard */; };
 		048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */; };
 		048AEC0524768F6E009130DA /* Random.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEC0424768F6E009130DA /* Random.storyboard */; };
+		048D154D248DD06700B89EEA /* SettingsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D154C248DD06700B89EEA /* SettingsNavigator.swift */; };
+		048D1550248DD12300B89EEA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D154F248DD12300B89EEA /* SettingsViewModel.swift */; };
+		048D1552248DD79C00B89EEA /* ServiceCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048D1551248DD79C00B89EEA /* ServiceCenter.storyboard */; };
+		048D1554248DD7BC00B89EEA /* ServiceCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D1553248DD7BC00B89EEA /* ServiceCenterViewController.swift */; };
+		048D1556248DD7DA00B89EEA /* ServiceCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D1555248DD7DA00B89EEA /* ServiceCenterViewModel.swift */; };
+		048D1558248DD7E900B89EEA /* ServiceCenterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D1557248DD7E900B89EEA /* ServiceCenterNavigator.swift */; };
+		048D155A248DDEA100B89EEA /* Usages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048D1559248DDEA100B89EEA /* Usages.storyboard */; };
+		048D155C248DDEB400B89EEA /* UsagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D155B248DDEB400B89EEA /* UsagesViewController.swift */; };
+		048D155E248DDEBF00B89EEA /* UsagesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D155D248DDEBF00B89EEA /* UsagesNavigator.swift */; };
+		048D1560248DDEEE00B89EEA /* UsagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D155F248DDEEE00B89EEA /* UsagesViewModel.swift */; };
 		04A6815C2484AE3C00E762C5 /* MyNumbersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6815B2484AE3C00E762C5 /* MyNumbersViewModel.swift */; };
 		04A6815E2484AE8E00E762C5 /* MyNumbersNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6815D2484AE8E00E762C5 /* MyNumbersNavigator.swift */; };
 		04A681612484B35800E762C5 /* MyNumbersHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A681602484B35800E762C5 /* MyNumbersHeaderView.xib */; };
@@ -199,6 +209,16 @@
 		048AEBFD24762BFA009130DA /* Recommended.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recommended.storyboard; sourceTree = "<group>"; };
 		048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSelectionViewModel.swift; sourceTree = "<group>"; };
 		048AEC0424768F6E009130DA /* Random.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Random.storyboard; sourceTree = "<group>"; };
+		048D154C248DD06700B89EEA /* SettingsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigator.swift; sourceTree = "<group>"; };
+		048D154F248DD12300B89EEA /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		048D1551248DD79C00B89EEA /* ServiceCenter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceCenter.storyboard; sourceTree = "<group>"; };
+		048D1553248DD7BC00B89EEA /* ServiceCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterViewController.swift; sourceTree = "<group>"; };
+		048D1555248DD7DA00B89EEA /* ServiceCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterViewModel.swift; sourceTree = "<group>"; };
+		048D1557248DD7E900B89EEA /* ServiceCenterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterNavigator.swift; sourceTree = "<group>"; };
+		048D1559248DDEA100B89EEA /* Usages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Usages.storyboard; sourceTree = "<group>"; };
+		048D155B248DDEB400B89EEA /* UsagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagesViewController.swift; sourceTree = "<group>"; };
+		048D155D248DDEBF00B89EEA /* UsagesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagesNavigator.swift; sourceTree = "<group>"; };
+		048D155F248DDEEE00B89EEA /* UsagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagesViewModel.swift; sourceTree = "<group>"; };
 		04A6815B2484AE3C00E762C5 /* MyNumbersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersViewModel.swift; sourceTree = "<group>"; };
 		04A6815D2484AE8E00E762C5 /* MyNumbersNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersNavigator.swift; sourceTree = "<group>"; };
 		04A681602484B35800E762C5 /* MyNumbersHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNumbersHeaderView.xib; sourceTree = "<group>"; };
@@ -679,6 +699,7 @@
 		04605C0224729927008727E8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				048D154C248DD06700B89EEA /* SettingsNavigator.swift */,
 				04605C1324729A01008727E8 /* View */,
 				04605C12247299FD008727E8 /* ViewModel */,
 			);
@@ -688,6 +709,7 @@
 		04605C032472992C008727E8 /* Usages */ = {
 			isa = PBXGroup;
 			children = (
+				048D155D248DDEBF00B89EEA /* UsagesNavigator.swift */,
 				04605C1724729A11008727E8 /* View */,
 				04605C1624729A0C008727E8 /* ViewModel */,
 			);
@@ -697,6 +719,7 @@
 		04605C0424729940008727E8 /* ServiceCenter */ = {
 			isa = PBXGroup;
 			children = (
+				048D1557248DD7E900B89EEA /* ServiceCenterNavigator.swift */,
 				04605C1524729A08008727E8 /* View */,
 				04605C1424729A04008727E8 /* ViewModel */,
 			);
@@ -816,6 +839,7 @@
 		04605C12247299FD008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				048D154F248DD12300B89EEA /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -832,6 +856,7 @@
 		04605C1424729A04008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				048D1555248DD7DA00B89EEA /* ServiceCenterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -839,6 +864,8 @@
 		04605C1524729A08008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048D1551248DD79C00B89EEA /* ServiceCenter.storyboard */,
+				048D1553248DD7BC00B89EEA /* ServiceCenterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -846,6 +873,7 @@
 		04605C1624729A0C008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				048D155F248DDEEE00B89EEA /* UsagesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -853,6 +881,8 @@
 		04605C1724729A11008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048D1559248DDEA100B89EEA /* Usages.storyboard */,
+				048D155B248DDEB400B89EEA /* UsagesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1058,6 +1088,7 @@
 				04605C472473D016008727E8 /* RecommendedCell.xib in Resources */,
 				04826FD42477600A003AFEA7 /* LottoBallHeaderView.xib in Resources */,
 				04A681612484B35800E762C5 /* MyNumbersHeaderView.xib in Resources */,
+				048D155A248DDEA100B89EEA /* Usages.storyboard in Resources */,
 				04605C512473D9BF008727E8 /* LottoHistory.storyboard in Resources */,
 				04605C592473EFD3008727E8 /* MyNumbers.storyboard in Resources */,
 				0477FFB32487812000ADB45C /* SelectedDreamCell.xib in Resources */,
@@ -1067,6 +1098,7 @@
 				04605BDE247291C6008727E8 /* Assets.xcassets in Resources */,
 				04605C2524737A8D008727E8 /* GoogleService-Info.plist in Resources */,
 				040028052474BF2A009D3A22 /* MainCategoryCell.xib in Resources */,
+				048D1552248DD79C00B89EEA /* ServiceCenter.storyboard in Resources */,
 				0451A844248890E7000DA059 /* DreamAndBallCell.xib in Resources */,
 				048AEBFE24762BFA009130DA /* Recommended.storyboard in Resources */,
 				04605C312473B15F008727E8 /* Dreams.json in Resources */,
@@ -1174,8 +1206,10 @@
 				04CB8DA4247CC8C40026C3E3 /* RandomFilter.swift in Sources */,
 				044B0DCD247F5AFF0087E2E6 /* DomainLottoUseCaseProvider.swift in Sources */,
 				044B0DD0247FA00C0087E2E6 /* LTButton.swift in Sources */,
+				048D155C248DDEB400B89EEA /* UsagesViewController.swift in Sources */,
 				04605C392473C6C0008727E8 /* UIView+Extension.swift in Sources */,
 				04826FCE24775B27003AFEA7 /* LottoBallCell.swift in Sources */,
+				048D155E248DDEBF00B89EEA /* UsagesNavigator.swift in Sources */,
 				04ADD534247E61FE00B9CC25 /* LottoDomainUseCase.swift in Sources */,
 				0418F5152485F9970077E643 /* DreamSelectionNavigator.swift in Sources */,
 				04605C372473C654008727E8 /* LTView.swift in Sources */,
@@ -1187,12 +1221,14 @@
 				04826FD024775BAB003AFEA7 /* LTCollectionViewCell.swift in Sources */,
 				048AEBF824762A24009130DA /* Key.swift in Sources */,
 				044B0DCB247F58740087E2E6 /* Observable + Extensions.swift in Sources */,
+				048D1556248DD7DA00B89EEA /* ServiceCenterViewModel.swift in Sources */,
 				048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */,
 				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,
 				04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */,
 				044B0DC3247F503D0087E2E6 /* Realm + Extensions.swift in Sources */,
 				04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */,
 				04ADD532247E501B00B9CC25 /* RecommendedItemViewModel.swift in Sources */,
+				048D1558248DD7E900B89EEA /* ServiceCenterNavigator.swift in Sources */,
 				04CB8DBB247D105D0026C3E3 /* MainNavigator.swift in Sources */,
 				0451A83D24888857000DA059 /* LottoDreamViewModel.swift in Sources */,
 				0418F519248629C70077E643 /* DreamDomainUseCase.swift in Sources */,
@@ -1201,6 +1237,7 @@
 				0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */,
 				0400281324753150009D3A22 /* QRScannerViewController.swift in Sources */,
 				04605C3B2473C77F008727E8 /* MainViewController.swift in Sources */,
+				048D1554248DD7BC00B89EEA /* ServiceCenterViewController.swift in Sources */,
 				044B0DC7247F57270087E2E6 /* RMUseCaseProvider.swift in Sources */,
 				04A6815C2484AE3C00E762C5 /* MyNumbersViewModel.swift in Sources */,
 				0418F51D24862ABB0077E643 /* FDreamUseCase.swift in Sources */,
@@ -1235,15 +1272,18 @@
 				04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */,
 				04605C532473DA61008727E8 /* LottoHistoryViewController.swift in Sources */,
 				040028072474D3CB009D3A22 /* MainCategoryCell.swift in Sources */,
+				048D1560248DDEEE00B89EEA /* UsagesViewModel.swift in Sources */,
 				04605C492473D2FA008727E8 /* RecommendedCell.swift in Sources */,
 				04605C4B2473D318008727E8 /* LTTableCell.swift in Sources */,
 				0400280A2474D8AB009D3A22 /* Segue.swift in Sources */,
 				04C15A51247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift in Sources */,
 				0418F5132485E5700077E643 /* UIViewController + Extension.swift in Sources */,
 				04605C572473E932008727E8 /* SettingsViewController.swift in Sources */,
+				048D154D248DD06700B89EEA /* SettingsNavigator.swift in Sources */,
 				04826FDA247785DF003AFEA7 /* RandomGeneratorViewModel.swift in Sources */,
 				0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */,
 				0418F517248629770077E643 /* Dream.swift in Sources */,
+				048D1550248DD12300B89EEA /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1388,6 +1428,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1408,6 +1449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
