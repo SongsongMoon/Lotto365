@@ -57,14 +57,24 @@ class MyNumbersViewController: BaseViewController {
         }
         .asDriver(onErrorJustReturn: false)
         
-        let input = MyNumbersViewModel.Input(allDeleteAlertTrigger: alert)
+        let input = MyNumbersViewModel.Input(viewWillAppear: self.rx.viewWillAppear.asDriver(),
+                                             allDeleteAlertTrigger: alert)
         let output = viewModel.bind(input: input)
         output.lottos.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-        output.delete.drive().disposed(by: disposeBag)
-        output.allDelete.drive().disposed(by: disposeBag)
-        output.enableAllDeleteBtn.drive(allDeleteBtn.rx.isEnabled).disposed(by: disposeBag)
+        output.delete
+            .drive()
+            .disposed(by: disposeBag)
+        output.allDelete
+            .drive()
+            .disposed(by: disposeBag)
+        output.enableAllDeleteBtn
+            .drive(allDeleteBtn.rx.isEnabled)
+            .disposed(by: disposeBag)
+        output.requestAppReview
+            .drive()
+            .disposed(by: disposeBag)
     }
 }
 

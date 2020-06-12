@@ -25,6 +25,7 @@ class MyNumbersViewModel {
 
 extension MyNumbersViewModel: DataBinding {
     struct Input {
+        let viewWillAppear: Driver<Bool>
         let allDeleteAlertTrigger: Driver<Bool>
     }
     
@@ -33,9 +34,18 @@ extension MyNumbersViewModel: DataBinding {
         let delete: Driver<Void>
         let enableAllDeleteBtn: Driver<Bool>
         let allDelete: Driver<Void>
+        let requestAppReview: Driver<Void>
     }
     
     func bind(input: MyNumbersViewModel.Input) -> MyNumbersViewModel.Output {
+        let requestAppReview = input.viewWillAppear
+            .do(onNext: { _ in
+                ReviewManager.requestReview()
+            })
+            .map{ _ in Void() }
+            .asDriver(onErrorJustReturn: ())
+
+        
         let allDelete = input.allDeleteAlertTrigger.asObservable()
             .filter({ $0 })
             .flatMapLatest({ _ in self.useCase.deleteAll() })
@@ -75,6 +85,7 @@ extension MyNumbersViewModel: DataBinding {
         return Output(lottos: lottos,
                       delete: delete,
                       enableAllDeleteBtn: enableAllDeleteBtn,
-                      allDelete: allDelete)
+                      allDelete: allDelete,
+                      requestAppReview: requestAppReview)
     }
 }
