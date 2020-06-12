@@ -14,7 +14,7 @@ import GoogleMobileAds
 class MainViewController: BaseViewController {
     
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var qrBtn: UIBarButtonItem!
+    @IBOutlet var moreBtn: UIBarButtonItem!
     @IBOutlet var bannerView: GADBannerView!
     
     private let disposeBag = DisposeBag()
@@ -29,12 +29,12 @@ class MainViewController: BaseViewController {
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
         let input = MainViewModel.Input(analyzesTrigger: tableView.rx.itemSelected.asDriver(),
-                                        qrScannerTrigger: qrBtn.rx.tap.asDriver())
+                                        moreTrigger: moreBtn.rx.tap.asDriver())
         let output = viewModel.bind(input: input)
         output.toAnalyzes
             .drive()
             .disposed(by: disposeBag)
-        output.toQRScanner
+        output.toMore
             .drive()
             .disposed(by: disposeBag)
         output.categories

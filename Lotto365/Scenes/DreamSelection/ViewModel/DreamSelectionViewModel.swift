@@ -69,7 +69,8 @@ extension DreamSelectionViewModel: DataBinding {
         let dreamCategories = useCase.getDreams()
         let selectingCategory = BehaviorSubject<Int>(value: defaultIdx)
         let selectingDream = BehaviorSubject<Int>(value: defaultIdx)
-        let sectionListSubject = BehaviorSubject<[DreamSectionModel]>(value: [])
+        
+        let sectionListSubject = BehaviorSubject<[DreamSectionModel]>(value: [DreamSectionModel(header: "", items: [])])
         
         let categories = dreamCategories.map({ $0.map({ $0.title }) })
         

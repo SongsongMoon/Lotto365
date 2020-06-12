@@ -51,8 +51,8 @@ extension AnalyzesViewModel {
         
         var title: String {
             switch self {
-            case .dream:    return "꿈해몽 번호분석"
-            case .random:   return "무작위 번호분석"
+            case .dream:    return "꿈 분석"
+            case .random:   return "랜덤 생성"
             }
         }
         

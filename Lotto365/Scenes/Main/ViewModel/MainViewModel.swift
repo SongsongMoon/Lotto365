@@ -21,13 +21,13 @@ class MainViewModel {
 extension MainViewModel: DataBinding {
     struct Input {
         var analyzesTrigger: Driver<IndexPath>
-        var qrScannerTrigger: Driver<Void>
+        var moreTrigger: Driver<Void>
     }
     
     struct Output {
         let toAnalyzes: Driver<Void>
-        let toQRScanner: Driver<Void>
-        let categories = Observable<[Category]>.of([.analyze, .myNumber, .settings])
+        let toMore: Driver<Void>
+        let categories = Observable<[Category]>.of([.analyze, .myNumber, .qrCapture])
     }
     
     func bind(input: MainViewModel.Input) -> MainViewModel.Output {
@@ -40,18 +40,18 @@ extension MainViewModel: DataBinding {
                     self.navigator.toMyNumbers()
                 }
                 else if idx.row == 2 {
-                    self.navigator.toSettings()
+                    self.navigator.toQRScanner()
                 }
             })
             .map({ _ in Void() })
-        let toQRScanner = input.qrScannerTrigger
+        let toMore = input.moreTrigger
             .do(onNext: {
-                self.navigator.toQRScanner()
+                self.navigator.toSettings()
             })
             .map({ _ in Void() })
         
         return Output(toAnalyzes: toAnalyzes,
-                      toQRScanner: toQRScanner)
+                      toMore: toMore)
     }
 }
 
@@ -59,21 +59,13 @@ extension MainViewModel {
     enum Category {
         case analyze
         case myNumber
-        case settings
+        case qrCapture
         
         var title: String {
             switch self {
-            case .analyze:      return "번호분석"
+            case .analyze:      return "번호 생성"
             case .myNumber:     return "내 번호"
-            case .settings:     return "설정"
-            }
-        }
-        
-        var segue: String {
-            switch self {
-            case .analyze:      return Segue.MAIN_TO_ANALYZES
-            case .myNumber:     return Segue.MAIN_TO_MY_NUMBERS
-            case .settings:     return Segue.MAIN_TO_SETTINGS
+            case .qrCapture:     return "QR 코드"
             }
         }
     }

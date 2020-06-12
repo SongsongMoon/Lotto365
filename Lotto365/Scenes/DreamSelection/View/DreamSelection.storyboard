@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--꿈해몽-->
+        <!--꿈 분석-->
         <scene sceneID="Npw-gd-bKu">
             <objects>
                 <viewController storyboardIdentifier="DreamSelectionViewController" id="ziH-JG-ERD" customClass="DreamSelectionViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etv-Py-Ft1" customClass="GADBannerView">
-                                <rect key="frame" x="47" y="44" width="320" height="53"/>
+                                <rect key="frame" x="47" y="88" width="320" height="53"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Nve-Qf-w68"/>
@@ -26,7 +26,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="LqQ-3U-TrS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="250"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GO5-Yj-EQe">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="250"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jx7-IF-DLA">
-                                <rect key="frame" x="0.0" y="294" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="338" width="414" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ne-ht-A18" customClass="LTButton" customModule="Lotto365" customModuleProvider="target">
                                         <rect key="frame" x="315" y="12" width="84" height="40"/>
@@ -119,11 +119,11 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ipm-Qb-2a7">
-                                <rect key="frame" x="0.0" y="406" width="414" height="394"/>
+                                <rect key="frame" x="0.0" y="450" width="414" height="350"/>
                                 <color key="backgroundColor" name="background"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택한 꿈 목록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ti-x8-qta">
-                                <rect key="frame" x="8" y="370" width="114.5" height="24"/>
+                                <rect key="frame" x="8" y="414" width="114.5" height="24"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -162,7 +162,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8E7-1Z-VHT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="꿈해몽" id="zmy-2g-AHk"/>
+                    <navigationItem key="navigationItem" title="꿈 분석" id="zmy-2g-AHk"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="addBtn" destination="2Ne-ht-A18" id="Mp9-kv-CgM"/>
                         <outlet property="bannerView" destination="Etv-Py-Ft1" id="MS8-lq-J65"/>

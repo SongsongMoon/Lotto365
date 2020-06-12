@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "04EA99DA248F81520069C10C"
+               BuildableName = "RandomGeneratorViewModelTests.xctest"
+               BlueprintName = "RandomGeneratorViewModelTests"
+               ReferencedContainer = "container:Lotto365.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "04EA99E8248F84F60069C10C"
+               BuildableName = "Lotto365Tests.xctest"
+               BlueprintName = "Lotto365Tests"
+               ReferencedContainer = "container:Lotto365.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

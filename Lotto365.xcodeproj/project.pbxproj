@@ -20,6 +20,7 @@
 		0418F51D24862ABB0077E643 /* FDreamUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F51C24862ABB0077E643 /* FDreamUseCase.swift */; };
 		0418F51F24862AE60077E643 /* FUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F51E24862AE60077E643 /* FUseCaseProvider.swift */; };
 		0418F52124862F070077E643 /* DomainDreamUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F52024862F070077E643 /* DomainDreamUseCaseProvider.swift */; };
+		043E9178249312E600087274 /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E9177249312E600087274 /* ReviewManager.swift */; };
 		044B0DBD247F4EAC0087E2E6 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DBC247F4EAC0087E2E6 /* DomainConvertibleType.swift */; };
 		044B0DBF247F4EBC0087E2E6 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DBE247F4EBC0087E2E6 /* RealmRepresentable.swift */; };
 		044B0DC1247F4F190087E2E6 /* RMLotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC0247F4F190087E2E6 /* RMLotto.swift */; };
@@ -122,8 +123,20 @@
 		04CB8DA6247CC9E90026C3E3 /* LottoBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */; };
 		04CB8DAE247CE91B0026C3E3 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */; };
 		04CB8DBB247D105D0026C3E3 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */; };
+		04EA99F7248F86830069C10C /* RandomGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA99F6248F86830069C10C /* RandomGeneratorTests.swift */; };
+		33DE6D03274606F607BD0CB4 /* Pods_Lotto365Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC585C488DF2A6597BFF70C /* Pods_Lotto365Tests.framework */; };
 		8363BBC9B2862E3F2FA4612D /* Pods_Lotto365.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04EA99EE248F84F60069C10C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04605BC9247291C5008727E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04605BD0247291C5008727E8;
+			remoteInfo = Lotto365;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		040028042474BF2A009D3A22 /* MainCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCategoryCell.xib; sourceTree = "<group>"; };
@@ -139,6 +152,7 @@
 		0418F51C24862ABB0077E643 /* FDreamUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDreamUseCase.swift; sourceTree = "<group>"; };
 		0418F51E24862AE60077E643 /* FUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUseCaseProvider.swift; sourceTree = "<group>"; };
 		0418F52024862F070077E643 /* DomainDreamUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDreamUseCaseProvider.swift; sourceTree = "<group>"; };
+		043E9177249312E600087274 /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 		044B0DBC247F4EAC0087E2E6 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
 		044B0DBE247F4EBC0087E2E6 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		044B0DC0247F4F190087E2E6 /* RMLotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLotto.swift; sourceTree = "<group>"; };
@@ -244,8 +258,14 @@
 		04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoBall.swift; sourceTree = "<group>"; };
 		04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		04EA99E9248F84F60069C10C /* Lotto365Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lotto365Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04EA99ED248F84F60069C10C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04EA99F6248F86830069C10C /* RandomGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorTests.swift; sourceTree = "<group>"; };
 		15E104ABC2122FCC48507374 /* Pods-Lotto365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365.debug.xcconfig"; path = "Target Support Files/Pods-Lotto365/Pods-Lotto365.debug.xcconfig"; sourceTree = "<group>"; };
+		3CC585C488DF2A6597BFF70C /* Pods_Lotto365Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotto365Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50822B85C0B19C099B3B71E8 /* Pods-Lotto365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365.release.xcconfig"; path = "Target Support Files/Pods-Lotto365/Pods-Lotto365.release.xcconfig"; sourceTree = "<group>"; };
+		64A2BD77C84B9E61BA72AB5D /* Pods-Lotto365Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365Tests.debug.xcconfig"; path = "Target Support Files/Pods-Lotto365Tests/Pods-Lotto365Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		66380333E17134BF4160D673 /* Pods-Lotto365Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365Tests.release.xcconfig"; path = "Target Support Files/Pods-Lotto365Tests/Pods-Lotto365Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotto365.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -255,6 +275,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8363BBC9B2862E3F2FA4612D /* Pods_Lotto365.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EA99E6248F84F60069C10C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33DE6D03274606F607BD0CB4 /* Pods_Lotto365Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +339,14 @@
 				0418F51E24862AE60077E643 /* FUseCaseProvider.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		043E9179249313BD00087274 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				043E9177249312E600087274 /* ReviewManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		044B0DB6247F4E340087E2E6 /* Entities */ = {
@@ -406,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				04605BD3247291C5008727E8 /* Lotto365 */,
+				04EA99EA248F84F60069C10C /* Lotto365Tests */,
 				04605BD2247291C5008727E8 /* Products */,
 				767C76443C63A9EDFB163050 /* Pods */,
 				158043A5E71D340455357725 /* Frameworks */,
@@ -416,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				04605BD1247291C5008727E8 /* Lotto365.app */,
+				04EA99E9248F84F60069C10C /* Lotto365Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -449,6 +487,7 @@
 		04605BE924729260008727E8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				043E9179249313BD00087274 /* Manager */,
 				040028082474D892009D3A22 /* Constant */,
 				04605BF52472939C008727E8 /* Base */,
 				04605BF424729391008727E8 /* Utils */,
@@ -1003,10 +1042,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04EA99EA248F84F60069C10C /* Lotto365Tests */ = {
+			isa = PBXGroup;
+			children = (
+				04EA99F3248F85090069C10C /* Scenes */,
+				04EA99ED248F84F60069C10C /* Info.plist */,
+			);
+			path = Lotto365Tests;
+			sourceTree = "<group>";
+		};
+		04EA99F3248F85090069C10C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04EA99F6248F86830069C10C /* RandomGeneratorTests.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		158043A5E71D340455357725 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */,
+				3CC585C488DF2A6597BFF70C /* Pods_Lotto365Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1016,6 +1073,8 @@
 			children = (
 				15E104ABC2122FCC48507374 /* Pods-Lotto365.debug.xcconfig */,
 				50822B85C0B19C099B3B71E8 /* Pods-Lotto365.release.xcconfig */,
+				64A2BD77C84B9E61BA72AB5D /* Pods-Lotto365Tests.debug.xcconfig */,
+				66380333E17134BF4160D673 /* Pods-Lotto365Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1042,6 +1101,26 @@
 			productReference = 04605BD1247291C5008727E8 /* Lotto365.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04EA99E8248F84F60069C10C /* Lotto365Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04EA99F2248F84F60069C10C /* Build configuration list for PBXNativeTarget "Lotto365Tests" */;
+			buildPhases = (
+				7E289AEA69662E7D8D67ED8F /* [CP] Check Pods Manifest.lock */,
+				04EA99E5248F84F60069C10C /* Sources */,
+				04EA99E6248F84F60069C10C /* Frameworks */,
+				04EA99E7248F84F60069C10C /* Resources */,
+				5D5355AAE0B6BFCED213E5B9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04EA99EF248F84F60069C10C /* PBXTargetDependency */,
+			);
+			name = Lotto365Tests;
+			productName = Lotto365Tests;
+			productReference = 04EA99E9248F84F60069C10C /* Lotto365Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1054,6 +1133,10 @@
 				TargetAttributes = {
 					04605BD0247291C5008727E8 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					04EA99E8248F84F60069C10C = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 04605BD0247291C5008727E8;
 					};
 				};
 			};
@@ -1071,6 +1154,7 @@
 			projectRoot = "";
 			targets = (
 				04605BD0247291C5008727E8 /* Lotto365 */,
+				04EA99E8248F84F60069C10C /* Lotto365Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1108,9 +1192,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04EA99E7248F84F60069C10C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5D5355AAE0B6BFCED213E5B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lotto365Tests/Pods-Lotto365Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lotto365Tests/Pods-Lotto365Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E289AEA69662E7D8D67ED8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lotto365Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A209C53B80F97C1D639F7CA4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1281,13 +1420,30 @@
 				04605C572473E932008727E8 /* SettingsViewController.swift in Sources */,
 				048D154D248DD06700B89EEA /* SettingsNavigator.swift in Sources */,
 				04826FDA247785DF003AFEA7 /* RandomGeneratorViewModel.swift in Sources */,
+				043E9178249312E600087274 /* ReviewManager.swift in Sources */,
 				0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */,
 				0418F517248629770077E643 /* Dream.swift in Sources */,
 				048D1550248DD12300B89EEA /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04EA99E5248F84F60069C10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EA99F7248F86830069C10C /* RandomGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04EA99EF248F84F60069C10C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04605BD0247291C5008727E8 /* Lotto365 */;
+			targetProxy = 04EA99EE248F84F60069C10C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04605BDF247291C6008727E8 /* LaunchScreen.storyboard */ = {
@@ -1457,6 +1613,50 @@
 			};
 			name = Release;
 		};
+		04EA99F0248F84F60069C10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A2BD77C84B9E61BA72AB5D /* Pods-Lotto365Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUF4YMXS3K;
+				INFOPLIST_FILE = Lotto365Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lotto365.app/Lotto365";
+			};
+			name = Debug;
+		};
+		04EA99F1248F84F60069C10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66380333E17134BF4160D673 /* Pods-Lotto365Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUF4YMXS3K;
+				INFOPLIST_FILE = Lotto365Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lotto365.app/Lotto365";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1474,6 +1674,15 @@
 			buildConfigurations = (
 				04605BE6247291C6008727E8 /* Debug */,
 				04605BE7247291C6008727E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04EA99F2248F84F60069C10C /* Build configuration list for PBXNativeTarget "Lotto365Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04EA99F0248F84F60069C10C /* Debug */,
+				04EA99F1248F84F60069C10C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

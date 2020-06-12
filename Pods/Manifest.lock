@@ -4,6 +4,8 @@ PODS:
     - Fabric (~> 1.10.2)
   - Differentiator (4.0.1)
   - Fabric (1.10.2)
+  - Firebase (6.22.0):
+    - Firebase/Core (= 6.22.0)
   - Firebase/AdMob (6.22.0):
     - Firebase/CoreOnly
     - Google-Mobile-Ads-SDK (~> 7.50)
@@ -129,6 +131,7 @@ PODS:
 DEPENDENCIES:
   - Crashlytics (~> 3.14.0)
   - Fabric (~> 1.10.2)
+  - Firebase
   - Firebase/AdMob
   - Firebase/Analytics
   - Firebase/Messaging
@@ -208,6 +211,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
 
-PODFILE CHECKSUM: 7a41388cba44535f6012fb97c0d6e7ded4bcad0d
+PODFILE CHECKSUM: b54ef8643849cd5648e551cf010d8f13969a14af
 
 COCOAPODS: 1.6.0

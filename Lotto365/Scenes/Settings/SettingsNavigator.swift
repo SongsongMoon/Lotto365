@@ -26,6 +26,14 @@ class SettingsNavigator {
 
 extension SettingsNavigator: SettingsNavigatorInterface {
     func toServiceCenter() {
+        let storyboard = UIStoryboard(name: "ServiceCenter", bundle: nil)
+        let navigator = ServiceCenterNavigator(storyBoard: storyboard, navigationController: navigationController)
+        let viewModel = ServiceCenterViewModel(navigator: navigator)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ServiceCenterViewController") as? ServiceCenterViewController else {
+            fatalError("It doesn't exist ServiceCenterViewController with Identifier.")
+        }
+        vc.viewModel = viewModel
+        navigationController.pushViewController(vc, animated: true)
         print("🔸push ServiceCenter from Settings")
     }
     

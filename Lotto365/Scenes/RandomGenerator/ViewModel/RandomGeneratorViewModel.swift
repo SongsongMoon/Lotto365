@@ -16,9 +16,23 @@ class RandomGeneratorViewModel {
     private let maxCntExcludedNumber = 35
     
     private var navigator: RandomGeneratorNavigatorInterface!
+    private let defaultSections: [LottoFilteringSectionModel]
     
     init(navigator: RandomGeneratorNavigatorInterface) {
         self.navigator = navigator
+        
+        
+        var fixedNumberItemList = [RandomFilter]()
+        var excludedNumberItemList = [RandomFilter]()
+        for idx in 1...45 {
+            fixedNumberItemList.append(RandomFilter(ballNumber: idx, section: .fixed))
+            excludedNumberItemList.append(RandomFilter(ballNumber: idx, section: .excluded))
+        }
+        
+        self.defaultSections = [
+            LottoFilteringSectionModel(header: "고정번호", items: fixedNumberItemList),
+            LottoFilteringSectionModel(header: "제외번호", items: excludedNumberItemList)
+        ]
     }
 }
 
@@ -38,18 +52,7 @@ extension RandomGeneratorViewModel: DataBinding {
     func bind(input: RandomGeneratorViewModel.Input) -> RandomGeneratorViewModel.Output {
         let errorTraker = PublishSubject<RandomGeneratorError>()
         
-        var fixedNumberItemList = [RandomFilter]()
-        var excludedNumberItemList = [RandomFilter]()
-        for idx in 1...45 {
-            fixedNumberItemList.append(RandomFilter(ballNumber: idx, section: .fixed))
-            excludedNumberItemList.append(RandomFilter(ballNumber: idx, section: .excluded))
-        }
-        
-        let sections = [
-            LottoFilteringSectionModel(header: "고정번호", items: fixedNumberItemList),
-            LottoFilteringSectionModel(header: "제외번호", items: excludedNumberItemList)
-        ]
-        let _sectionModels = BehaviorRelay<[LottoFilteringSectionModel]>(value: sections)
+        let _sectionModels = BehaviorRelay<[LottoFilteringSectionModel]>(value: defaultSections)
         
         let selected = input.lottoBallTrigger.asObservable()
             .withLatestFrom(_sectionModels) { (selectedNumber, sections) -> [LottoFilteringSectionModel] in
@@ -108,7 +111,7 @@ extension RandomGeneratorViewModel: DataBinding {
                 ]
         }
         .do(onNext: { _sectionModels.accept($0) })
-        .asDriver(onErrorJustReturn: sections)
+        .asDriver(onErrorJustReturn: defaultSections)
             
         let create = input.createTrigger.asObservable()
             .withLatestFrom(_sectionModels.asObservable())

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Lotto 365-->
+        <!--로또365-->
         <scene sceneID="Bcq-mb-cew">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="ff5-62-Fcz" customClass="MainViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,12 +41,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iVU-SX-wwT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lotto 365" id="R4H-go-bdJ">
-                        <barButtonItem key="rightBarButtonItem" image="qrcode" catalog="system" id="sxL-OI-arC"/>
+                    <navigationItem key="navigationItem" title="로또365" id="R4H-go-bdJ">
+                        <barButtonItem key="rightBarButtonItem" image="imageToolbarMore" id="sxL-OI-arC"/>
                     </navigationItem>
                     <connections>
                         <outlet property="bannerView" destination="79f-fj-b9z" id="ILu-bY-dfj"/>
-                        <outlet property="qrBtn" destination="sxL-OI-arC" id="iTG-aj-Q54"/>
+                        <outlet property="moreBtn" destination="sxL-OI-arC" id="0ql-4P-yHk"/>
                         <outlet property="tableView" destination="zkS-LV-vhC" id="S5C-Y4-lgp"/>
                         <segue destination="uf6-1i-f4v" kind="show" identifier="mainToAnalyzes" id="9Cr-Pd-2pz"/>
                         <segue destination="KgK-cD-PEe" kind="show" identifier="mainToLottoHistory" id="j5d-am-Xrh"/>
@@ -118,7 +118,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="qrcode" catalog="system" width="64" height="56"/>
+        <image name="imageToolbarMore" width="30" height="30"/>
         <namedColor name="background">
             <color red="0.090196078431372548" green="0.11372549019607843" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
