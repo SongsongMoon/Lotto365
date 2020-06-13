@@ -65,7 +65,7 @@ extension MainViewModel {
             switch self {
             case .analyze:      return "번호 생성"
             case .myNumber:     return "내 번호"
-            case .qrCapture:     return "QR 코드"
+            case .qrCapture:    return "당첨확인(QR코드)"
             }
         }
     }
