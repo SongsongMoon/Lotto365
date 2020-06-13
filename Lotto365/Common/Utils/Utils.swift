@@ -10,6 +10,18 @@ import UIKit
 import Foundation
 
 class Utils {
+    //MARK: - Version
+    static var AppVersion: String {
+        guard let dictionary = Bundle.main.infoDictionary,
+            let version = dictionary["CFBundleShortVersionString"] as? String else { return "0" }
+        
+        #if DEBUG
+        return "debug " + version
+        #else
+        return version
+        #endif
+    }
+    
     //MARK: -Font
     static func Font(_ style: FontStyle, size: CGFloat) -> UIFont? {
         return UIFont(name: style.rawValue, size: size)

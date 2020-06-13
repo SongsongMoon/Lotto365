@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Service Center View Controller-->
+        <scene sceneID="o8r-Td-KRv">
+            <objects>
+                <viewController storyboardIdentifier="ServiceCenterViewController" id="WTg-8y-joC" customClass="ServiceCenterViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbL-FM-5oN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객센터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82F-dn-ga1">
+                                <rect key="frame" x="17" y="68" width="100.5" height="35"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="29"/>
+                                <color key="textColor" name="text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="문의 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmq-UX-wEa">
+                                <rect key="frame" x="17" y="131" width="67.5" height="22"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" name="text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFB-MV-XNm" customClass="LTView" customModule="Lotto365" customModuleProvider="target">
+                                <rect key="frame" x="23" y="250" width="367" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="developer@factoryx.co.kr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlq-8G-0UR">
+                                        <rect key="frame" x="92" y="22" width="183.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <color key="textColor" name="text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktl-OA-zqk">
+                                        <rect key="frame" x="0.0" y="0.0" width="367" height="64"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Box"/>
+                                <constraints>
+                                    <constraint firstItem="ktl-OA-zqk" firstAttribute="top" secondItem="RFB-MV-XNm" secondAttribute="top" id="Gss-QO-ibJ"/>
+                                    <constraint firstItem="ktl-OA-zqk" firstAttribute="leading" secondItem="RFB-MV-XNm" secondAttribute="leading" id="LTc-BY-yOl"/>
+                                    <constraint firstItem="hlq-8G-0UR" firstAttribute="centerY" secondItem="RFB-MV-XNm" secondAttribute="centerY" id="Pl1-jZ-DeL"/>
+                                    <constraint firstAttribute="bottom" secondItem="ktl-OA-zqk" secondAttribute="bottom" id="WC3-3Z-eOI"/>
+                                    <constraint firstItem="hlq-8G-0UR" firstAttribute="centerX" secondItem="RFB-MV-XNm" secondAttribute="centerX" id="aAz-cb-PcP"/>
+                                    <constraint firstAttribute="trailing" secondItem="ktl-OA-zqk" secondAttribute="trailing" id="kQk-zC-R5R"/>
+                                    <constraint firstAttribute="height" constant="64" id="vm8-wJ-f4s"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sI6-qC-zyt">
+                                <rect key="frame" x="17" y="168" width="328" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="・ 로또365의 모든 정책은 앱스토어의 정책에 준합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vff-9i-aJ4">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="17"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                        <color key="textColor" red="0.37254901959999998" green="0.4039215686" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="・ 로또365는 어떠한 개인정보도 요구하지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SU-C5-Psv">
+                                        <rect key="frame" x="0.0" y="25" width="278.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                        <color key="textColor" red="0.37254901959999998" green="0.4039215686" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="・ 추가 문의사항은 아래 관리자 메일로 연락 주시기 바랍니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-qX-R9l">
+                                        <rect key="frame" x="0.0" y="50" width="328" height="17"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                        <color key="textColor" red="0.37254901959999998" green="0.4039215686" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="mes-o3-Wt1" firstAttribute="trailing" secondItem="RFB-MV-XNm" secondAttribute="trailing" constant="24" id="2R4-Wn-fqV"/>
+                            <constraint firstItem="jmq-UX-wEa" firstAttribute="leading" secondItem="82F-dn-ga1" secondAttribute="leading" id="NuI-7f-O6c"/>
+                            <constraint firstItem="RFB-MV-XNm" firstAttribute="leading" secondItem="mes-o3-Wt1" secondAttribute="leading" constant="23" id="cci-uA-vnd"/>
+                            <constraint firstItem="82F-dn-ga1" firstAttribute="top" secondItem="mes-o3-Wt1" secondAttribute="top" constant="24" id="ePe-EW-dGg"/>
+                            <constraint firstItem="jmq-UX-wEa" firstAttribute="top" secondItem="82F-dn-ga1" secondAttribute="bottom" constant="28" id="fhY-Eh-QT7"/>
+                            <constraint firstItem="82F-dn-ga1" firstAttribute="leading" secondItem="mes-o3-Wt1" secondAttribute="leading" constant="17" id="g1h-vS-VyI"/>
+                            <constraint firstItem="RFB-MV-XNm" firstAttribute="top" secondItem="sI6-qC-zyt" secondAttribute="bottom" constant="15" id="lG4-gv-LgT"/>
+                            <constraint firstItem="sI6-qC-zyt" firstAttribute="leading" secondItem="82F-dn-ga1" secondAttribute="leading" id="sNd-iX-D5a"/>
+                            <constraint firstItem="sI6-qC-zyt" firstAttribute="top" secondItem="jmq-UX-wEa" secondAttribute="bottom" constant="15" id="v1S-oB-ml6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mes-o3-Wt1"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailBtn" destination="ktl-OA-zqk" id="hrF-qo-HcV"/>
+                        <outlet property="emailLb" destination="hlq-8G-0UR" id="6r4-x8-KTU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qzs-ne-7li" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="-121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Box">
+            <color red="0.16862745098039217" green="0.20392156862745098" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background">
+            <color red="0.090196078431372548" green="0.11372549019607843" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text">
+            <color red="0.60392156862745094" green="0.63529411764705879" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

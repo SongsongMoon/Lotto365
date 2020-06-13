@@ -7,12 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040028052474BF2A009D3A22 /* MainCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040028042474BF2A009D3A22 /* MainCategoryCell.xib */; };
+		040028072474D3CB009D3A22 /* MainCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040028062474D3CB009D3A22 /* MainCategoryCell.swift */; };
+		0400280A2474D8AB009D3A22 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040028092474D8AB009D3A22 /* Segue.swift */; };
+		0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400280B2474E006009D3A22 /* AnalyzesViewModel.swift */; };
+		0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400280D2475004D009D3A22 /* MainViewModel.swift */; };
+		0400281324753150009D3A22 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400281224753150009D3A22 /* QRScannerViewController.swift */; };
+		0418F5132485E5700077E643 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F5122485E5700077E643 /* UIViewController + Extension.swift */; };
+		0418F5152485F9970077E643 /* DreamSelectionNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F5142485F9970077E643 /* DreamSelectionNavigator.swift */; };
+		0418F517248629770077E643 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F516248629770077E643 /* Dream.swift */; };
+		0418F519248629C70077E643 /* DreamDomainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F518248629C70077E643 /* DreamDomainUseCase.swift */; };
+		0418F51D24862ABB0077E643 /* FDreamUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F51C24862ABB0077E643 /* FDreamUseCase.swift */; };
+		0418F51F24862AE60077E643 /* FUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F51E24862AE60077E643 /* FUseCaseProvider.swift */; };
+		0418F52124862F070077E643 /* DomainDreamUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418F52024862F070077E643 /* DomainDreamUseCaseProvider.swift */; };
+		043E9178249312E600087274 /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E9177249312E600087274 /* ReviewManager.swift */; };
+		044B0DBD247F4EAC0087E2E6 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DBC247F4EAC0087E2E6 /* DomainConvertibleType.swift */; };
+		044B0DBF247F4EBC0087E2E6 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DBE247F4EBC0087E2E6 /* RealmRepresentable.swift */; };
+		044B0DC1247F4F190087E2E6 /* RMLotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC0247F4F190087E2E6 /* RMLotto.swift */; };
+		044B0DC3247F503D0087E2E6 /* Realm + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC2247F503D0087E2E6 /* Realm + Extensions.swift */; };
+		044B0DC5247F56CF0087E2E6 /* RMLottoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC4247F56CF0087E2E6 /* RMLottoUseCase.swift */; };
+		044B0DC7247F57270087E2E6 /* RMUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC6247F57270087E2E6 /* RMUseCaseProvider.swift */; };
+		044B0DC9247F57400087E2E6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DC8247F57400087E2E6 /* Repository.swift */; };
+		044B0DCB247F58740087E2E6 /* Observable + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DCA247F58740087E2E6 /* Observable + Extensions.swift */; };
+		044B0DCD247F5AFF0087E2E6 /* DomainLottoUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DCC247F5AFF0087E2E6 /* DomainLottoUseCaseProvider.swift */; };
+		044B0DD0247FA00C0087E2E6 /* LTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B0DCF247FA00C0087E2E6 /* LTButton.swift */; };
+		0451A83B248887FB000DA059 /* LottoDreamNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451A83A248887FB000DA059 /* LottoDreamNavigator.swift */; };
+		0451A83D24888857000DA059 /* LottoDreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451A83C24888857000DA059 /* LottoDreamViewModel.swift */; };
+		0451A83F248888F6000DA059 /* LottoDream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451A83E248888F6000DA059 /* LottoDream.storyboard */; };
+		0451A84124888909000DA059 /* LottoDreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451A84024888909000DA059 /* LottoDreamViewController.swift */; };
+		0451A844248890E7000DA059 /* DreamAndBallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0451A843248890E7000DA059 /* DreamAndBallCell.xib */; };
+		0451A846248890F7000DA059 /* DreamAndBallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451A845248890F7000DA059 /* DreamAndBallCell.swift */; };
+		0451A8482488A46B000DA059 /* UINavigationController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451A8472488A46B000DA059 /* UINavigationController + Extension.swift */; };
 		04605BD5247291C5008727E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605BD4247291C5008727E8 /* AppDelegate.swift */; };
 		04605BDE247291C6008727E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDD247291C6008727E8 /* Assets.xcassets */; };
 		04605BE1247291C6008727E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605BDF247291C6008727E8 /* LaunchScreen.storyboard */; };
 		04605C1924729A6E008727E8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1824729A6E008727E8 /* LaunchViewController.swift */; };
 		04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1A24729C1F008727E8 /* BaseViewController.swift */; };
-		04605C1D24729C4C008727E8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1C24729C4C008727E8 /* BaseViewModel.swift */; };
 		04605C1F24729DC4008727E8 /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C1E24729DC4008727E8 /* DataBinding.swift */; };
 		04605C2524737A8D008727E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04605C2424737A8D008727E8 /* GoogleService-Info.plist */; };
 		04605C312473B15F008727E8 /* Dreams.json in Resources */ = {isa = PBXBuildFile; fileRef = 04605C302473B15F008727E8 /* Dreams.json */; };
@@ -37,10 +67,109 @@
 		04605C572473E932008727E8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C562473E932008727E8 /* SettingsViewController.swift */; };
 		04605C592473EFD3008727E8 /* MyNumbers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04605C582473EFD3008727E8 /* MyNumbers.storyboard */; };
 		04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605C5A2473F09F008727E8 /* MyNumbersViewController.swift */; };
+		0477FFB32487812000ADB45C /* SelectedDreamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0477FFB22487812000ADB45C /* SelectedDreamCell.xib */; };
+		0477FFB52487813300ADB45C /* SelectedDreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477FFB42487813300ADB45C /* SelectedDreamCell.swift */; };
+		0477FFB72487992500ADB45C /* RewardAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477FFB62487992500ADB45C /* RewardAdViewController.swift */; };
+		0477FFBC24879EF800ADB45C /* RewardAd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0477FFBB24879EF800ADB45C /* RewardAd.storyboard */; };
+		0477FFC024879F6400ADB45C /* RewardAdNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477FFBF24879F6400ADB45C /* RewardAdNavigator.swift */; };
+		04826FCA2477578A003AFEA7 /* RandomGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FC92477578A003AFEA7 /* RandomGeneratorViewController.swift */; };
+		04826FCC24775B14003AFEA7 /* LottoBallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04826FCB24775B14003AFEA7 /* LottoBallCell.xib */; };
+		04826FCE24775B27003AFEA7 /* LottoBallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FCD24775B27003AFEA7 /* LottoBallCell.swift */; };
+		04826FD024775BAB003AFEA7 /* LTCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FCF24775BAB003AFEA7 /* LTCollectionViewCell.swift */; };
+		04826FD224776000003AFEA7 /* LottoBallHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FD124776000003AFEA7 /* LottoBallHeaderView.swift */; };
+		04826FD42477600A003AFEA7 /* LottoBallHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04826FD32477600A003AFEA7 /* LottoBallHeaderView.xib */; };
+		04826FD624776E96003AFEA7 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FD524776E96003AFEA7 /* UIColor + Extension.swift */; };
+		04826FD824777544003AFEA7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FD724777544003AFEA7 /* Toast.swift */; };
+		04826FDA247785DF003AFEA7 /* RandomGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FD9247785DF003AFEA7 /* RandomGeneratorViewModel.swift */; };
+		04826FDD2477C970003AFEA7 /* RandomGeneratorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04826FDC2477C970003AFEA7 /* RandomGeneratorDatasource.swift */; };
+		048AEBF824762A24009130DA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AEBF724762A24009130DA /* Key.swift */; };
+		048AEBFA24762B57009130DA /* DreamSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEBF924762B57009130DA /* DreamSelection.storyboard */; };
+		048AEBFC24762B92009130DA /* DreamSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AEBFB24762B92009130DA /* DreamSelectionViewController.swift */; };
+		048AEBFE24762BFA009130DA /* Recommended.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEBFD24762BFA009130DA /* Recommended.storyboard */; };
+		048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */; };
+		048AEC0524768F6E009130DA /* Random.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEC0424768F6E009130DA /* Random.storyboard */; };
+		048D154D248DD06700B89EEA /* SettingsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D154C248DD06700B89EEA /* SettingsNavigator.swift */; };
+		048D1550248DD12300B89EEA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D154F248DD12300B89EEA /* SettingsViewModel.swift */; };
+		048D1552248DD79C00B89EEA /* ServiceCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048D1551248DD79C00B89EEA /* ServiceCenter.storyboard */; };
+		048D1554248DD7BC00B89EEA /* ServiceCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D1553248DD7BC00B89EEA /* ServiceCenterViewController.swift */; };
+		048D1556248DD7DA00B89EEA /* ServiceCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D1555248DD7DA00B89EEA /* ServiceCenterViewModel.swift */; };
+		048D1558248DD7E900B89EEA /* ServiceCenterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D1557248DD7E900B89EEA /* ServiceCenterNavigator.swift */; };
+		048D155A248DDEA100B89EEA /* Usages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048D1559248DDEA100B89EEA /* Usages.storyboard */; };
+		048D155C248DDEB400B89EEA /* UsagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D155B248DDEB400B89EEA /* UsagesViewController.swift */; };
+		048D155E248DDEBF00B89EEA /* UsagesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D155D248DDEBF00B89EEA /* UsagesNavigator.swift */; };
+		048D1560248DDEEE00B89EEA /* UsagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D155F248DDEEE00B89EEA /* UsagesViewModel.swift */; };
+		04A6815C2484AE3C00E762C5 /* MyNumbersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6815B2484AE3C00E762C5 /* MyNumbersViewModel.swift */; };
+		04A6815E2484AE8E00E762C5 /* MyNumbersNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6815D2484AE8E00E762C5 /* MyNumbersNavigator.swift */; };
+		04A681612484B35800E762C5 /* MyNumbersHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A681602484B35800E762C5 /* MyNumbersHeaderView.xib */; };
+		04A681632484B3E400E762C5 /* MyNumbersHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A681622484B3E400E762C5 /* MyNumbersHeaderView.swift */; };
+		04A681652484B4AE00E762C5 /* MyNumbersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A681642484B4AE00E762C5 /* MyNumbersDataSource.swift */; };
+		04ADD530247E35A700B9CC25 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD52F247E35A700B9CC25 /* Application.swift */; };
+		04ADD532247E501B00B9CC25 /* RecommendedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD531247E501B00B9CC25 /* RecommendedItemViewModel.swift */; };
+		04ADD534247E61FE00B9CC25 /* LottoDomainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */; };
+		04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */; };
+		04ADD538247E638900B9CC25 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD537247E638900B9CC25 /* DAO.swift */; };
+		04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */; };
+		04AEF8312484EC5800945FD7 /* MyNumbersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AEF8302484EC5800945FD7 /* MyNumbersCell.xib */; };
+		04AEF8332484EC6C00945FD7 /* MyNumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8322484EC6C00945FD7 /* MyNumbersCell.swift */; };
+		04AEF8352484ED0700945FD7 /* MyNumbersItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8342484ED0700945FD7 /* MyNumbersItemViewModel.swift */; };
+		04C15A4B247DF77A00FEE2C9 /* QRScannerNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4A247DF77A00FEE2C9 /* QRScannerNavigator.swift */; };
+		04C15A4D247DF9B600FEE2C9 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4C247DF9B600FEE2C9 /* QRScannerViewModel.swift */; };
+		04C15A4F247E06C800FEE2C9 /* AnalyzesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A4E247E06C800FEE2C9 /* AnalyzesNavigator.swift */; };
+		04C15A51247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C15A50247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift */; };
+		04C4A052247E125100AFC0A2 /* RecommendedNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4A051247E125100AFC0A2 /* RecommendedNavigator.swift */; };
+		04C4A054247E12A000AFC0A2 /* RecommendedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4A053247E12A000AFC0A2 /* RecommendedViewModel.swift */; };
+		04CB8DA2247CC88A0026C3E3 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA1247CC88A0026C3E3 /* Lotto.swift */; };
+		04CB8DA4247CC8C40026C3E3 /* RandomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA3247CC8C40026C3E3 /* RandomFilter.swift */; };
+		04CB8DA6247CC9E90026C3E3 /* LottoBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */; };
+		04CB8DAE247CE91B0026C3E3 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */; };
+		04CB8DBB247D105D0026C3E3 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */; };
+		04EA99F7248F86830069C10C /* RandomGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA99F6248F86830069C10C /* RandomGeneratorTests.swift */; };
+		33DE6D03274606F607BD0CB4 /* Pods_Lotto365Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC585C488DF2A6597BFF70C /* Pods_Lotto365Tests.framework */; };
 		8363BBC9B2862E3F2FA4612D /* Pods_Lotto365.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		04EA99EE248F84F60069C10C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04605BC9247291C5008727E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04605BD0247291C5008727E8;
+			remoteInfo = Lotto365;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		040028042474BF2A009D3A22 /* MainCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCategoryCell.xib; sourceTree = "<group>"; };
+		040028062474D3CB009D3A22 /* MainCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryCell.swift; sourceTree = "<group>"; };
+		040028092474D8AB009D3A22 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		0400280B2474E006009D3A22 /* AnalyzesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzesViewModel.swift; sourceTree = "<group>"; };
+		0400280D2475004D009D3A22 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0400281224753150009D3A22 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		0418F5122485E5700077E643 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		0418F5142485F9970077E643 /* DreamSelectionNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSelectionNavigator.swift; sourceTree = "<group>"; };
+		0418F516248629770077E643 /* Dream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
+		0418F518248629C70077E643 /* DreamDomainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamDomainUseCase.swift; sourceTree = "<group>"; };
+		0418F51C24862ABB0077E643 /* FDreamUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDreamUseCase.swift; sourceTree = "<group>"; };
+		0418F51E24862AE60077E643 /* FUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUseCaseProvider.swift; sourceTree = "<group>"; };
+		0418F52024862F070077E643 /* DomainDreamUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDreamUseCaseProvider.swift; sourceTree = "<group>"; };
+		043E9177249312E600087274 /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
+		044B0DBC247F4EAC0087E2E6 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		044B0DBE247F4EBC0087E2E6 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		044B0DC0247F4F190087E2E6 /* RMLotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLotto.swift; sourceTree = "<group>"; };
+		044B0DC2247F503D0087E2E6 /* Realm + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm + Extensions.swift"; sourceTree = "<group>"; };
+		044B0DC4247F56CF0087E2E6 /* RMLottoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLottoUseCase.swift; sourceTree = "<group>"; };
+		044B0DC6247F57270087E2E6 /* RMUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMUseCaseProvider.swift; sourceTree = "<group>"; };
+		044B0DC8247F57400087E2E6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		044B0DCA247F58740087E2E6 /* Observable + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable + Extensions.swift"; sourceTree = "<group>"; };
+		044B0DCC247F5AFF0087E2E6 /* DomainLottoUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLottoUseCaseProvider.swift; sourceTree = "<group>"; };
+		044B0DCF247FA00C0087E2E6 /* LTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTButton.swift; sourceTree = "<group>"; };
+		0451A83A248887FB000DA059 /* LottoDreamNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDreamNavigator.swift; sourceTree = "<group>"; };
+		0451A83C24888857000DA059 /* LottoDreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDreamViewModel.swift; sourceTree = "<group>"; };
+		0451A83E248888F6000DA059 /* LottoDream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LottoDream.storyboard; sourceTree = "<group>"; };
+		0451A84024888909000DA059 /* LottoDreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDreamViewController.swift; sourceTree = "<group>"; };
+		0451A843248890E7000DA059 /* DreamAndBallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DreamAndBallCell.xib; sourceTree = "<group>"; };
+		0451A845248890F7000DA059 /* DreamAndBallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamAndBallCell.swift; sourceTree = "<group>"; };
+		0451A8472488A46B000DA059 /* UINavigationController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController + Extension.swift"; sourceTree = "<group>"; };
 		04605BD1247291C5008727E8 /* Lotto365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotto365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04605BD4247291C5008727E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04605BDD247291C6008727E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,7 +177,6 @@
 		04605BE2247291C6008727E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04605C1824729A6E008727E8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		04605C1A24729C1F008727E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		04605C1C24729C4C008727E8 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		04605C1E24729DC4008727E8 /* DataBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
 		04605C22247372EA008727E8 /* Lotto365.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotto365.entitlements; sourceTree = "<group>"; };
 		04605C2424737A8D008727E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -74,8 +202,70 @@
 		04605C562473E932008727E8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04605C582473EFD3008727E8 /* MyNumbers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyNumbers.storyboard; sourceTree = "<group>"; };
 		04605C5A2473F09F008727E8 /* MyNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersViewController.swift; sourceTree = "<group>"; };
+		0477FFB22487812000ADB45C /* SelectedDreamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedDreamCell.xib; sourceTree = "<group>"; };
+		0477FFB42487813300ADB45C /* SelectedDreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDreamCell.swift; sourceTree = "<group>"; };
+		0477FFB62487992500ADB45C /* RewardAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAdViewController.swift; sourceTree = "<group>"; };
+		0477FFBB24879EF800ADB45C /* RewardAd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RewardAd.storyboard; sourceTree = "<group>"; };
+		0477FFBF24879F6400ADB45C /* RewardAdNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAdNavigator.swift; sourceTree = "<group>"; };
+		04826FC92477578A003AFEA7 /* RandomGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorViewController.swift; sourceTree = "<group>"; };
+		04826FCB24775B14003AFEA7 /* LottoBallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LottoBallCell.xib; sourceTree = "<group>"; };
+		04826FCD24775B27003AFEA7 /* LottoBallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoBallCell.swift; sourceTree = "<group>"; };
+		04826FCF24775BAB003AFEA7 /* LTCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTCollectionViewCell.swift; sourceTree = "<group>"; };
+		04826FD124776000003AFEA7 /* LottoBallHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoBallHeaderView.swift; sourceTree = "<group>"; };
+		04826FD32477600A003AFEA7 /* LottoBallHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LottoBallHeaderView.xib; sourceTree = "<group>"; };
+		04826FD524776E96003AFEA7 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		04826FD724777544003AFEA7 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		04826FD9247785DF003AFEA7 /* RandomGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorViewModel.swift; sourceTree = "<group>"; };
+		04826FDC2477C970003AFEA7 /* RandomGeneratorDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorDatasource.swift; sourceTree = "<group>"; };
+		048AEBF724762A24009130DA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		048AEBF924762B57009130DA /* DreamSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DreamSelection.storyboard; sourceTree = "<group>"; };
+		048AEBFB24762B92009130DA /* DreamSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSelectionViewController.swift; sourceTree = "<group>"; };
+		048AEBFD24762BFA009130DA /* Recommended.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recommended.storyboard; sourceTree = "<group>"; };
+		048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamSelectionViewModel.swift; sourceTree = "<group>"; };
+		048AEC0424768F6E009130DA /* Random.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Random.storyboard; sourceTree = "<group>"; };
+		048D154C248DD06700B89EEA /* SettingsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigator.swift; sourceTree = "<group>"; };
+		048D154F248DD12300B89EEA /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		048D1551248DD79C00B89EEA /* ServiceCenter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceCenter.storyboard; sourceTree = "<group>"; };
+		048D1553248DD7BC00B89EEA /* ServiceCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterViewController.swift; sourceTree = "<group>"; };
+		048D1555248DD7DA00B89EEA /* ServiceCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterViewModel.swift; sourceTree = "<group>"; };
+		048D1557248DD7E900B89EEA /* ServiceCenterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterNavigator.swift; sourceTree = "<group>"; };
+		048D1559248DDEA100B89EEA /* Usages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Usages.storyboard; sourceTree = "<group>"; };
+		048D155B248DDEB400B89EEA /* UsagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagesViewController.swift; sourceTree = "<group>"; };
+		048D155D248DDEBF00B89EEA /* UsagesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagesNavigator.swift; sourceTree = "<group>"; };
+		048D155F248DDEEE00B89EEA /* UsagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagesViewModel.swift; sourceTree = "<group>"; };
+		04A6815B2484AE3C00E762C5 /* MyNumbersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersViewModel.swift; sourceTree = "<group>"; };
+		04A6815D2484AE8E00E762C5 /* MyNumbersNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersNavigator.swift; sourceTree = "<group>"; };
+		04A681602484B35800E762C5 /* MyNumbersHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNumbersHeaderView.xib; sourceTree = "<group>"; };
+		04A681622484B3E400E762C5 /* MyNumbersHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersHeaderView.swift; sourceTree = "<group>"; };
+		04A681642484B4AE00E762C5 /* MyNumbersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersDataSource.swift; sourceTree = "<group>"; };
+		04ADD52F247E35A700B9CC25 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		04ADD531247E501B00B9CC25 /* RecommendedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedItemViewModel.swift; sourceTree = "<group>"; };
+		04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDomainUseCase.swift; sourceTree = "<group>"; };
+		04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoRepositoryInterface.swift; sourceTree = "<group>"; };
+		04ADD537247E638900B9CC25 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		04AEF8302484EC5800945FD7 /* MyNumbersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNumbersCell.xib; sourceTree = "<group>"; };
+		04AEF8322484EC6C00945FD7 /* MyNumbersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersCell.swift; sourceTree = "<group>"; };
+		04AEF8342484ED0700945FD7 /* MyNumbersItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersItemViewModel.swift; sourceTree = "<group>"; };
+		04C15A4A247DF77A00FEE2C9 /* QRScannerNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerNavigator.swift; sourceTree = "<group>"; };
+		04C15A4C247DF9B600FEE2C9 /* QRScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewModel.swift; sourceTree = "<group>"; };
+		04C15A4E247E06C800FEE2C9 /* AnalyzesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzesNavigator.swift; sourceTree = "<group>"; };
+		04C15A50247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorNavigator.swift; sourceTree = "<group>"; };
+		04C4A051247E125100AFC0A2 /* RecommendedNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedNavigator.swift; sourceTree = "<group>"; };
+		04C4A053247E12A000AFC0A2 /* RecommendedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewModel.swift; sourceTree = "<group>"; };
+		04CB8DA1247CC88A0026C3E3 /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
+		04CB8DA3247CC8C40026C3E3 /* RandomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFilter.swift; sourceTree = "<group>"; };
+		04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoBall.swift; sourceTree = "<group>"; };
+		04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		04EA99E9248F84F60069C10C /* Lotto365Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lotto365Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04EA99ED248F84F60069C10C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04EA99F6248F86830069C10C /* RandomGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorTests.swift; sourceTree = "<group>"; };
 		15E104ABC2122FCC48507374 /* Pods-Lotto365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365.debug.xcconfig"; path = "Target Support Files/Pods-Lotto365/Pods-Lotto365.debug.xcconfig"; sourceTree = "<group>"; };
+		3CC585C488DF2A6597BFF70C /* Pods_Lotto365Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotto365Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50822B85C0B19C099B3B71E8 /* Pods-Lotto365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365.release.xcconfig"; path = "Target Support Files/Pods-Lotto365/Pods-Lotto365.release.xcconfig"; sourceTree = "<group>"; };
+		64A2BD77C84B9E61BA72AB5D /* Pods-Lotto365Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365Tests.debug.xcconfig"; path = "Target Support Files/Pods-Lotto365Tests/Pods-Lotto365Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		66380333E17134BF4160D673 /* Pods-Lotto365Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto365Tests.release.xcconfig"; path = "Target Support Files/Pods-Lotto365Tests/Pods-Lotto365Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotto365.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,13 +278,171 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04EA99E6248F84F60069C10C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33DE6D03274606F607BD0CB4 /* Pods_Lotto365Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040028082474D892009D3A22 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				040028092474D8AB009D3A22 /* Segue.swift */,
+				048AEBF724762A24009130DA /* Key.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		0400280F24753118009D3A22 /* QRScanner */ = {
+			isa = PBXGroup;
+			children = (
+				04C15A4A247DF77A00FEE2C9 /* QRScannerNavigator.swift */,
+				040028102475312A009D3A22 /* View */,
+				0400281124753130009D3A22 /* ViewModel */,
+			);
+			path = QRScanner;
+			sourceTree = "<group>";
+		};
+		040028102475312A009D3A22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0400281224753150009D3A22 /* QRScannerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0400281124753130009D3A22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04C15A4C247DF9B600FEE2C9 /* QRScannerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0418F51A24862A5C0077E643 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				0418F51B24862A630077E643 /* UseCase */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		0418F51B24862A630077E643 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				0418F51C24862ABB0077E643 /* FDreamUseCase.swift */,
+				0418F51E24862AE60077E643 /* FUseCaseProvider.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		043E9179249313BD00087274 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				043E9177249312E600087274 /* ReviewManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		044B0DB6247F4E340087E2E6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				044B0DBB247F4E970087E2E6 /* Convertion */,
+				044B0DC0247F4F190087E2E6 /* RMLotto.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		044B0DB7247F4E3E0087E2E6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				044B0DC8247F57400087E2E6 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		044B0DB8247F4E490087E2E6 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				044B0DC4247F56CF0087E2E6 /* RMLottoUseCase.swift */,
+				044B0DC6247F57270087E2E6 /* RMUseCaseProvider.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		044B0DB9247F4E500087E2E6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */,
+				044B0DC2247F503D0087E2E6 /* Realm + Extensions.swift */,
+				044B0DCA247F58740087E2E6 /* Observable + Extensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		044B0DBB247F4E970087E2E6 /* Convertion */ = {
+			isa = PBXGroup;
+			children = (
+				044B0DBC247F4EAC0087E2E6 /* DomainConvertibleType.swift */,
+				044B0DBE247F4EBC0087E2E6 /* RealmRepresentable.swift */,
+			);
+			path = Convertion;
+			sourceTree = "<group>";
+		};
+		044B0DCE247F8CDF0087E2E6 /* RealmTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RealmTest;
+			sourceTree = "<group>";
+		};
+		0451A837248887DC000DA059 /* LottoDream */ = {
+			isa = PBXGroup;
+			children = (
+				0451A83A248887FB000DA059 /* LottoDreamNavigator.swift */,
+				0451A838248887E8000DA059 /* View */,
+				0451A839248887EC000DA059 /* ViewModel */,
+			);
+			path = LottoDream;
+			sourceTree = "<group>";
+		};
+		0451A838248887E8000DA059 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0451A842248890C7000DA059 /* Cells */,
+				0451A83E248888F6000DA059 /* LottoDream.storyboard */,
+				0451A84024888909000DA059 /* LottoDreamViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0451A839248887EC000DA059 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0451A83C24888857000DA059 /* LottoDreamViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0451A842248890C7000DA059 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0451A843248890E7000DA059 /* DreamAndBallCell.xib */,
+				0451A845248890F7000DA059 /* DreamAndBallCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		04605BC8247291C5008727E8 = {
 			isa = PBXGroup;
 			children = (
 				04605BD3247291C5008727E8 /* Lotto365 */,
+				04EA99EA248F84F60069C10C /* Lotto365Tests */,
 				04605BD2247291C5008727E8 /* Products */,
 				767C76443C63A9EDFB163050 /* Pods */,
 				158043A5E71D340455357725 /* Frameworks */,
@@ -105,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				04605BD1247291C5008727E8 /* Lotto365.app */,
+				04EA99E9248F84F60069C10C /* Lotto365Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +466,7 @@
 				04605C22247372EA008727E8 /* Lotto365.entitlements */,
 				04605BE82472922D008727E8 /* Application */,
 				04605BE924729260008727E8 /* Common */,
-				04605BEE247292AD008727E8 /* Presentation */,
+				04605BEE247292AD008727E8 /* Scenes */,
 				04605BEB24729276008727E8 /* Domain */,
 				04605BF224729347008727E8 /* Data */,
 				04605BFA2472956C008727E8 /* Infrastructure */,
@@ -130,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				04605BD4247291C5008727E8 /* AppDelegate.swift */,
+				04ADD52F247E35A700B9CC25 /* Application.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -137,6 +487,8 @@
 		04605BE924729260008727E8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				043E9179249313BD00087274 /* Manager */,
+				040028082474D892009D3A22 /* Constant */,
 				04605BF52472939C008727E8 /* Base */,
 				04605BF424729391008727E8 /* Utils */,
 				04605BF32472938B008727E8 /* Extension */,
@@ -168,28 +520,37 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		04605BED24729289008727E8 /* PersistentStorage */ = {
+		04605BED24729289008727E8 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				044B0DB6247F4E340087E2E6 /* Entities */,
+				044B0DB7247F4E3E0087E2E6 /* Repository */,
+				044B0DB8247F4E490087E2E6 /* UseCases */,
+				044B0DB9247F4E500087E2E6 /* Utility */,
 			);
-			path = PersistentStorage;
+			path = Realm;
 			sourceTree = "<group>";
 		};
-		04605BEE247292AD008727E8 /* Presentation */ = {
+		04605BEE247292AD008727E8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				04605C402473CBD9008727E8 /* BaseNavigationController.swift */,
 				04605BEF247292C7008727E8 /* Launch */,
 				04605BFC2472984E008727E8 /* Main */,
+				0400280F24753118009D3A22 /* QRScanner */,
 				04605BFD24729889008727E8 /* Analyzes */,
 				04605BFE24729898008727E8 /* DreamSelection */,
+				0477FFB824879ED100ADB45C /* RewardAd */,
+				0451A837248887DC000DA059 /* LottoDream */,
+				048AEC0124768F4A009130DA /* RandomGenerator */,
 				04605BFF247298B0008727E8 /* RecommendedNumber */,
-				04605C0024729909008727E8 /* History */,
+				04605C0024729909008727E8 /* History(Hide) */,
 				04605C0124729918008727E8 /* MyNumbers */,
 				04605C0224729927008727E8 /* Settings */,
 				04605C0424729940008727E8 /* ServiceCenter */,
 				04605C032472992C008727E8 /* Usages */,
 			);
-			path = Presentation;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		04605BEF247292C7008727E8 /* Launch */ = {
@@ -223,7 +584,9 @@
 			isa = PBXGroup;
 			children = (
 				04605BF92472954D008727E8 /* Repositories */,
-				04605BED24729289008727E8 /* PersistentStorage */,
+				0418F51A24862A5C0077E643 /* File */,
+				04605BED24729289008727E8 /* Realm */,
+				044B0DCE247F8CDF0087E2E6 /* RealmTest */,
 				04605BEC2472927D008727E8 /* Network */,
 			);
 			path = Data;
@@ -233,6 +596,9 @@
 			isa = PBXGroup;
 			children = (
 				04605C382473C6C0008727E8 /* UIView+Extension.swift */,
+				04826FD524776E96003AFEA7 /* UIColor + Extension.swift */,
+				0418F5122485E5700077E643 /* UIViewController + Extension.swift */,
+				0451A8472488A46B000DA059 /* UINavigationController + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -241,6 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				04605C422473CCD2008727E8 /* Utils.swift */,
+				04CB8DAD247CE91B0026C3E3 /* DispatchQueue.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -248,13 +615,9 @@
 		04605BF52472939C008727E8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				04CB8DAF247CE95D0026C3E3 /* View */,
 				04605C1A24729C1F008727E8 /* BaseViewController.swift */,
-				04605C1C24729C4C008727E8 /* BaseViewModel.swift */,
 				04605C1E24729DC4008727E8 /* DataBinding.swift */,
-				04605C342473C623008727E8 /* RoundableView.swift */,
-				04605C362473C654008727E8 /* LTView.swift */,
-				04605C402473CBD9008727E8 /* BaseNavigationController.swift */,
-				04605C4A2473D318008727E8 /* LTTableCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -262,6 +625,10 @@
 		04605BF6247293DE008727E8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				04CB8DA5247CC9E90026C3E3 /* LottoBall.swift */,
+				04CB8DA1247CC88A0026C3E3 /* Lotto.swift */,
+				04CB8DA3247CC8C40026C3E3 /* RandomFilter.swift */,
+				0418F516248629770077E643 /* Dream.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -269,6 +636,10 @@
 		04605BF7247293E4008727E8 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				044B0DCC247F5AFF0087E2E6 /* DomainLottoUseCaseProvider.swift */,
+				04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */,
+				0418F52024862F070077E643 /* DomainDreamUseCaseProvider.swift */,
+				0418F518248629C70077E643 /* DreamDomainUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -276,6 +647,8 @@
 		04605BF824729403008727E8 /* RepositoryInterface */ = {
 			isa = PBXGroup;
 			children = (
+				04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */,
+				04ADD537247E638900B9CC25 /* DAO.swift */,
 			);
 			path = RepositoryInterface;
 			sourceTree = "<group>";
@@ -290,6 +663,7 @@
 		04605BFA2472956C008727E8 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				04ADD539247E658400B9CC25 /* Realm */,
 				04605BFB24729584008727E8 /* Network */,
 			);
 			path = Infrastructure;
@@ -305,6 +679,7 @@
 		04605BFC2472984E008727E8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				04CB8DBA247D105D0026C3E3 /* MainNavigator.swift */,
 				04605C06247299CB008727E8 /* View */,
 				04605C07247299CF008727E8 /* ViewModel */,
 			);
@@ -314,6 +689,7 @@
 		04605BFD24729889008727E8 /* Analyzes */ = {
 			isa = PBXGroup;
 			children = (
+				04C15A4E247E06C800FEE2C9 /* AnalyzesNavigator.swift */,
 				04605C09247299DA008727E8 /* View */,
 				04605C08247299D5008727E8 /* ViewModel */,
 			);
@@ -323,6 +699,7 @@
 		04605BFE24729898008727E8 /* DreamSelection */ = {
 			isa = PBXGroup;
 			children = (
+				0418F5142485F9970077E643 /* DreamSelectionNavigator.swift */,
 				04605C0B247299E2008727E8 /* View */,
 				04605C0A247299DE008727E8 /* ViewModel */,
 			);
@@ -332,19 +709,20 @@
 		04605BFF247298B0008727E8 /* RecommendedNumber */ = {
 			isa = PBXGroup;
 			children = (
+				04C4A051247E125100AFC0A2 /* RecommendedNavigator.swift */,
 				04605C0D247299EA008727E8 /* View */,
 				04605C0C247299E6008727E8 /* ViewModel */,
 			);
 			path = RecommendedNumber;
 			sourceTree = "<group>";
 		};
-		04605C0024729909008727E8 /* History */ = {
+		04605C0024729909008727E8 /* History(Hide) */ = {
 			isa = PBXGroup;
 			children = (
 				04605C0F247299F2008727E8 /* View */,
 				04605C0E247299ED008727E8 /* ViewModel */,
 			);
-			path = History;
+			path = "History(Hide)";
 			sourceTree = "<group>";
 		};
 		04605C0124729918008727E8 /* MyNumbers */ = {
@@ -352,6 +730,7 @@
 			children = (
 				04605C11247299F9008727E8 /* View */,
 				04605C10247299F5008727E8 /* ViewModel */,
+				04A6815D2484AE8E00E762C5 /* MyNumbersNavigator.swift */,
 			);
 			path = MyNumbers;
 			sourceTree = "<group>";
@@ -359,6 +738,7 @@
 		04605C0224729927008727E8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				048D154C248DD06700B89EEA /* SettingsNavigator.swift */,
 				04605C1324729A01008727E8 /* View */,
 				04605C12247299FD008727E8 /* ViewModel */,
 			);
@@ -368,6 +748,7 @@
 		04605C032472992C008727E8 /* Usages */ = {
 			isa = PBXGroup;
 			children = (
+				048D155D248DDEBF00B89EEA /* UsagesNavigator.swift */,
 				04605C1724729A11008727E8 /* View */,
 				04605C1624729A0C008727E8 /* ViewModel */,
 			);
@@ -377,6 +758,7 @@
 		04605C0424729940008727E8 /* ServiceCenter */ = {
 			isa = PBXGroup;
 			children = (
+				048D1557248DD7E900B89EEA /* ServiceCenterNavigator.swift */,
 				04605C1524729A08008727E8 /* View */,
 				04605C1424729A04008727E8 /* ViewModel */,
 			);
@@ -386,6 +768,7 @@
 		04605C06247299CB008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C4A056247E13C500AFC0A2 /* Cells */,
 				04605C322473C538008727E8 /* Main.storyboard */,
 				04605C3A2473C77F008727E8 /* MainViewController.swift */,
 			);
@@ -395,6 +778,7 @@
 		04605C07247299CF008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0400280D2475004D009D3A22 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -402,6 +786,7 @@
 		04605C08247299D5008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0400280B2474E006009D3A22 /* AnalyzesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -418,6 +803,7 @@
 		04605C0A247299DE008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				048AEBFF24764AF5009130DA /* DreamSelectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -425,6 +811,9 @@
 		04605C0B247299E2008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0477FFB12487810600ADB45C /* Cells */,
+				048AEBF924762B57009130DA /* DreamSelection.storyboard */,
+				048AEBFB24762B92009130DA /* DreamSelectionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -432,6 +821,8 @@
 		04605C0C247299E6008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04C4A053247E12A000AFC0A2 /* RecommendedViewModel.swift */,
+				04ADD531247E501B00B9CC25 /* RecommendedItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -439,9 +830,9 @@
 		04605C0D247299EA008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C4A055247E13AC00AFC0A2 /* Cells */,
+				048AEBFD24762BFA009130DA /* Recommended.storyboard */,
 				04605C442473CF93008727E8 /* RecommendedViewController.swift */,
-				04605C462473D016008727E8 /* RecommendedCell.xib */,
-				04605C482473D2FA008727E8 /* RecommendedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -467,6 +858,9 @@
 		04605C10247299F5008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04A6815B2484AE3C00E762C5 /* MyNumbersViewModel.swift */,
+				04A681642484B4AE00E762C5 /* MyNumbersDataSource.swift */,
+				04AEF8342484ED0700945FD7 /* MyNumbersItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -474,6 +868,7 @@
 		04605C11247299F9008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04A6815F2484B34900E762C5 /* Cells */,
 				04605C582473EFD3008727E8 /* MyNumbers.storyboard */,
 				04605C5A2473F09F008727E8 /* MyNumbersViewController.swift */,
 			);
@@ -483,6 +878,7 @@
 		04605C12247299FD008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				048D154F248DD12300B89EEA /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -499,6 +895,7 @@
 		04605C1424729A04008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				048D1555248DD7DA00B89EEA /* ServiceCenterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -506,6 +903,8 @@
 		04605C1524729A08008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048D1551248DD79C00B89EEA /* ServiceCenter.storyboard */,
+				048D1553248DD7BC00B89EEA /* ServiceCenterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,6 +912,7 @@
 		04605C1624729A0C008727E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				048D155F248DDEEE00B89EEA /* UsagesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -520,14 +920,150 @@
 		04605C1724729A11008727E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048D1559248DDEA100B89EEA /* Usages.storyboard */,
+				048D155B248DDEB400B89EEA /* UsagesViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0477FFB12487810600ADB45C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0477FFB22487812000ADB45C /* SelectedDreamCell.xib */,
+				0477FFB42487813300ADB45C /* SelectedDreamCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0477FFB824879ED100ADB45C /* RewardAd */ = {
+			isa = PBXGroup;
+			children = (
+				0477FFBF24879F6400ADB45C /* RewardAdNavigator.swift */,
+				0477FFB924879EDE00ADB45C /* View */,
+			);
+			path = RewardAd;
+			sourceTree = "<group>";
+		};
+		0477FFB924879EDE00ADB45C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0477FFBB24879EF800ADB45C /* RewardAd.storyboard */,
+				0477FFB62487992500ADB45C /* RewardAdViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		048AEC0124768F4A009130DA /* RandomGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				04C15A50247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift */,
+				048AEC0224768F62009130DA /* View */,
+				048AEC0324768F65009130DA /* ViewModel */,
+			);
+			path = RandomGenerator;
+			sourceTree = "<group>";
+		};
+		048AEC0224768F62009130DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04C15A52247E0DB400FEE2C9 /* Cells */,
+				048AEC0424768F6E009130DA /* Random.storyboard */,
+				04826FC92477578A003AFEA7 /* RandomGeneratorViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		048AEC0324768F65009130DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04826FD9247785DF003AFEA7 /* RandomGeneratorViewModel.swift */,
+				04826FDC2477C970003AFEA7 /* RandomGeneratorDatasource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04A6815F2484B34900E762C5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04A681602484B35800E762C5 /* MyNumbersHeaderView.xib */,
+				04A681622484B3E400E762C5 /* MyNumbersHeaderView.swift */,
+				04AEF8302484EC5800945FD7 /* MyNumbersCell.xib */,
+				04AEF8322484EC6C00945FD7 /* MyNumbersCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04ADD539247E658400B9CC25 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		04C15A52247E0DB400FEE2C9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04826FCB24775B14003AFEA7 /* LottoBallCell.xib */,
+				04826FCD24775B27003AFEA7 /* LottoBallCell.swift */,
+				04826FD124776000003AFEA7 /* LottoBallHeaderView.swift */,
+				04826FD32477600A003AFEA7 /* LottoBallHeaderView.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04C4A055247E13AC00AFC0A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04605C462473D016008727E8 /* RecommendedCell.xib */,
+				04605C482473D2FA008727E8 /* RecommendedCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04C4A056247E13C500AFC0A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				040028042474BF2A009D3A22 /* MainCategoryCell.xib */,
+				040028062474D3CB009D3A22 /* MainCategoryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04CB8DAF247CE95D0026C3E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04605C342473C623008727E8 /* RoundableView.swift */,
+				04605C362473C654008727E8 /* LTView.swift */,
+				044B0DCF247FA00C0087E2E6 /* LTButton.swift */,
+				04605C4A2473D318008727E8 /* LTTableCell.swift */,
+				04826FCF24775BAB003AFEA7 /* LTCollectionViewCell.swift */,
+				04826FD724777544003AFEA7 /* Toast.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04EA99EA248F84F60069C10C /* Lotto365Tests */ = {
+			isa = PBXGroup;
+			children = (
+				04EA99F3248F85090069C10C /* Scenes */,
+				04EA99ED248F84F60069C10C /* Info.plist */,
+			);
+			path = Lotto365Tests;
+			sourceTree = "<group>";
+		};
+		04EA99F3248F85090069C10C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04EA99F6248F86830069C10C /* RandomGeneratorTests.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		158043A5E71D340455357725 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D5CE8AEA374964D41D3AE4F6 /* Pods_Lotto365.framework */,
+				3CC585C488DF2A6597BFF70C /* Pods_Lotto365Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -537,6 +1073,8 @@
 			children = (
 				15E104ABC2122FCC48507374 /* Pods-Lotto365.debug.xcconfig */,
 				50822B85C0B19C099B3B71E8 /* Pods-Lotto365.release.xcconfig */,
+				64A2BD77C84B9E61BA72AB5D /* Pods-Lotto365Tests.debug.xcconfig */,
+				66380333E17134BF4160D673 /* Pods-Lotto365Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -563,6 +1101,26 @@
 			productReference = 04605BD1247291C5008727E8 /* Lotto365.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04EA99E8248F84F60069C10C /* Lotto365Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04EA99F2248F84F60069C10C /* Build configuration list for PBXNativeTarget "Lotto365Tests" */;
+			buildPhases = (
+				7E289AEA69662E7D8D67ED8F /* [CP] Check Pods Manifest.lock */,
+				04EA99E5248F84F60069C10C /* Sources */,
+				04EA99E6248F84F60069C10C /* Frameworks */,
+				04EA99E7248F84F60069C10C /* Resources */,
+				5D5355AAE0B6BFCED213E5B9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04EA99EF248F84F60069C10C /* PBXTargetDependency */,
+			);
+			name = Lotto365Tests;
+			productName = Lotto365Tests;
+			productReference = 04EA99E9248F84F60069C10C /* Lotto365Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -575,6 +1133,10 @@
 				TargetAttributes = {
 					04605BD0247291C5008727E8 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					04EA99E8248F84F60069C10C = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 04605BD0247291C5008727E8;
 					};
 				};
 			};
@@ -592,6 +1154,7 @@
 			projectRoot = "";
 			targets = (
 				04605BD0247291C5008727E8 /* Lotto365 */,
+				04EA99E8248F84F60069C10C /* Lotto365Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -601,23 +1164,92 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0477FFBC24879EF800ADB45C /* RewardAd.storyboard in Resources */,
 				04605BE1247291C6008727E8 /* LaunchScreen.storyboard in Resources */,
+				04AEF8312484EC5800945FD7 /* MyNumbersCell.xib in Resources */,
+				0451A83F248888F6000DA059 /* LottoDream.storyboard in Resources */,
 				04605C4D2473D66D008727E8 /* LottoHistoryCell.xib in Resources */,
 				04605C472473D016008727E8 /* RecommendedCell.xib in Resources */,
+				04826FD42477600A003AFEA7 /* LottoBallHeaderView.xib in Resources */,
+				04A681612484B35800E762C5 /* MyNumbersHeaderView.xib in Resources */,
+				048D155A248DDEA100B89EEA /* Usages.storyboard in Resources */,
 				04605C512473D9BF008727E8 /* LottoHistory.storyboard in Resources */,
 				04605C592473EFD3008727E8 /* MyNumbers.storyboard in Resources */,
+				0477FFB32487812000ADB45C /* SelectedDreamCell.xib in Resources */,
 				04605C332473C538008727E8 /* Main.storyboard in Resources */,
+				048AEBFA24762B57009130DA /* DreamSelection.storyboard in Resources */,
+				048AEC0524768F6E009130DA /* Random.storyboard in Resources */,
 				04605BDE247291C6008727E8 /* Assets.xcassets in Resources */,
 				04605C2524737A8D008727E8 /* GoogleService-Info.plist in Resources */,
+				040028052474BF2A009D3A22 /* MainCategoryCell.xib in Resources */,
+				048D1552248DD79C00B89EEA /* ServiceCenter.storyboard in Resources */,
+				0451A844248890E7000DA059 /* DreamAndBallCell.xib in Resources */,
+				048AEBFE24762BFA009130DA /* Recommended.storyboard in Resources */,
 				04605C312473B15F008727E8 /* Dreams.json in Resources */,
 				04605C3D2473C964008727E8 /* Analyzes.storyboard in Resources */,
 				04605C552473E6A4008727E8 /* Settings.storyboard in Resources */,
+				04826FCC24775B14003AFEA7 /* LottoBallCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EA99E7248F84F60069C10C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5D5355AAE0B6BFCED213E5B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lotto365Tests/Pods-Lotto365Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lotto365Tests/Pods-Lotto365Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E289AEA69662E7D8D67ED8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lotto365Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A209C53B80F97C1D639F7CA4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -650,6 +1282,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Lotto365/Pods-Lotto365-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
@@ -659,6 +1292,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -670,6 +1304,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
@@ -679,6 +1314,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -697,29 +1333,117 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044B0DC5247F56CF0087E2E6 /* RMLottoUseCase.swift in Sources */,
+				04CB8DA2247CC88A0026C3E3 /* Lotto.swift in Sources */,
+				04A681632484B3E400E762C5 /* MyNumbersHeaderView.swift in Sources */,
+				04AEF8352484ED0700945FD7 /* MyNumbersItemViewModel.swift in Sources */,
 				04605C1F24729DC4008727E8 /* DataBinding.swift in Sources */,
+				04CB8DA6247CC9E90026C3E3 /* LottoBall.swift in Sources */,
+				04826FD224776000003AFEA7 /* LottoBallHeaderView.swift in Sources */,
+				0477FFC024879F6400ADB45C /* RewardAdNavigator.swift in Sources */,
 				04605C352473C623008727E8 /* RoundableView.swift in Sources */,
+				04CB8DA4247CC8C40026C3E3 /* RandomFilter.swift in Sources */,
+				044B0DCD247F5AFF0087E2E6 /* DomainLottoUseCaseProvider.swift in Sources */,
+				044B0DD0247FA00C0087E2E6 /* LTButton.swift in Sources */,
+				048D155C248DDEB400B89EEA /* UsagesViewController.swift in Sources */,
 				04605C392473C6C0008727E8 /* UIView+Extension.swift in Sources */,
+				04826FCE24775B27003AFEA7 /* LottoBallCell.swift in Sources */,
+				048D155E248DDEBF00B89EEA /* UsagesNavigator.swift in Sources */,
+				04ADD534247E61FE00B9CC25 /* LottoDomainUseCase.swift in Sources */,
+				0418F5152485F9970077E643 /* DreamSelectionNavigator.swift in Sources */,
 				04605C372473C654008727E8 /* LTView.swift in Sources */,
+				04ADD530247E35A700B9CC25 /* Application.swift in Sources */,
+				048AEBFC24762B92009130DA /* DreamSelectionViewController.swift in Sources */,
 				04605BD5247291C5008727E8 /* AppDelegate.swift in Sources */,
+				0451A846248890F7000DA059 /* DreamAndBallCell.swift in Sources */,
+				0477FFB72487992500ADB45C /* RewardAdViewController.swift in Sources */,
+				04826FD024775BAB003AFEA7 /* LTCollectionViewCell.swift in Sources */,
+				048AEBF824762A24009130DA /* Key.swift in Sources */,
+				044B0DCB247F58740087E2E6 /* Observable + Extensions.swift in Sources */,
+				048D1556248DD7DA00B89EEA /* ServiceCenterViewModel.swift in Sources */,
+				048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */,
 				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,
-				04605C1D24729C4C008727E8 /* BaseViewModel.swift in Sources */,
+				04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */,
+				044B0DC3247F503D0087E2E6 /* Realm + Extensions.swift in Sources */,
+				04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */,
+				04ADD532247E501B00B9CC25 /* RecommendedItemViewModel.swift in Sources */,
+				048D1558248DD7E900B89EEA /* ServiceCenterNavigator.swift in Sources */,
+				04CB8DBB247D105D0026C3E3 /* MainNavigator.swift in Sources */,
+				0451A83D24888857000DA059 /* LottoDreamViewModel.swift in Sources */,
+				0418F519248629C70077E643 /* DreamDomainUseCase.swift in Sources */,
+				0418F52124862F070077E643 /* DomainDreamUseCaseProvider.swift in Sources */,
+				044B0DBD247F4EAC0087E2E6 /* DomainConvertibleType.swift in Sources */,
+				0400280C2474E006009D3A22 /* AnalyzesViewModel.swift in Sources */,
+				0400281324753150009D3A22 /* QRScannerViewController.swift in Sources */,
 				04605C3B2473C77F008727E8 /* MainViewController.swift in Sources */,
+				048D1554248DD7BC00B89EEA /* ServiceCenterViewController.swift in Sources */,
+				044B0DC7247F57270087E2E6 /* RMUseCaseProvider.swift in Sources */,
+				04A6815C2484AE3C00E762C5 /* MyNumbersViewModel.swift in Sources */,
+				0418F51D24862ABB0077E643 /* FDreamUseCase.swift in Sources */,
 				04605C452473CF93008727E8 /* RecommendedViewController.swift in Sources */,
+				04ADD538247E638900B9CC25 /* DAO.swift in Sources */,
 				04605C412473CBD9008727E8 /* BaseNavigationController.swift in Sources */,
+				04C15A4B247DF77A00FEE2C9 /* QRScannerNavigator.swift in Sources */,
+				04C15A4F247E06C800FEE2C9 /* AnalyzesNavigator.swift in Sources */,
+				044B0DC1247F4F190087E2E6 /* RMLotto.swift in Sources */,
+				04826FD824777544003AFEA7 /* Toast.swift in Sources */,
 				04605C3F2473CAB8008727E8 /* AnalyzesViewController.swift in Sources */,
 				04605C1924729A6E008727E8 /* LaunchViewController.swift in Sources */,
+				04826FD624776E96003AFEA7 /* UIColor + Extension.swift in Sources */,
+				04CB8DAE247CE91B0026C3E3 /* DispatchQueue.swift in Sources */,
+				04C15A4D247DF9B600FEE2C9 /* QRScannerViewModel.swift in Sources */,
 				04605C1B24729C1F008727E8 /* BaseViewController.swift in Sources */,
+				04C4A054247E12A000AFC0A2 /* RecommendedViewModel.swift in Sources */,
+				0451A84124888909000DA059 /* LottoDreamViewController.swift in Sources */,
+				044B0DBF247F4EBC0087E2E6 /* RealmRepresentable.swift in Sources */,
 				04605C432473CCD2008727E8 /* Utils.swift in Sources */,
+				0451A83B248887FB000DA059 /* LottoDreamNavigator.swift in Sources */,
+				04826FDD2477C970003AFEA7 /* RandomGeneratorDatasource.swift in Sources */,
+				044B0DC9247F57400087E2E6 /* Repository.swift in Sources */,
+				04A6815E2484AE8E00E762C5 /* MyNumbersNavigator.swift in Sources */,
+				04C4A052247E125100AFC0A2 /* RecommendedNavigator.swift in Sources */,
+				0418F51F24862AE60077E643 /* FUseCaseProvider.swift in Sources */,
+				04826FCA2477578A003AFEA7 /* RandomGeneratorViewController.swift in Sources */,
+				0477FFB52487813300ADB45C /* SelectedDreamCell.swift in Sources */,
+				0451A8482488A46B000DA059 /* UINavigationController + Extension.swift in Sources */,
+				04AEF8332484EC6C00945FD7 /* MyNumbersCell.swift in Sources */,
+				04A681652484B4AE00E762C5 /* MyNumbersDataSource.swift in Sources */,
 				04605C5B2473F09F008727E8 /* MyNumbersViewController.swift in Sources */,
 				04605C532473DA61008727E8 /* LottoHistoryViewController.swift in Sources */,
+				040028072474D3CB009D3A22 /* MainCategoryCell.swift in Sources */,
+				048D1560248DDEEE00B89EEA /* UsagesViewModel.swift in Sources */,
 				04605C492473D2FA008727E8 /* RecommendedCell.swift in Sources */,
 				04605C4B2473D318008727E8 /* LTTableCell.swift in Sources */,
+				0400280A2474D8AB009D3A22 /* Segue.swift in Sources */,
+				04C15A51247E0D3500FEE2C9 /* RandomGeneratorNavigator.swift in Sources */,
+				0418F5132485E5700077E643 /* UIViewController + Extension.swift in Sources */,
 				04605C572473E932008727E8 /* SettingsViewController.swift in Sources */,
+				048D154D248DD06700B89EEA /* SettingsNavigator.swift in Sources */,
+				04826FDA247785DF003AFEA7 /* RandomGeneratorViewModel.swift in Sources */,
+				043E9178249312E600087274 /* ReviewManager.swift in Sources */,
+				0400280E2475004D009D3A22 /* MainViewModel.swift in Sources */,
+				0418F517248629770077E643 /* Dream.swift in Sources */,
+				048D1550248DD12300B89EEA /* SettingsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EA99E5248F84F60069C10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EA99F7248F86830069C10C /* RandomGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04EA99EF248F84F60069C10C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04605BD0247291C5008727E8 /* Lotto365 */;
+			targetProxy = 04EA99EE248F84F60069C10C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04605BDF247291C6008727E8 /* LaunchScreen.storyboard */ = {
@@ -854,15 +1578,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Lotto365/Lotto365.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = FUF4YMXS3K;
 				INFOPLIST_FILE = Lotto365/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -874,16 +1600,62 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Lotto365/Lotto365.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = FUF4YMXS3K;
 				INFOPLIST_FILE = Lotto365/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		04EA99F0248F84F60069C10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A2BD77C84B9E61BA72AB5D /* Pods-Lotto365Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUF4YMXS3K;
+				INFOPLIST_FILE = Lotto365Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lotto365.app/Lotto365";
+			};
+			name = Debug;
+		};
+		04EA99F1248F84F60069C10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66380333E17134BF4160D673 /* Pods-Lotto365Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUF4YMXS3K;
+				INFOPLIST_FILE = Lotto365Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.factoryx.Lotto365Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lotto365.app/Lotto365";
 			};
 			name = Release;
 		};
@@ -904,6 +1676,15 @@
 			buildConfigurations = (
 				04605BE6247291C6008727E8 /* Debug */,
 				04605BE7247291C6008727E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04EA99F2248F84F60069C10C /* Build configuration list for PBXNativeTarget "Lotto365Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04EA99F0248F84F60069C10C /* Debug */,
+				04EA99F1248F84F60069C10C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

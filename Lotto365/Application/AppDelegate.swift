@@ -15,14 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        Application.shared.configureMainIterface(in: window)
+        self.window = window
         
+        //MARK: - configure firebase
         FirebaseApp.configure()
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["98dcf8cc42150a49a4328e8870307e3e"]
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        //MARK: - APNs
         Messaging.messaging().delegate = self
         UNUserNotificationCenter.current().delegate = self
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { _, _ in }
         application.registerForRemoteNotifications()
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         
         return true
     }

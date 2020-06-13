@@ -2,7 +2,10 @@ PODS:
   - Alamofire (5.1.0)
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
+  - Differentiator (4.0.1)
   - Fabric (1.10.2)
+  - Firebase (6.22.0):
+    - Firebase/Core (= 6.22.0)
   - Firebase/AdMob (6.22.0):
     - Firebase/CoreOnly
     - Google-Mobile-Ads-SDK (~> 7.50)
@@ -111,6 +114,10 @@ PODS:
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRealm (2.0.0):
     - RealmSwift (~> 4.0)
     - RxSwift (~> 5.0)
@@ -124,11 +131,13 @@ PODS:
 DEPENDENCIES:
   - Crashlytics (~> 3.14.0)
   - Fabric (~> 1.10.2)
+  - Firebase
   - Firebase/AdMob
   - Firebase/Analytics
   - Firebase/Messaging
   - Moya-ObjectMapper
   - RxCocoa (~> 5)
+  - RxDataSources (~> 4.0)
   - RxRealm
   - RxSwift (~> 5)
   - RxViewController
@@ -137,6 +146,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Crashlytics
+    - Differentiator
     - Fabric
     - Firebase
     - FirebaseAnalytics
@@ -161,6 +171,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - RxCocoa
+    - RxDataSources
     - RxRealm
     - RxRelay
     - RxSwift
@@ -169,6 +180,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 32f9520684e87c7af3f0704f7f88042626d6b536
   FirebaseAnalytics: 83f822fd0d33a46f49f89b8c3ab16ab4d89df08a
@@ -193,11 +205,12 @@ SPEC CHECKSUMS:
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
   RealmSwift: 33656a42bd300959a081fc13347376bc478071af
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRealm: 900f5c7e6f0a2d6527b56eaf7283f3035ec1e8ba
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
 
-PODFILE CHECKSUM: 608aa1b778117da7fcd4801b2c1183fe59fc28a6
+PODFILE CHECKSUM: b54ef8643849cd5648e551cf010d8f13969a14af
 
 COCOAPODS: 1.6.0

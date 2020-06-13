@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2h7-Ya-bGk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--로또365-->
+        <scene sceneID="Bcq-mb-cew">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="ff5-62-Fcz" customClass="MainViewController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tDx-8n-e51">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79f-fj-b9z" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="88" width="320" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="IbX-Rs-ThW"/>
+                                    <constraint firstAttribute="width" constant="320" id="sje-t1-Nbp"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zkS-LV-vhC">
+                                <rect key="frame" x="0.0" y="166" width="414" height="661"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="iVU-SX-wwT" firstAttribute="trailing" secondItem="zkS-LV-vhC" secondAttribute="trailing" id="2lI-mf-d7u"/>
+                            <constraint firstItem="79f-fj-b9z" firstAttribute="top" secondItem="iVU-SX-wwT" secondAttribute="top" id="4D3-g4-ofx"/>
+                            <constraint firstItem="iVU-SX-wwT" firstAttribute="bottom" secondItem="zkS-LV-vhC" secondAttribute="bottom" constant="35" id="Ffs-Jv-QmM"/>
+                            <constraint firstItem="zkS-LV-vhC" firstAttribute="top" secondItem="79f-fj-b9z" secondAttribute="bottom" constant="25" id="MDs-bK-pcs"/>
+                            <constraint firstItem="79f-fj-b9z" firstAttribute="centerX" secondItem="tDx-8n-e51" secondAttribute="centerX" id="UiN-X5-hlH"/>
+                            <constraint firstItem="zkS-LV-vhC" firstAttribute="leading" secondItem="iVU-SX-wwT" secondAttribute="leading" id="cI1-XQ-Hdm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iVU-SX-wwT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="로또365" id="R4H-go-bdJ">
+                        <barButtonItem key="rightBarButtonItem" image="imageToolbarMore" id="sxL-OI-arC"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bannerView" destination="79f-fj-b9z" id="ILu-bY-dfj"/>
+                        <outlet property="moreBtn" destination="sxL-OI-arC" id="0ql-4P-yHk"/>
+                        <outlet property="tableView" destination="zkS-LV-vhC" id="S5C-Y4-lgp"/>
+                        <segue destination="uf6-1i-f4v" kind="show" identifier="mainToAnalyzes" id="9Cr-Pd-2pz"/>
+                        <segue destination="KgK-cD-PEe" kind="show" identifier="mainToLottoHistory" id="j5d-am-Xrh"/>
+                        <segue destination="dXr-eQ-iuw" kind="show" identifier="mainToMyNumbers" id="1LQ-MY-2L7"/>
+                        <segue destination="zes-XM-JOo" kind="show" identifier="mainToSettings" id="k8L-mo-PW0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EK9-Qg-t5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="131"/>
+        </scene>
+        <!--AnalyzesViewController-->
+        <scene sceneID="6cu-hu-FDA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Analyzes" referencedIdentifier="AnalyzesViewController" id="uf6-1i-f4v" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3yf-Wp-NLJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bp-by-K8Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="-52"/>
+        </scene>
+        <!--LottoHistoryViewController-->
+        <scene sceneID="fgH-4b-kHA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LottoHistory" referencedIdentifier="LottoHistoryViewController" id="KgK-cD-PEe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YcS-wI-Too"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="raI-W3-PdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="62"/>
+        </scene>
+        <!--MyNumbersViewController-->
+        <scene sceneID="g8r-cO-ed9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyNumbers" referencedIdentifier="MyNumbersViewController" id="dXr-eQ-iuw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FSu-LR-7ti"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lim-XN-yMx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="195"/>
+        </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="ntp-Pp-MaZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsViewController" id="zes-XM-JOo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cOw-fz-VXv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXG-C3-SMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="325"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="2Cx-u5-rvM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2h7-Ya-bGk" customClass="BaseNavigationController" customModule="Lotto365" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yaT-St-evD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ff5-62-Fcz" kind="relationship" relationship="rootViewController" id="b4Z-Bc-MQp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9Q-5v-NK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imageToolbarMore" width="30" height="30"/>
+        <namedColor name="background">
+            <color red="0.090196078431372548" green="0.11372549019607843" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
