@@ -106,8 +106,6 @@
 		04ADD530247E35A700B9CC25 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD52F247E35A700B9CC25 /* Application.swift */; };
 		04ADD532247E501B00B9CC25 /* RecommendedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD531247E501B00B9CC25 /* RecommendedItemViewModel.swift */; };
 		04ADD534247E61FE00B9CC25 /* LottoDomainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */; };
-		04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */; };
-		04ADD538247E638900B9CC25 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD537247E638900B9CC25 /* DAO.swift */; };
 		04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */; };
 		04AEF8312484EC5800945FD7 /* MyNumbersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AEF8302484EC5800945FD7 /* MyNumbersCell.xib */; };
 		04AEF8332484EC6C00945FD7 /* MyNumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8322484EC6C00945FD7 /* MyNumbersCell.swift */; };
@@ -241,8 +239,6 @@
 		04ADD52F247E35A700B9CC25 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		04ADD531247E501B00B9CC25 /* RecommendedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedItemViewModel.swift; sourceTree = "<group>"; };
 		04ADD533247E61FE00B9CC25 /* LottoDomainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDomainUseCase.swift; sourceTree = "<group>"; };
-		04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoRepositoryInterface.swift; sourceTree = "<group>"; };
-		04ADD537247E638900B9CC25 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		04ADD53E247E74DE00B9CC25 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		04AEF8302484EC5800945FD7 /* MyNumbersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNumbersCell.xib; sourceTree = "<group>"; };
 		04AEF8322484EC6C00945FD7 /* MyNumbersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNumbersCell.swift; sourceTree = "<group>"; };
@@ -508,7 +504,6 @@
 			children = (
 				04605BF6247293DE008727E8 /* Entities */,
 				04605BF7247293E4008727E8 /* UseCases */,
-				04605BF824729403008727E8 /* RepositoryInterface */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -642,15 +637,6 @@
 				0418F518248629C70077E643 /* DreamDomainUseCase.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		04605BF824729403008727E8 /* RepositoryInterface */ = {
-			isa = PBXGroup;
-			children = (
-				04ADD535247E629200B9CC25 /* LottoRepositoryInterface.swift */,
-				04ADD537247E638900B9CC25 /* DAO.swift */,
-			);
-			path = RepositoryInterface;
 			sourceTree = "<group>";
 		};
 		04605BF92472954D008727E8 /* Repositories */ = {
@@ -1363,7 +1349,6 @@
 				048D1556248DD7DA00B89EEA /* ServiceCenterViewModel.swift in Sources */,
 				048AEC0024764AF5009130DA /* DreamSelectionViewModel.swift in Sources */,
 				04605C4F2473D798008727E8 /* LottoHistoryCell.swift in Sources */,
-				04ADD536247E629200B9CC25 /* LottoRepositoryInterface.swift in Sources */,
 				044B0DC3247F503D0087E2E6 /* Realm + Extensions.swift in Sources */,
 				04ADD53F247E74DE00B9CC25 /* RunLoopThreadScheduler.swift in Sources */,
 				04ADD532247E501B00B9CC25 /* RecommendedItemViewModel.swift in Sources */,
@@ -1381,7 +1366,6 @@
 				04A6815C2484AE3C00E762C5 /* MyNumbersViewModel.swift in Sources */,
 				0418F51D24862ABB0077E643 /* FDreamUseCase.swift in Sources */,
 				04605C452473CF93008727E8 /* RecommendedViewController.swift in Sources */,
-				04ADD538247E638900B9CC25 /* DAO.swift in Sources */,
 				04605C412473CBD9008727E8 /* BaseNavigationController.swift in Sources */,
 				04C15A4B247DF77A00FEE2C9 /* QRScannerNavigator.swift in Sources */,
 				04C15A4F247E06C800FEE2C9 /* AnalyzesNavigator.swift in Sources */,
